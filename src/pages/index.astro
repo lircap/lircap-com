@@ -1,20 +1,38 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import CrossingHero from '../components/CrossingHero.astro';
 ---
 
 <BaseLayout
-  title="Lir Capital — partner-led capital advisory"
-  description="Lir Capital is a discreet, partner-led advisory and capital platform."
+  title="Lir Capital — The crossing"
+  description="Lir Capital is a discreet, partner-led advisory firm working where capital and complex opportunities meet."
 >
-  <section class="hero" aria-labelledby="hero-title">
-    <div>
-      <p class="eyebrow">The crossing</p>
-      <h1 id="hero-title">Where capital and opportunity find their fix.</h1>
-      <div class="crossing-rule" aria-hidden="true"></div>
-      <p class="lede">
-        A static-first foundation for the Lir Capital website, ready for issue-bounded content,
-        design, compliance, and browser QA work.
-      </p>
+  <CrossingHero />
+
+  <section class="home-brief" aria-labelledby="home-brief-title">
+    <div class="section-heading">
+      <p class="eyebrow">One function, two directions</p>
+      <h2 id="home-brief-title">A senior route into the right conversation.</h2>
+    </div>
+    <div class="brief-grid">
+      <article>
+        <h3>For capital</h3>
+        <p>
+          Understanding mandate, appetite and timing before a conversation becomes a transaction.
+        </p>
+      </article>
+      <article>
+        <h3>For opportunities</h3>
+        <p>
+          Helping owners and advisers frame what kind of capital partner the situation requires.
+        </p>
+      </article>
+      <article>
+        <h3>For introductions</h3>
+        <p>
+          A discreet partner-led route when judgement, context and fit matter more than volume.
+        </p>
+      </article>
     </div>
   </section>
 </BaseLayout>
