@@ -15,6 +15,7 @@ compliance_claim_ids:
   - "CL-005"
   - "CL-014"
 copy_freeze: false
+content_model: "docs/content/content-model.md"
 ---
 
 # For Deals page brief

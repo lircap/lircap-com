@@ -16,6 +16,7 @@ compliance_claim_ids:
   - "CL-012"
   - "CL-013"
 copy_freeze: false
+content_model: "docs/content/content-model.md"
 ---
 
 # For Investors page brief

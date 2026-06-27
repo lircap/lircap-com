@@ -17,6 +17,7 @@ compliance_claim_ids:
   - "CL-009"
   - "CL-010"
 copy_freeze: false
+content_model: "docs/content/content-model.md"
 ---
 
 # Home page brief
