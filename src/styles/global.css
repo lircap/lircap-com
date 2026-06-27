@@ -1,38 +1,29 @@
-:root {
-  color-scheme: dark;
-  --color-obsidian: #12151c;
-  --color-atlantic-deep: #0c2b35;
-  --color-aged-gold: #b8975a;
-  --color-atlantic-slate: #7a9ba8;
-  --color-parchment: #f5f1eb;
-  --font-display: Newsreader, Georgia, 'Times New Roman', serif;
-  --font-body: Inter, Arial, system-ui, sans-serif;
-}
+@import './tokens.css';
 
 * { box-sizing: border-box; }
 
-html { background: var(--color-obsidian); }
+html { background: var(--obsidian); }
 
 body {
   margin: 0;
   min-height: 100vh;
   background:
     radial-gradient(circle at 20% 0%, rgba(122, 155, 168, 0.16), transparent 34rem),
-    linear-gradient(145deg, var(--color-obsidian), var(--color-atlantic-deep));
-  color: var(--color-parchment);
+    linear-gradient(145deg, var(--obsidian), var(--atlantic-deep));
+  color: var(--parchment);
   font-family: var(--font-body);
-  line-height: 1.6;
+  line-height: var(--leading-body);
 }
 
 a { color: inherit; }
 
 :focus-visible {
-  outline: 2px solid var(--color-aged-gold);
+  outline: 2px solid var(--aged-gold);
   outline-offset: 0.25rem;
 }
 
 .site-shell {
-  width: min(1120px, calc(100% - 2rem));
+  width: min(var(--container-max), calc(100% - (var(--container-gutter) * 2)));
   margin: 0 auto;
 }
 
@@ -46,7 +37,7 @@ a { color: inherit; }
 }
 
 .brand-mark {
-  letter-spacing: 0.18em;
+  letter-spacing: var(--tracking-eyebrow);
   text-transform: uppercase;
   font-size: 0.82rem;
 }
@@ -58,7 +49,7 @@ a { color: inherit; }
   list-style: none;
   margin: 0;
   padding: 0;
-  color: var(--color-atlantic-slate);
+  color: var(--atlantic-slate);
   font-size: 0.92rem;
 }
 
@@ -70,25 +61,25 @@ a { color: inherit; }
 }
 
 .eyebrow {
-  color: var(--color-aged-gold);
+  color: var(--aged-gold);
   letter-spacing: 0.18em;
   text-transform: uppercase;
-  font-size: 0.76rem;
+  font-size: var(--type-eyebrow);
 }
 
 h1 {
   max-width: 12ch;
   margin: 1rem 0;
   font-family: var(--font-display);
-  font-size: clamp(3.25rem, 10vw, 8rem);
-  line-height: 0.88;
-  letter-spacing: -0.055em;
+  font-size: var(--type-display);
+  line-height: var(--leading-tight);
+  letter-spacing: var(--tracking-tight);
 }
 
 .lede {
   max-width: 42rem;
   color: rgba(245, 241, 235, 0.82);
-  font-size: clamp(1.1rem, 2vw, 1.35rem);
+  font-size: var(--type-body-lg);
 }
 
 .crossing-rule {
