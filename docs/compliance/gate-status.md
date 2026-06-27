@@ -11,10 +11,10 @@ This file is a project-control instrument, not legal advice. It records the defa
 
 | Gate | Items | Status | Blocks | Default until cleared |
 |---|---|---|---|---|
-| Gate A | A–E | Not globally cleared | final/build-ready copy | use registration-only language; anonymise case studies; hedge/soften claims; no active regulated-status implications |
+| Gate A | A–E | Not globally cleared | final/build-ready copy | use registration-only language; use anonymised/generalised case-study fallbacks; hedge/soften claims; no active regulated-status implications |
 | Gate B | F–I | Not globally cleared | pre-prod/client review or deploy as applicable | do not deploy public/client-facing final content until legal/entity/privacy/bio/endorsement checks are documented |
 
-Implementation may continue only when the issue-specific closeout in `sign-off-tracker.md` records each touched claim as `allowed`, `safe-default`, `remove/soften`, or explicitly excluded from the scope. No claim ships in a “to be confirmed” state.
+Implementation may continue only when the issue-specific closeout in `sign-off-tracker.md` records each touched claim as `allowed`, `safe-default`, `remove-soften`, or explicitly excluded from the scope. No claim ships in a “to be confirmed” state.
 
 ## Status vocabulary
 
@@ -24,8 +24,8 @@ Implementation may continue only when the issue-specific closeout in `sign-off-t
 | `safe-default` | Conservative fallback wording from `claims-register.md`; no high-risk claim is being made. |
 | `needs-substantiation` | Factual proof, partner confirmation, or documentary evidence is missing. |
 | `needs-counsel` | Legal/regulatory judgement is required. |
-| `remove/soften` | Original source wording is too risky or unsupported; publish only the fallback or omit. |
-| `exclude-until-cleared` | Do not publish this copy/claim in client-facing pre-prod or public production. |
+| `remove-soften` | Original source wording is too risky or unsupported; publish only the fallback or omit. |
+| `exclude` | Do not publish this copy/claim in client-facing pre-prod or public production. |
 
 ## Gate A — before build copy is considered shippable
 
@@ -33,7 +33,7 @@ Implementation may continue only when the issue-specific closeout in `sign-off-t
 |---|---|---|---|---|---|
 | A | Regulatory authorisation status and language | Not cleared | Tim Cole / counsel | No “authorised” wording; registration/company-number only | `CL-001` |
 | B | Regulated-activity mapping | Not cleared | Tim Cole / counsel | Service descriptions must avoid implying unauthorised regulated activity | `CL-002`, `CL-012`, `CL-013` |
-| C | Named-counterparty consent | Not cleared | Partners / counsel | Case studies anonymised by default | `CL-004`, `CL-005` |
+| C | Named-counterparty consent | Not cleared | Partners / counsel | Case studies use anonymised/generalised fallback by default | `CL-004`, `CL-005` |
 | D | Factual/superlative claim substantiation | Not cleared | Partners / compliance | Claims must be hedged, softened, omitted, or marked not-publishable | `CL-006`–`CL-011`, `CL-014`, `CL-015` |
 | E | Financial-promotion gating | Not cleared | Tim Cole / counsel | Professional/institutional wording is not enough to assume active gating requirements are satisfied | `CL-003`, `CL-012`, `CL-013` |
 

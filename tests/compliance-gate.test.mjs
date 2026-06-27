@@ -48,6 +48,23 @@ describe('compliance gate controls', () => {
     expect(combinedControls).toContain('CL-012');
   });
 
+  it('uses a normalized compliance status vocabulary only', () => {
+    const allowedStatuses = [
+      'allowed',
+      'safe-default',
+      'needs-substantiation',
+      'needs-counsel',
+      'remove-soften',
+      'exclude',
+    ];
+
+    for (const status of allowedStatuses) {
+      expect(combinedControls).toContain(`\`${status}\``);
+    }
+
+    expect(combinedControls).not.toMatch(/`(?:allowed-direction|anonymise|remove\/soften|exclude-until-cleared)`/i);
+  });
+
   it('uses only the confirmed entity disclosure fallback on the site', () => {
     const disclosure = 'Harmonycove Limited trading as Lir Capital Partners. Registered in Ireland. Company No. 801328.';
 

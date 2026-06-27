@@ -14,8 +14,8 @@ Every copy area, claim, and implementation issue must use one of these statuses 
 | `safe-default` | Conservative fallback wording from the claims register; no high-risk claim is being made. | Yes, if reviewer confirms scope | Yes only if production launch checklist accepts the fallback |
 | `needs-substantiation` | Factual proof, partner confirmation, or documentary evidence is missing. | No, unless softened or excluded | No |
 | `needs-counsel` | Legal/regulatory judgement is required. | No, unless excluded or explicitly counsel-cleared | No |
-| `remove/soften` | Original source wording is too risky or unsupported; publish only the fallback or omit. | Fallback only | Fallback only |
-| `exclude-until-cleared` | Do not publish this copy/claim in client-facing pre-prod or public production. | No | No |
+| `remove-soften` | Original source wording is too risky or unsupported; publish only the fallback or omit. | Fallback only | Fallback only |
+| `exclude` | Do not publish this copy/claim in client-facing pre-prod or public production. | No | No |
 
 ## Gate A — build-copy closeout
 
@@ -23,10 +23,10 @@ Gate A covers copy that could imply regulatory status, regulated activity, named
 
 | Gate item | Claim IDs | Default project status | Required closeout before issue merge |
 |---|---|---|---|
-| A. Regulatory authorisation status and language | `CL-001` | `exclude-until-cleared` / `needs-counsel` | No “authorised” language; use only registration/company-number wording unless counsel confirms exact regulatory status. |
+| A. Regulatory authorisation status and language | `CL-001` | `exclude` / `needs-counsel` | No “authorised” language; use only registration/company-number wording unless counsel confirms exact regulatory status. |
 | B. Regulated-activity mapping | `CL-002`, `CL-012`, `CL-013` | `needs-counsel` | Avoid offer, invitation, arranging, product-like SPV/fund, or active regulated-service language. |
-| C. Named-counterparty consent | `CL-004`, `CL-005` | `anonymise` / `needs-substantiation` | Named case studies/counterparties are omitted or anonymised unless consent and public substantiation are recorded. |
-| D. Factual/superlative claim substantiation | `CL-006`, `CL-007`, `CL-008`, `CL-009`, `CL-010`, `CL-011`, `CL-014`, `CL-015` | `needs-substantiation` or `exclude-until-cleared` | Hedge, soften, omit, or record evidence/sign-off. No placeholders or superlatives ship. |
+| C. Named-counterparty consent | `CL-004`, `CL-005` | `remove-soften` / `needs-substantiation` | Named case studies/counterparties are omitted or anonymised unless consent and public substantiation are recorded. |
+| D. Factual/superlative claim substantiation | `CL-006`, `CL-007`, `CL-008`, `CL-009`, `CL-010`, `CL-011`, `CL-014`, `CL-015` | `needs-substantiation` or `exclude` | Hedge, soften, omit, or record evidence/sign-off. No placeholders or superlatives ship. |
 | E. Financial-promotion gating | `CL-003`, `CL-012`, `CL-013` | `needs-counsel` | Professional/institutional wording is not enough by itself; private-markets/investor-solicitation language remains excluded unless counsel-cleared. |
 
 ## Gate B — pre-prod/client/public-review closeout
@@ -38,7 +38,7 @@ Gate B covers disclosure, privacy, team-bio accuracy, and implied endorsements. 
 | F. Entity disclosure | `CL-001` | `safe-default` for confirmed registration facts only | Footer/legal route may state: “Harmonycove Limited trading as Lir Capital Partners. Registered in Ireland. Company No. 801328.” Address, authorisation, and regulatory wording remain unconfirmed. |
 | G. Data protection / GDPR | `CL-017` | `needs-counsel` / `needs-substantiation` | Contact forms, analytics, processors, retention, and privacy copy require documented decision before use. Email-only fallback is preferred until cleared. |
 | H. Team bio accuracy and third-party references | `CL-007`, `CL-015` | `needs-substantiation` | Bios require partner/compliance review for titles, tense, employer names, third-party references, and claims. |
-| I. Endorsements/testimonials | `CL-004`, `CL-005`, `CL-011` | `exclude-until-cleared` | No quote, testimonial, logo, named client validation, or implied endorsement without written consent and substantiation. |
+| I. Endorsements/testimonials | `CL-004`, `CL-005`, `CL-011` | `exclude` | No quote, testimonial, logo, named client validation, or implied endorsement without written consent and substantiation. |
 
 ## Issue closeout matrix
 
