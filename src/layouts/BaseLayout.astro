@@ -1,0 +1,45 @@
+---
+import '../styles/global.css';
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const {
+  title = 'Lir Capital',
+  description = 'A discreet, partner-led advisory and capital platform.',
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content={description} />
+    <title>{title}</title>
+  </head>
+  <body>
+    <div class="site-shell">
+      <header class="site-header" aria-label="Site header">
+        <a class="brand-mark" href="/">Lir Capital</a>
+        <nav aria-label="Primary navigation">
+          <ul class="nav-list">
+            <li><a href="/for-investors/">For investors</a></li>
+            <li><a href="/for-deals/">For deals</a></li>
+            <li><a href="/team/">Team</a></li>
+            <li><a href="/contact/">Contact</a></li>
+          </ul>
+        </nav>
+      </header>
+      <main>
+        <slot />
+      </main>
+      <footer class="site-footer">
+        <span>Harmonycove Limited trading as Lir Capital Partners.</span>
+        <a href="/legal/">Legal</a>
+      </footer>
+    </div>
+  </body>
+</html>
