@@ -1,0 +1,55 @@
+name: Deploy pre-prod
+
+on:
+  workflow_dispatch:
+    inputs:
+      ref:
+        description: Git ref to deploy
+        required: true
+        default: main
+
+permissions:
+  contents: read
+
+concurrency:
+  group: lircap-preprod
+  cancel-in-progress: false
+
+jobs:
+  build-artifact:
+    name: Build static artifact for pre-prod
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout requested ref
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ inputs.ref }}
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Verify
+        run: |
+          npm run typecheck
+          npm run lint
+          npm test -- --run
+          npm run build
+          python3 scripts/check-placeholders.py
+          npm run perf:budget
+
+      - name: Upload static build artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: lircap-dist
+          path: dist/
+          if-no-files-found: error
+
+  # Actual VPS sync is intentionally not enabled until #4 records host, path,
+  # SSH key secret names, Caddy path, and password-gate smoke evidence.
+  # Secrets must live in GitHub/VPS secret stores; never in source.
