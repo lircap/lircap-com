@@ -1,7 +1,9 @@
 # Claims register
 
 **Control issue:** #18
+**Operational gate issue:** #9
 **Canonical brief section:** `docs/brief/canonical-brief.md` §8–§9
+**Companion tracker:** `docs/compliance/sign-off-tracker.md`
 **Default posture:** no claim ships in a “to be confirmed” state. It is either cleared, softened, anonymised, or removed.
 
 Status values:
