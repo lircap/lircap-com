@@ -1,0 +1,38 @@
+---
+const routes = [
+  { href: '/for-investors/', label: 'For investors', meta: 'Capital seeking qualified opportunities' },
+  { href: '/for-deals/', label: 'For deals', meta: 'Owners and advisers seeking the right capital path' },
+];
+---
+
+<section class="crossing-hero" aria-labelledby="hero-title">
+  <div class="crossing-hero__copy">
+    <p class="eyebrow">The crossing</p>
+    <h1 id="hero-title">Where capital and opportunity take a bearing.</h1>
+    <p class="lede">
+      Lir Capital works at the point where capital needs a considered route and complex
+      opportunities need the right counterparties. Discreet, partner-led conversations;
+      no public mandate claims, no market noise.
+    </p>
+    <div class="hero-actions" aria-label="Primary journeys">
+      {routes.map((route) => (
+        <a class="journey-card" href={route.href}>
+          <span>{route.label}</span>
+          <small>{route.meta}</small>
+        </a>
+      ))}
+    </div>
+  </div>
+
+  <div class="crossing-hero__chart" aria-label="Abstract navigational crossing: two plotted paths meeting at a fix">
+    <div class="chart-frame">
+      <span class="horizon" aria-hidden="true"></span>
+      <span class="track track--capital" aria-hidden="true"></span>
+      <span class="track track--opportunity" aria-hidden="true"></span>
+      <span class="fix" aria-hidden="true"></span>
+      <span class="soundings sounding--one" aria-hidden="true">43°N</span>
+      <span class="soundings sounding--two" aria-hidden="true">08°W</span>
+      <span class="soundings sounding--three" aria-hidden="true">fix</span>
+    </div>
+  </div>
+</section>
