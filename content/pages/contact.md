@@ -13,6 +13,7 @@ compliance_claim_ids:
   - "CL-003"
   - "CL-017"
 copy_freeze: false
+content_model: "docs/content/content-model.md"
 ---
 
 # Contact / Enquiry page brief

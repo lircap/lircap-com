@@ -13,6 +13,7 @@ compliance_claim_ids:
   - "CL-010"
   - "CL-015"
 copy_freeze: false
+content_model: "docs/content/content-model.md"
 ---
 
 # Team page brief

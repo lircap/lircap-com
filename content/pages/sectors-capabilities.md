@@ -13,6 +13,7 @@ compliance_claim_ids:
   - "CL-011"
   - "CL-012"
 copy_freeze: false
+content_model: "docs/content/content-model.md"
 ---
 
 # Sectors / Capabilities page brief
