@@ -26,6 +26,7 @@ Before a scored design run starts:
 | `agent:orchestrator` | Owns run setup, candidate selection, branch hygiene, score reconciliation, promotion/no-promotion decision, PR/merge/deploy evidence. | Does not let candidates self-promote; does not skip parent verification. |
 | `agent:design-director` | Finds visual opportunities, reviews composition/typography/restraint/AI-template smell, scores design dimensions. | Does not implement or approve without rendered evidence. |
 | `agent:brand-strategist` | Scores strategic fit, ownable crossing idea, institutional credibility, proof model, warmth. | Does not invent new positioning or compliance-sensitive claims. |
+| `agent:production-design-reviewer` | Performs pixel-perfect production-design QA on rendered candidates: spacing, alignment, typographic rhythm, component polish, responsive craft, visual consistency, screenshot deltas, and whether the implementation feels agency-grade at common breakpoints. | Does not redesign, change strategy, invent copy/assets, or pass candidates without rendered multi-viewport evidence. |
 | `agent:ux-researcher` | Writes constrained UX/audience testing scenarios, assigns audience-agent tasks, synthesises findings into scorecard evidence and trend recommendations. | Does not treat simulated users as market proof; does not bypass hard blockers or rewrite strategy from audience comments alone. |
 | `audience:institutional-investor` | Tests whether the experience feels credible, disciplined, legible, and worth a follow-up from an institutional capital perspective. | Does not approve regulated claims, diligence facts, or investment merit. |
 | `audience:founder-dealmaker` | Tests whether the experience feels warm, high-trust, direct, and useful to a founder/operator considering a transaction. | Does not create new positioning, promises, testimonials, or proof points. |
@@ -47,21 +48,25 @@ docs/design/loops/<run-id>/
     scorecard.md
     screenshots/
     browser-qa.json
+    production-design-review.md
   candidates/
     a/
       scorecard.md
       screenshots/
       browser-qa.json
+      production-design-review.md
       audience-findings.md
     b/
       scorecard.md
       screenshots/
       browser-qa.json
+      production-design-review.md
       audience-findings.md
     c/
       scorecard.md
       screenshots/
       browser-qa.json
+      production-design-review.md
       audience-findings.md
   decision.md
 ```
@@ -96,9 +101,10 @@ Capture the deployed/current `main` baseline before proposing changes:
 - console/page error state;
 - axe/equivalent accessibility result where practical;
 - performance budget/Lighthouse-equivalent note;
-- current scorecard using `templates/design-loop-scorecard.md`.
+- current scorecard using `templates/design-loop-scorecard.md`;
+- production-design baseline audit by `agent:production-design-reviewer`, covering spacing rhythm, grid/container alignment, typography scale/measure/leading, component consistency, responsive polish, placeholder/asset craft limits, and the top craft defects future candidates must not worsen.
 
-Baseline scoring must state asset caps: for example, human warmth and imagery quality may be capped while neutral portrait placeholders remain.
+Baseline scoring must state asset caps: for example, human warmth and imagery quality may be capped while neutral portrait placeholders remain. Baseline scoring must also distinguish strategic/design caps from implementation-craft defects. Craft defects present in the baseline should be listed explicitly so candidates can be credited for fixing them or blocked for worsening them.
 
 ### 2. Opportunity scouting
 
@@ -138,12 +144,56 @@ For each candidate:
 
 - build and capture the same evidence set as the baseline;
 - complete `templates/design-loop-scorecard.md`, including proof/provenance evidence for any claims or proof points touched by the candidate;
-- dispatch design, brand, browser-QA, and code/security review as relevant;
+- dispatch design, brand, production-design, browser-QA, and code/security review as relevant;
+- run production-design review after rendered screenshots/browser evidence exist and before final scorecard scoring;
+- record craft defects separately from strategic/design disagreements and from score improvements;
 - record blockers separately from score improvements.
 
-Scoring must compare against baseline, not against taste in isolation.
+Scoring must compare against baseline, not against taste in isolation. Visual/UI candidates cannot receive final scorecards until production-design review is `PASS`, or all material focused changes have been fixed and re-reviewed.
 
-### 4a. Audience-agent UX testing, when useful
+### 4a. Production-design craft QA gate
+
+Use `agent:production-design-reviewer` for every visual/UI candidate before final scoring.
+
+Purpose: catch implementation craft defects that broad design, brand, browser-QA, or audience review may miss.
+
+Inputs:
+
+- baseline and candidate screenshots at comparable viewports;
+- local/deployed URL when available;
+- browser-QA evidence;
+- affected components/routes;
+- run objective and priority/critical dimensions;
+- known baseline craft defects and asset caps.
+
+Required checks:
+
+- spacing rhythm: section padding, gutters, card gaps, list rhythm, vertical cadence;
+- alignment: container edges, baselines, optical centering, grid relationships;
+- typography: measure, leading, widows/orphans, scale consistency, line breaks at key viewports;
+- component polish: card sizing, borders, dividers, hover/focus visual fit, repeated module consistency;
+- responsive craft: no cramped, orphaned, over-wide, under-spaced, or awkward intermediate states;
+- visual hierarchy: intended focal order survives implementation at all reviewed widths;
+- brand materiality: premium restraint is preserved; no cheap decorative artifacts;
+- placeholder/imagery discipline: placeholders remain honest, proportionate, non-stock, and non-AI-looking;
+- screenshot deltas: candidate improves or preserves baseline craft; no unnoticed regressions;
+- implementation fidelity: CSS/layout choices produce intentional pixels, not accidental near-misses.
+
+Verdict:
+
+- `PASS` — no blocking or material craft defects;
+- `NEEDS FOCUSED CHANGES` — candidate may be rescored only after fixes and re-review;
+- `REJECT` — craft quality is below baseline or too defective for promotion;
+- `BLOCKER` — pixel/craft defects create accessibility, credibility, placeholder, or production-readiness risk.
+
+Rules:
+
+- A candidate with unresolved `BLOCKER` or material `NEEDS FOCUSED CHANGES` from production-design review cannot be scored for promotion.
+- Craft fixes must stay within the candidate hypothesis; they must not become a new design direction.
+- The reviewer must name exact routes, viewports, screenshot references, visible defects, severity, and required fix.
+- Do not accept “looks good” without screenshot-specific evidence.
+
+### 4b. Audience-agent UX testing, when useful
 
 Use audience-agent UX testing when the run affects first-impression trust, clarity, warmth, conversion confidence, or comprehension. This is a lightweight simulation layer, not analytics and not a substitute for real client/user testing.
 
@@ -170,7 +220,12 @@ A candidate can win only if all are true:
 - at least one priority dimension improves materially;
 - no critical dimension regresses beyond the regression guard;
 - browser evidence is complete enough for the affected surface;
+- production-design review is `PASS`, or all required craft changes have been fixed and re-reviewed;
+- no unresolved material craft defect remains in priority surfaces/viewports;
+- candidate does not regress baseline craft quality in spacing, alignment, typography, responsive polish, or visual consistency;
 - parent/orchestrator independently verifies the diff and commands.
+
+A candidate cannot win on weighted score alone if production-design review finds unresolved material craft defects. Pixel/craft defects are promotion blockers when they weaken credibility, make the implementation feel unfinished, or reduce the premium/agency-grade quality of the affected surface.
 
 If no candidate clears the threshold, record **NO PROMOTION**. Do not merge the least-bad branch.
 
@@ -231,7 +286,12 @@ Any of these blocks promotion regardless of score:
 - placeholder marker or placeholder asset leaking beyond approved pre-prod usage;
 - compliance-risky new claim or regulated phrasing without source/sign-off;
 - broken pre-prod password gate or route smoke;
-- PR branch not based on current accepted baseline.
+- PR branch not based on current accepted baseline;
+- unresolved production-design `BLOCKER`;
+- visible spacing/alignment/typography defect that makes a priority route look unfinished or below baseline craft quality;
+- responsive craft failure at a required viewport, including cramped, clipped, orphaned, overlapping, or materially unbalanced layout;
+- repeated component inconsistency that undermines premium/system quality;
+- placeholder/imagery treatment that appears fake, stock-like, AI-generated, deceptive, or visually dominant beyond the approved asset cap.
 
 ## Context and iteration budget
 
@@ -264,6 +324,16 @@ Task: score strategic fit, ownable crossing idea, institutional credibility, hum
 Forbidden: do not create new positioning, regulated claims, client promises, or unsourced proof.
 Expected output: PASS / REQUIRED CHANGES / REJECT plus priority-dimension scores, proof/provenance notes, asset caps, and brand-risk findings.
 Stop conditions: missing source for claims; recommendation would change approved positioning.
+```
+
+### Production-design reviewer
+
+```text
+Inputs: baseline screenshots, candidate screenshots, local/deployed URL if available, browser-QA evidence, affected routes/components, run objective, known baseline craft defects, asset caps.
+Task: perform pixel-perfect production-design QA. Compare candidate against baseline and intended premium craft standard. Identify concrete rendered defects in spacing, alignment, typography, visual rhythm, responsive behaviour, component consistency, placeholder discipline, and implementation polish before candidate scoring/promotion.
+Forbidden: do not redesign; do not invent copy, claims, imagery, or strategy; do not approve without rendered multi-viewport evidence; do not treat browser-QA/a11y pass as visual craft pass.
+Expected output: PASS / NEEDS FOCUSED CHANGES / REJECT / BLOCKER, with route, viewport, screenshot reference, defect description, severity, required fix, and whether candidate scoring is allowed.
+Stop conditions: missing screenshots/rendered URL; baseline and candidate evidence are not comparable; defect requires new art direction or assets outside run scope.
 ```
 
 ### UX-researcher scenario writer/synthesiser
@@ -334,6 +404,7 @@ Use these templates:
 - `docs/workflow/templates/design-loop-run.md`
 - `docs/workflow/templates/design-loop-issue-comment.md`
 - `docs/workflow/templates/design-loop-pr-comment.md`
+- `docs/workflow/templates/production-design-review.md`
 
 ## First pilot recommendation
 

@@ -11,6 +11,8 @@ Control issue:
 
 - Screenshots:
 - Browser QA:
+- Production-design baseline audit:
+- Known baseline craft defects:
 - Baseline score:
 - Asset/input caps:
 
@@ -35,10 +37,20 @@ Control issue:
 
 - `agent:design-director`:
 - `agent:brand-strategist`:
+- `agent:production-design-reviewer`:
 - `agent:ux-researcher` / audience agents:
 - `agent:browser-qa-reviewer`:
 - `agent:code-security-reviewer`:
 - `agent:devops-deployer`:
+
+### Production-design craft QA
+
+- Evidence reviewed:
+- Candidate scoring allowed? yes/no
+- Blocking craft defects:
+- Focused changes required:
+- Re-review status:
+- Craft regressions vs baseline:
 
 ### Audience-agent UX findings
 
@@ -52,7 +64,9 @@ Control issue:
 ### Decision
 
 - Decision: PROMOTE / NO PROMOTION / REQUEST NEW INPUTS
+- Production-design gate: PASS / BLOCKED / N/A
 - Rationale:
+- If promoted, why craft quality is production-ready:
 - PR, if promoted:
 - If no promotion, what we learned:
 
@@ -73,5 +87,6 @@ Control issue:
 ### Parent verification
 
 - Commands run:
+- Production-design craft defects resolved/re-reviewed:
 - CI/deploy evidence:
 - Remaining risks:

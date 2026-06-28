@@ -1,0 +1,119 @@
+{
+  "capturedAt": "2026-06-28T15:04:27.167Z",
+  "base": "http://127.0.0.1:4322",
+  "screenshots": [
+    {
+      "page": "home",
+      "route": "/",
+      "viewport": "mobile",
+      "width": 390,
+      "file": "screenshots/home-mobile-390.png"
+    },
+    {
+      "page": "home",
+      "route": "/",
+      "viewport": "tablet",
+      "width": 1024,
+      "file": "screenshots/home-tablet-1024.png"
+    },
+    {
+      "page": "home",
+      "route": "/",
+      "viewport": "desktop",
+      "width": 1440,
+      "file": "screenshots/home-desktop-1440.png"
+    },
+    {
+      "page": "team",
+      "route": "/team/",
+      "viewport": "mobile",
+      "width": 390,
+      "file": "screenshots/team-mobile-390.png"
+    },
+    {
+      "page": "team",
+      "route": "/team/",
+      "viewport": "tablet",
+      "width": 1024,
+      "file": "screenshots/team-tablet-1024.png"
+    },
+    {
+      "page": "team",
+      "route": "/team/",
+      "viewport": "desktop",
+      "width": 1440,
+      "file": "screenshots/team-desktop-1440.png"
+    },
+    {
+      "page": "contact",
+      "route": "/contact/",
+      "viewport": "mobile",
+      "width": 390,
+      "file": "screenshots/contact-mobile-390.png"
+    },
+    {
+      "page": "contact",
+      "route": "/contact/",
+      "viewport": "tablet",
+      "width": 1024,
+      "file": "screenshots/contact-tablet-1024.png"
+    },
+    {
+      "page": "contact",
+      "route": "/contact/",
+      "viewport": "desktop",
+      "width": 1440,
+      "file": "screenshots/contact-desktop-1440.png"
+    },
+    {
+      "page": "home",
+      "route": "/",
+      "viewport": "desktop-reduced-motion",
+      "width": 1440,
+      "file": "screenshots/home-desktop-1440-reduced-motion.png"
+    }
+  ],
+  "consoleErrors": {
+    "home-mobile": [],
+    "home-tablet": [],
+    "home-desktop": [],
+    "team-mobile": [],
+    "team-tablet": [],
+    "team-desktop": [],
+    "contact-mobile": [],
+    "contact-tablet": [],
+    "contact-desktop": []
+  },
+  "pageErrors": {
+    "home-mobile": [],
+    "home-tablet": [],
+    "home-desktop": [],
+    "team-mobile": [],
+    "team-tablet": [],
+    "team-desktop": [],
+    "contact-mobile": [],
+    "contact-tablet": [],
+    "contact-desktop": []
+  },
+  "axe": {
+    "home-mobile": [],
+    "home-tablet": [],
+    "home-desktop": [],
+    "team-mobile": [],
+    "team-tablet": [],
+    "team-desktop": [],
+    "contact-mobile": [],
+    "contact-tablet": [],
+    "contact-desktop": []
+  },
+  "focus": {
+    "firstTab": {
+      "active": {
+        "tag": "A",
+        "text": "Skip to content",
+        "cls": "skip-link"
+      },
+      "file": "screenshots/focus-first-tab-desktop.png"
+    }
+  }
+}
