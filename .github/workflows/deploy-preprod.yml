@@ -1,12 +1,11 @@
 name: Deploy pre-prod
 
 on:
+  workflow_run:
+    workflows: [CI]
+    types: [completed]
+    branches: [main]
   workflow_dispatch:
-    inputs:
-      ref:
-        description: Git ref to deploy
-        required: true
-        default: main
 
 permissions:
   contents: read
@@ -16,14 +15,35 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  build-artifact:
-    name: Build static artifact for pre-prod
+  deploy:
+    name: Build, deploy, and smoke pre-prod
     runs-on: ubuntu-latest
+    environment: preprod
+    if: >-
+      ${{
+        (
+          github.event_name == 'workflow_dispatch' &&
+          github.ref == 'refs/heads/main'
+        ) ||
+        (
+          github.event_name == 'workflow_run' &&
+          github.event.workflow_run.event == 'push' &&
+          github.event.workflow_run.conclusion == 'success' &&
+          github.event.workflow_run.head_repository.full_name == github.repository &&
+          github.event.workflow_run.head_branch == 'main'
+        )
+      }}
+    env:
+      PREPROD_URL: ${{ vars.PREPROD_URL || 'https://lircap.pendragon.bot' }}
+      PREPROD_SSH_HOST: ${{ vars.PREPROD_SSH_HOST }}
+      PREPROD_SSH_PORT: ${{ vars.PREPROD_SSH_PORT || '22' }}
+      PREPROD_SSH_USER: ${{ vars.PREPROD_SSH_USER || 'root' }}
+      PREPROD_RUNTIME_PATH: ${{ vars.PREPROD_RUNTIME_PATH || '/opt/lircap-preprod' }}
     steps:
-      - name: Checkout requested ref
+      - name: Checkout trusted main commit
         uses: actions/checkout@v4
         with:
-          ref: ${{ inputs.ref }}
+          ref: ${{ github.event_name == 'workflow_dispatch' && 'main' || github.event.workflow_run.head_sha }}
 
       - name: Setup Node
         uses: actions/setup-node@v4
@@ -34,7 +54,7 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Verify
+      - name: Verify and build
         run: |
           npm run typecheck
           npm run lint
@@ -43,13 +63,125 @@ jobs:
           python3 scripts/check-placeholders.py
           npm run perf:budget
 
-      - name: Upload static build artifact
-        uses: actions/upload-artifact@v4
-        with:
-          name: lircap-dist
-          path: dist/
-          if-no-files-found: error
+      - name: Package static build
+        run: |
+          test -f dist/index.html
+          tar -C dist -czf lircap-dist.tgz .
 
-  # Actual VPS sync is intentionally not enabled until #4 records host, path,
-  # SSH key secret names, Caddy path, and password-gate smoke evidence.
-  # Secrets must live in GitHub/VPS secret stores; never in source.
+      - name: Connect to Tailscale tailnet
+        uses: tailscale/github-action@6cae46e2d796f265265cfcf628b72a32b4d7cade
+        with:
+          authkey: ${{ secrets.TS_AUTHKEY }}
+
+      - name: Validate deployment configuration
+        env:
+          PREPROD_SSH_PRIVATE_KEY: ${{ secrets.PREPROD_SSH_PRIVATE_KEY }}
+          PREPROD_SSH_KNOWN_HOSTS: ${{ secrets.PREPROD_SSH_KNOWN_HOSTS }}
+          PREPROD_BASIC_AUTH_USER: ${{ secrets.PREPROD_BASIC_AUTH_USER }}
+          PREPROD_BASIC_AUTH_PASSWORD: ${{ secrets.PREPROD_BASIC_AUTH_PASSWORD }}
+        run: |
+          test -n "$PREPROD_URL"
+          test -n "$PREPROD_SSH_HOST"
+          test -n "$PREPROD_SSH_PORT"
+          test -n "$PREPROD_SSH_USER"
+          test -n "$PREPROD_RUNTIME_PATH"
+          test -n "$PREPROD_SSH_PRIVATE_KEY"
+          test -n "$PREPROD_SSH_KNOWN_HOSTS"
+          test -n "$PREPROD_BASIC_AUTH_USER"
+          test -n "$PREPROD_BASIC_AUTH_PASSWORD"
+
+      - name: Configure SSH
+        env:
+          PREPROD_SSH_PRIVATE_KEY: ${{ secrets.PREPROD_SSH_PRIVATE_KEY }}
+          PREPROD_SSH_KNOWN_HOSTS: ${{ secrets.PREPROD_SSH_KNOWN_HOSTS }}
+        run: |
+          install -m 700 -d ~/.ssh
+          install -m 600 /dev/null ~/.ssh/preprod_deploy_key
+          printf '%s\n' "$PREPROD_SSH_PRIVATE_KEY" > ~/.ssh/preprod_deploy_key
+          install -m 600 /dev/null ~/.ssh/known_hosts
+          printf '%s\n' "$PREPROD_SSH_KNOWN_HOSTS" > ~/.ssh/known_hosts
+
+      - name: Upload and activate release
+        run: |
+          set -euo pipefail
+          SOURCE_SHA="$(git rev-parse --short=12 HEAD)"
+          RELEASE_STAMP="$(date -u +%Y%m%dT%H%M%SZ)"
+          RELEASE_ID="${RELEASE_STAMP}-${GITHUB_RUN_ID}-${GITHUB_RUN_ATTEMPT}-${SOURCE_SHA}"
+          case "$PREPROD_RUNTIME_PATH" in
+            *..*) echo "PREPROD_RUNTIME_PATH must not contain .. path segments" >&2; exit 1 ;;
+            /opt/lircap-preprod|/opt/lircap-preprod/*) ;;
+            *) echo "PREPROD_RUNTIME_PATH must be under /opt/lircap-preprod" >&2; exit 1 ;;
+          esac
+
+          SSH_TARGET="${PREPROD_SSH_USER}@${PREPROD_SSH_HOST}"
+          SSH_OPTS=(
+            -i "$HOME/.ssh/preprod_deploy_key"
+            -p "$PREPROD_SSH_PORT"
+            -o IdentitiesOnly=yes
+            -o StrictHostKeyChecking=yes
+            -o UserKnownHostsFile="$HOME/.ssh/known_hosts"
+          )
+          SCP_OPTS=(
+            -i "$HOME/.ssh/preprod_deploy_key"
+            -P "$PREPROD_SSH_PORT"
+            -o IdentitiesOnly=yes
+            -o StrictHostKeyChecking=yes
+            -o UserKnownHostsFile="$HOME/.ssh/known_hosts"
+          )
+          REMOTE_TARBALL="/tmp/lircap-dist-${RELEASE_ID}.tgz"
+
+          scp "${SCP_OPTS[@]}" lircap-dist.tgz "${SSH_TARGET}:${REMOTE_TARBALL}"
+          ssh "${SSH_OPTS[@]}" "$SSH_TARGET" \
+            "RELEASE_ID=${RELEASE_ID@Q} RUNTIME_PATH=${PREPROD_RUNTIME_PATH@Q} REMOTE_TARBALL=${REMOTE_TARBALL@Q} bash -s" <<'REMOTE'
+          set -euo pipefail
+          umask 022
+          release_dir="$RUNTIME_PATH/releases/$RELEASE_ID"
+          mkdir -p "$release_dir"
+          tar -xzf "$REMOTE_TARBALL" -C "$release_dir"
+          test -f "$release_dir/index.html"
+          rm -f "$REMOTE_TARBALL"
+
+          if [ -e "$RUNTIME_PATH/site" ] && [ ! -L "$RUNTIME_PATH/site" ]; then
+            backup_dir="$RUNTIME_PATH/releases/pre-automation-backup-$RELEASE_ID"
+            mv "$RUNTIME_PATH/site" "$backup_dir"
+          fi
+
+          ln -sfn "$release_dir" "$RUNTIME_PATH/site.next"
+          mv -Tf "$RUNTIME_PATH/site.next" "$RUNTIME_PATH/site"
+          cd "$RUNTIME_PATH"
+          # The compose file bind-mounts ./site into Caddy. Docker resolves a bind
+          # mount source when the container is created, so recreate Caddy after
+          # moving the site symlink to ensure it serves the newly activated release.
+          docker compose up -d --force-recreate --no-deps caddy
+          REMOTE
+
+      - name: Smoke check password gate and routes
+        env:
+          PREPROD_BASIC_AUTH_USER: ${{ secrets.PREPROD_BASIC_AUTH_USER }}
+          PREPROD_BASIC_AUTH_PASSWORD: ${{ secrets.PREPROD_BASIC_AUTH_PASSWORD }}
+        run: |
+          set -euo pipefail
+          base="${PREPROD_URL%/}"
+          headers="$(mktemp)"
+          body="$(mktemp)"
+
+          unauth_code="$(curl -sS -o /dev/null -D "$headers" -w '%{http_code}' "$base/")"
+          test "$unauth_code" = "401"
+          grep -iq '^www-authenticate:[[:space:]]*Basic' "$headers"
+
+          check_route() {
+            path="$1"
+            marker="$2"
+            curl -fsS --user "${PREPROD_BASIC_AUTH_USER}:${PREPROD_BASIC_AUTH_PASSWORD}" "$base$path" -o "$body"
+            grep -Eiq "$marker" "$body"
+          }
+
+          check_route / 'Lir Capital|private markets'
+          check_route /team/ 'team|investment'
+          check_route /contact/ 'contact|conversation'
+          check_route /robots.txt '^User-agent:'
+          check_route /sitemap.xml '<urlset|<sitemapindex'
+
+      - name: Cleanup SSH key
+        if: always()
+        run: rm -f ~/.ssh/preprod_deploy_key
