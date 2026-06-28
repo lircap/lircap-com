@@ -1,6 +1,6 @@
 # Content model and page map
 
-**Control issue:** #3  
+**Control issue:** #3
 **Status:** source-of-truth content model for implementation planning. Copy remains unfrozen until the relevant page issue records compliance status and review evidence.
 
 ## Source hierarchy
@@ -65,7 +65,7 @@ Implementation issues must update or supersede these before freezing copy.
 
 - #6 homepage must use the Home row and `content/pages/home.md`.
 - #7 team must use Team row, `CL-015`, and partner bio review.
-- #8 proposition copy must use Investors/Deals/Sectors/Private Markets rows and the claims register.
+- #8 proposition copy must use Investors/Deals/Sectors/Private Markets rows, the claims register, and `docs/content/proposition-copy.md` for web-native draft copy plus compliance-sensitive alternatives.
 - #12 contact must use Contact row and `CL-017`.
 - #13 SEO must use this page map plus `docs/source/existing-site-audit.md` and `docs/seo/redirect-map.md`.
 - #27 launch must confirm unresolved dependencies are either resolved or explicitly excluded from production.
