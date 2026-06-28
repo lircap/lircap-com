@@ -26,6 +26,11 @@ Before a scored design run starts:
 | `agent:orchestrator` | Owns run setup, candidate selection, branch hygiene, score reconciliation, promotion/no-promotion decision, PR/merge/deploy evidence. | Does not let candidates self-promote; does not skip parent verification. |
 | `agent:design-director` | Finds visual opportunities, reviews composition/typography/restraint/AI-template smell, scores design dimensions. | Does not implement or approve without rendered evidence. |
 | `agent:brand-strategist` | Scores strategic fit, ownable crossing idea, institutional credibility, proof model, warmth. | Does not invent new positioning or compliance-sensitive claims. |
+| `agent:ux-researcher` | Writes constrained UX/audience testing scenarios, assigns audience-agent tasks, synthesises findings into scorecard evidence and trend recommendations. | Does not treat simulated users as market proof; does not bypass hard blockers or rewrite strategy from audience comments alone. |
+| `audience:institutional-investor` | Tests whether the experience feels credible, disciplined, legible, and worth a follow-up from an institutional capital perspective. | Does not approve regulated claims, diligence facts, or investment merit. |
+| `audience:founder-dealmaker` | Tests whether the experience feels warm, high-trust, direct, and useful to a founder/operator considering a transaction. | Does not create new positioning, promises, testimonials, or proof points. |
+| `audience:intermediary-adviser` | Tests whether advisers can quickly understand fit, process, seriousness, and referral confidence. | Does not approve legal/compliance language or invent client examples. |
+| `audience:compliance-conscious-reviewer` | Tests whether the page raises trust, disclosure, overclaiming, or ambiguity concerns from a cautious reader viewpoint. | Does not replace code/security or formal legal/compliance review. |
 | `agent:frontend-implementer` | Implements one bounded candidate branch from an orchestrator-selected hypothesis. | Does not broaden scope, add imagery/copy, or share a branch with another implementer. |
 | `agent:browser-qa-reviewer` | Captures/validates screenshots, console, keyboard/focus, axe/equivalent, responsive behaviour, reduced motion. | Does not pass visual work without reproducible evidence. |
 | `agent:code-security-reviewer` | Reviews code, data, runtime, secrets, tracking, dependency and compliance-risk surface. | Does not accept secret leakage, trackers, or unsafe deploy/auth changes. |
@@ -47,10 +52,17 @@ docs/design/loops/<run-id>/
       scorecard.md
       screenshots/
       browser-qa.json
+      audience-findings.md
     b/
       scorecard.md
       screenshots/
       browser-qa.json
+      audience-findings.md
+    c/
+      scorecard.md
+      screenshots/
+      browser-qa.json
+      audience-findings.md
   decision.md
 ```
 
@@ -103,7 +115,7 @@ The orchestrator selects one to three opportunities. Broad redesign prompts are 
 Before any candidate is implemented, the orchestrator must pre-declare the run's scoring rules in `templates/design-loop-run.md`:
 
 - **materiality threshold formula** — default: candidate improvement percentage = `(candidate weighted score - baseline weighted score) / 75 × 100`, because the default scorecard maximum is 75 weighted points;
-- **promotion threshold** — default: at least 3 percentage points of max score, equivalent to +2.25 weighted points; 5 percentage points is +3.75 weighted points;
+- **promotion threshold** — default: at least 3 percentage points of max score, equivalent to +2.25 weighted points; 5 percentage points is +3.75 weighted points. This fixed +3 percentage-point rule is the default **promotion gate**, not the sole stopping rule for the loop;
 - **priority dimensions** — normally 1–3 dimensions selected from the run objective before implementation;
 - **critical dimensions** — dimensions where regression is unacceptable without explicit rationale, normally accessibility, compliance/security risk, institutional credibility, and any run-specific brand/design dimension;
 - **regression guard** — default: no critical dimension may drop by more than 0.25 weighted points and no non-critical dimension may drop by more than 1.0 weighted point unless the decision record explicitly accepts the trade-off.
@@ -131,6 +143,24 @@ For each candidate:
 
 Scoring must compare against baseline, not against taste in isolation.
 
+### 4a. Audience-agent UX testing, when useful
+
+Use audience-agent UX testing when the run affects first-impression trust, clarity, warmth, conversion confidence, or comprehension. This is a lightweight simulation layer, not analytics and not a substitute for real client/user testing.
+
+Default workflow:
+
+1. `agent:ux-researcher` writes 2–4 constrained scenario prompts before audience review starts. Scenarios must name the role, viewport or local URL/screenshot set, task, timebox, and exact questions to answer.
+2. Audience agents review only screenshots, recorded evidence, or a local/deployed URL supplied by the orchestrator. They must not browse for outside facts or infer unavailable commercial proof.
+3. Each audience agent returns observations, friction points, confidence rating, and dimension-level implications. They do not assign final promotion decisions.
+4. The UX researcher synthesises findings into `audience-findings.md` and scorecard notes, mapping evidence to affected dimensions such as institutional credibility, human warmth, composition/hierarchy, proof/provenance, accessibility-visible clarity, and compliance/security risk.
+
+Rules:
+
+- Audience findings may inform dimension scores and opportunity selection, but **must not bypass hard blockers**.
+- Simulated audience reactions are qualitative evidence only. They are not real market proof, client validation, conversion data, legal advice, or compliance sign-off.
+- Real human/client testing outranks simulated audience evidence. If real testing conflicts with audience agents, record the conflict and prefer real evidence unless it is out of scope, stale, or unsafe to use.
+- Do not add tracking, analytics, beacons, or behavioural instrumentation as part of this loop.
+
 ### 5. Selection and promotion gate
 
 A candidate can win only if all are true:
@@ -156,20 +186,37 @@ For the winning candidate only:
 6. Verify the real deploy run and external smoke.
 7. Capture post-deploy score as the next baseline.
 
-## Score trend adaptation
+## Score trend adaptation and stopping logic
 
-The loop must track score history over time.
+The loop must track score history per run, per candidate, per dimension, and total weighted score. The default +3 percentage-point materiality threshold remains the promotion gate for replacing the baseline; stopping decisions also consider trend, noise, effort, and risk.
+
+Record score history in the run record and durable decision notes:
+
+| Run | Baseline score | Winning / no-promotion candidate score | Delta | Rolling average delta | Dimensions improved | Dimensions regressed | Decision |
+|---|---:|---:|---:|---:|---|---|---|
+| | | | | | | | continue broad / surgical / request new inputs / stop |
+
+Trend interpretation:
 
 | Signal | Adaptation |
 |---|---|
-| Early runs produce large gains | Continue broad but bounded exploration. |
-| Gains fall below threshold for one run | Narrow prompts to the weakest dimensions/components. |
-| No candidate clears the pre-declared materiality threshold across 3 consecutive runs, defaulting to ≥3 percentage points of max score (+2.25 weighted points) | Declare plateau; stop broad branch generation. |
-| Repeated regressions in a dimension | Add a regression guard and reviewer focus for that dimension. |
+| Early runs produce large, repeatable gains across priority dimensions | Continue broad but bounded exploration. |
+| One run misses the promotion threshold but improves a priority dimension without regressions | Continue once with a narrower hypothesis or surgical optimisation. |
+| Marginal gain per run/candidate is falling and rolling average delta is near zero | Treat as approaching a local optimum; stop broad branch generation. |
+| Candidate deltas are within scoring noise or reviewer disagreement | Do not promote on taste alone; request focused tie-break, stronger evidence, or no-promotion. |
+| No candidate clears the pre-declared materiality threshold across 3 consecutive runs, defaulting to ≥3 percentage points of max score (+2.25 weighted points) | Declare plateau unless new inputs or a materially different hypothesis exist. |
+| Repeated regressions in a dimension | Add or tighten a regression guard and reviewer focus for that dimension. |
 | Scores capped by missing assets | Stop trying to solve with layout; request new inputs such as commissioned photography, approved copy, or brand assets. |
 | Candidate is different but not better | Record no-promotion; preserve learning only. |
 
-The orchestrator should rotate from **broad exploration → surgical optimisation → new-input request**. More branches are not automatically better.
+Distinguish noise from real improvement:
+
+- Treat tiny deltas, isolated reviewer preference, or improvements paired with equal regressions as noise unless corroborated by screenshots, QA evidence, audience synthesis, or repeated score movement.
+- Treat an improvement as stronger when it appears in priority dimensions, persists across viewports, aligns with design/brand review, and does not increase accessibility, compliance, performance, or deploy risk.
+- Track marginal gain per candidate and per run: `(candidate weighted score - baseline weighted score) / implementation-and-review effort`. If expected improvement is below the likely effort/risk cost, stop or switch modes.
+- Estimate a local optimum when several bounded candidates cluster around the same total, improve different minor dimensions while regressing others, or require missing assets/claims to move further.
+
+The orchestrator should rotate from **broad exploration → surgical optimisation → new-input request → stop**. More branches are not automatically better. Stop or switch modes when expected improvement is lower than effort, review, regression, compliance, or deploy risk.
 
 ## Hard blockers
 
@@ -217,6 +264,26 @@ Task: score strategic fit, ownable crossing idea, institutional credibility, hum
 Forbidden: do not create new positioning, regulated claims, client promises, or unsourced proof.
 Expected output: PASS / REQUIRED CHANGES / REJECT plus priority-dimension scores, proof/provenance notes, asset caps, and brand-risk findings.
 Stop conditions: missing source for claims; recommendation would change approved positioning.
+```
+
+### UX-researcher scenario writer/synthesiser
+
+```text
+Inputs: run objective, baseline/candidate screenshots or local URL, selected audience roles, scorecard dimensions, known hard blockers, approved source constraints.
+Task: write constrained scenario prompts for audience agents and synthesise their findings into dimension implications, friction themes, confidence levels, and recommended next mode.
+Forbidden: do not add tracking/analytics; do not treat simulated users as market proof; do not bypass accessibility/security/compliance/deploy blockers; do not invent claims or commercial facts.
+Expected output: scenario prompts, audience matrix, synthesis of strongest findings, affected dimensions, whether findings support continue broad / surgical / request new inputs / stop.
+Stop conditions: no screenshots/local URL; scenario requires real confidential client context; findings would require new claims/assets outside approved inputs.
+```
+
+### Audience-agent UX test
+
+```text
+Inputs: assigned audience role, constrained scenario, screenshots or local URL, specific questions, timebox, hard-blocker reminder.
+Task: act as the assigned audience type while reviewing only the supplied evidence; report first impression, comprehension, trust/friction points, task outcome, confidence rating, and scorecard dimension implications.
+Forbidden: do not browse for outside facts; do not invent diligence proof, testimonials, claims, or market validation; do not make final promotion decisions; do not overrule hard blockers.
+Expected output: PASSABLE / CONCERN / BLOCKING-FOR-THIS-AUDIENCE plus observations, quoted UI references, affected dimensions, and what evidence would change the view.
+Stop conditions: evidence cannot be viewed; scenario asks for facts not present; role would need real human/client testing rather than simulation.
 ```
 
 ### Frontend-implementer candidate

@@ -15,6 +15,7 @@ These must be filled before candidate implementation starts.
 - Materiality threshold formula:
   - Default: `(candidate weighted score - baseline weighted score) / 75 × 100`.
   - Default promotion threshold: at least +3 percentage points of max score, equivalent to +2.25 weighted points.
+  - The fixed +3 percentage-point rule is the default promotion gate, not the only loop stopping rule; stop/switch decisions also consider trend, noise, effort, and risk.
 - Priority dimensions for this run:
 - Critical dimensions for this run:
 - Regression guard:
@@ -49,13 +50,29 @@ State the bounded opportunity, not a broad redesign.
 | B | | | | | | |
 | C | | | | | | |
 
+## Audience-agent UX testing plan
+
+Use only when relevant to the run objective. Audience agents review supplied screenshots/local URL and constrained scenarios; findings inform dimensions but do not bypass hard blockers.
+
+- UX researcher:
+- Evidence supplied: screenshots / local URL / deployed URL
+- Scenarios:
+  - Scenario 1:
+  - Scenario 2:
+- Audience roles selected: `audience:institutional-investor` / `audience:founder-dealmaker` / `audience:intermediary-adviser` / `audience:compliance-conscious-reviewer`
+- Real human/client testing available? yes/no; if yes, record why it outranks simulated audience evidence.
+
+| Audience role | Candidate(s) reviewed | Scenario | Finding summary | Dimension implications | Confidence |
+|---|---|---|---|---|---:|
+| | | | | | |
+
 ## Review verdicts
 
-| Candidate | Design director | Brand strategist | Browser QA | Code/security | DevOps | Notes |
-|---|---|---|---|---|---|---|
-| A | | | | | | |
-| B | | | | | | |
-| C | | | | | | |
+| Candidate | Design director | Brand strategist | UX researcher / audience | Browser QA | Code/security | DevOps | Notes |
+|---|---|---|---|---|---|---|---|
+| A | | | | | | | |
+| B | | | | | | | |
+| C | | | | | | | |
 
 ## Decision
 
@@ -68,11 +85,19 @@ State the bounded opportunity, not a broad redesign.
 
 ## Score trend note
 
+| Run | Baseline score | Winning / no-promotion candidate score | Delta | Rolling average delta | Dimensions improved | Dimensions regressed | Decision |
+|---|---:|---:|---:|---:|---|---|---|
+| | | | | | | | continue broad / surgical / request new inputs / stop |
+
 - Previous baseline score:
 - New baseline score or no-promotion score:
 - Delta:
+- Marginal gain per candidate/run:
+- Noise vs real improvement assessment:
+- Evidence for/against local optimum:
 - Consecutive no-promotion / below-threshold runs:
-- Adaptation for next run: broad exploration / surgical optimisation / new input required
+- Expected improvement vs effort/risk cost:
+- Adaptation for next run: continue broad / surgical optimisation / request new inputs / stop
 
 ## Closeout evidence
 
