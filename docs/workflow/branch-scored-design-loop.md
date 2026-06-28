@@ -96,13 +96,14 @@ Rules:
 
 Capture the deployed/current `main` baseline before proposing changes:
 
-- screenshots at mobile (~390), tablet/mid (~1024), desktop (~1440);
+- baseline screenshots at the default smoke widths: mobile (~390), tablet/mid (~1024), desktop (~1440);
+- expanded production-design craft screenshots for visual/UI runs, defaulting to: 320, 390, 768, 980, 981, 1024, 1180, 1181, 1280, 1440, and 1728/1920 where practical; each run may add route-specific breakpoint edges, but omissions must be recorded with rationale;
 - reduced-motion evidence when motion matters;
 - console/page error state;
 - axe/equivalent accessibility result where practical;
 - performance budget/Lighthouse-equivalent note;
 - current scorecard using `templates/design-loop-scorecard.md`;
-- production-design baseline audit by `agent:production-design-reviewer`, covering spacing rhythm, grid/container alignment, typography scale/measure/leading, component consistency, responsive polish, placeholder/asset craft limits, and the top craft defects future candidates must not worsen.
+- production-design baseline audit by `agent:production-design-reviewer`, covering spacing rhythm, grid/container alignment, typography scale/measure/leading/letter-spacing/kerning/top alignment, component consistency, responsive polish, placeholder/asset craft limits, and the top craft defects future candidates must not worsen.
 
 Baseline scoring must state asset caps: for example, human warmth and imagery quality may be capped while neutral portrait placeholders remain. Baseline scoring must also distinguish strategic/design caps from implementation-craft defects. Craft defects present in the baseline should be listed explicitly so candidates can be credited for fixing them or blocked for worsening them.
 
@@ -159,7 +160,7 @@ Purpose: catch implementation craft defects that broad design, brand, browser-QA
 
 Inputs:
 
-- baseline and candidate screenshots at comparable viewports;
+- baseline and candidate screenshots at comparable viewports, including the run's expanded craft breakpoint matrix;
 - local/deployed URL when available;
 - browser-QA evidence;
 - affected components/routes;
@@ -170,9 +171,9 @@ Required checks:
 
 - spacing rhythm: section padding, gutters, card gaps, list rhythm, vertical cadence;
 - alignment: container edges, baselines, optical centering, grid relationships;
-- typography: measure, leading, widows/orphans, scale consistency, line breaks at key viewports;
+- typography: measure, leading, letter-spacing/kerning, widows/orphans, scale consistency, top alignment, cross-page consistency, and line breaks at key viewports;
 - component polish: card sizing, borders, dividers, hover/focus visual fit, repeated module consistency;
-- responsive craft: no cramped, orphaned, over-wide, under-spaced, or awkward intermediate states;
+- responsive craft: no cramped, orphaned, over-wide, under-spaced, or awkward intermediate states across default smoke widths and breakpoint-edge widths;
 - visual hierarchy: intended focal order survives implementation at all reviewed widths;
 - brand materiality: premium restraint is preserved; no cheap decorative artifacts;
 - placeholder/imagery discipline: placeholders remain honest, proportionate, non-stock, and non-AI-looking;
@@ -190,7 +191,7 @@ Rules:
 
 - A candidate with unresolved `BLOCKER` or material `NEEDS FOCUSED CHANGES` from production-design review cannot be scored for promotion.
 - Craft fixes must stay within the candidate hypothesis; they must not become a new design direction.
-- The reviewer must name exact routes, viewports, screenshot references, visible defects, severity, and required fix.
+- The reviewer must name exact routes, viewports, screenshot references, visible defects, severity, proposed owner/profile, required fix, and whether scoring is allowed.
 - Do not accept “looks good” without screenshot-specific evidence.
 
 ### 4b. Audience-agent UX testing, when useful

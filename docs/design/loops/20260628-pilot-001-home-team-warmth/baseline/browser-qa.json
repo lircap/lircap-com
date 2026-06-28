@@ -115,5 +115,401 @@
       },
       "file": "screenshots/focus-first-tab-desktop.png"
     }
+  },
+  "productionDesignCraftEvidence": {
+    "note": "Expanded breakpoint screenshots are indexed for production-design craft QA. Original console/axe checks apply to the Browser QA smoke matrix unless separately rerun for a candidate.",
+    "defaultRequiredWidths": [
+      320,
+      390,
+      768,
+      980,
+      981,
+      1024,
+      1180,
+      1181,
+      1280,
+      1440,
+      1728
+    ],
+    "screenshots": [
+      {
+        "page": "contact",
+        "route": "/contact/",
+        "width": 1180,
+        "file": "production-design-screenshots/contact-1180.png",
+        "purpose": "production-design craft breakpoint screenshot"
+      },
+      {
+        "page": "contact",
+        "route": "/contact/",
+        "width": 1181,
+        "file": "production-design-screenshots/contact-1181.png",
+        "purpose": "production-design craft breakpoint screenshot"
+      },
+      {
+        "page": "contact",
+        "route": "/contact/",
+        "width": 1280,
+        "file": "production-design-screenshots/contact-1280.png",
+        "purpose": "production-design craft breakpoint screenshot"
+      },
+      {
+        "page": "contact",
+        "route": "/contact/",
+        "width": 1728,
+        "file": "production-design-screenshots/contact-1728.png",
+        "purpose": "production-design craft breakpoint screenshot"
+      },
+      {
+        "page": "contact",
+        "route": "/contact/",
+        "width": 320,
+        "file": "production-design-screenshots/contact-320.png",
+        "purpose": "production-design craft breakpoint screenshot"
+      },
+      {
+        "page": "contact",
+        "route": "/contact/",
+        "width": 768,
+        "file": "production-design-screenshots/contact-768.png",
+        "purpose": "production-design craft breakpoint screenshot"
+      },
+      {
+        "page": "contact",
+        "route": "/contact/",
+        "width": 820,
+        "file": "production-design-screenshots/contact-820.png",
+        "purpose": "production-design craft breakpoint screenshot"
+      },
+      {
+        "page": "contact",
+        "route": "/contact/",
+        "width": 980,
+        "file": "production-design-screenshots/contact-980.png",
+        "purpose": "production-design craft breakpoint screenshot"
+      },
+      {
+        "page": "contact",
+        "route": "/contact/",
+        "width": 981,
+        "file": "production-design-screenshots/contact-981.png",
+        "purpose": "production-design craft breakpoint screenshot"
+      },
+      {
+        "page": "deals",
+        "route": "/for-deals/",
+        "width": 1180,
+        "file": "production-design-screenshots/deals-1180.png",
+        "purpose": "production-design craft breakpoint screenshot"
+      },
+      {
+        "page": "deals",
+        "route": "/for-deals/",
+        "width": 1181,
+        "file": "production-design-screenshots/deals-1181.png",
+        "purpose": "production-design craft breakpoint screenshot"
+      },
+      {
+        "page": "deals",
+        "route": "/for-deals/",
+        "width": 1280,
+        "file": "production-design-screenshots/deals-1280.png",
+        "purpose": "production-design craft breakpoint screenshot"
+      },
+      {
+        "page": "deals",
+        "route": "/for-deals/",
+        "width": 1728,
+        "file": "production-design-screenshots/deals-1728.png",
+        "purpose": "production-design craft breakpoint screenshot"
+      },
+      {
+        "page": "deals",
+        "route": "/for-deals/",
+        "width": 320,
+        "file": "production-design-screenshots/deals-320.png",
+        "purpose": "production-design craft breakpoint screenshot"
+      },
+      {
+        "page": "deals",
+        "route": "/for-deals/",
+        "width": 768,
+        "file": "production-design-screenshots/deals-768.png",
+        "purpose": "production-design craft breakpoint screenshot"
+      },
+      {
+        "page": "deals",
+        "route": "/for-deals/",
+        "width": 820,
+        "file": "production-design-screenshots/deals-820.png",
+        "purpose": "production-design craft breakpoint screenshot"
+      },
+      {
+        "page": "deals",
+        "route": "/for-deals/",
+        "width": 980,
+        "file": "production-design-screenshots/deals-980.png",
+        "purpose": "production-design craft breakpoint screenshot"
+      },
+      {
+        "page": "deals",
+        "route": "/for-deals/",
+        "width": 981,
+        "file": "production-design-screenshots/deals-981.png",
+        "purpose": "production-design craft breakpoint screenshot"
+      },
+      {
+        "page": "home",
+        "route": "/",
+        "width": 1180,
+        "file": "production-design-screenshots/home-1180.png",
+        "purpose": "production-design craft breakpoint screenshot"
+      },
+      {
+        "page": "home",
+        "route": "/",
+        "width": 1181,
+        "file": "production-design-screenshots/home-1181.png",
+        "purpose": "production-design craft breakpoint screenshot"
+      },
+      {
+        "page": "home",
+        "route": "/",
+        "width": 1280,
+        "file": "production-design-screenshots/home-1280.png",
+        "purpose": "production-design craft breakpoint screenshot"
+      },
+      {
+        "page": "home",
+        "route": "/",
+        "width": 1728,
+        "file": "production-design-screenshots/home-1728.png",
+        "purpose": "production-design craft breakpoint screenshot"
+      },
+      {
+        "page": "home",
+        "route": "/",
+        "width": 320,
+        "file": "production-design-screenshots/home-320.png",
+        "purpose": "production-design craft breakpoint screenshot"
+      },
+      {
+        "page": "home",
+        "route": "/",
+        "width": 768,
+        "file": "production-design-screenshots/home-768.png",
+        "purpose": "production-design craft breakpoint screenshot"
+      },
+      {
+        "page": "home",
+        "route": "/",
+        "width": 820,
+        "file": "production-design-screenshots/home-820.png",
+        "purpose": "production-design craft breakpoint screenshot"
+      },
+      {
+        "page": "home",
+        "route": "/",
+        "width": 980,
+        "file": "production-design-screenshots/home-980.png",
+        "purpose": "production-design craft breakpoint screenshot"
+      },
+      {
+        "page": "home",
+        "route": "/",
+        "width": 981,
+        "file": "production-design-screenshots/home-981.png",
+        "purpose": "production-design craft breakpoint screenshot"
+      },
+      {
+        "page": "investors",
+        "route": "/for-investors/",
+        "width": 1180,
+        "file": "production-design-screenshots/investors-1180.png",
+        "purpose": "production-design craft breakpoint screenshot"
+      },
+      {
+        "page": "investors",
+        "route": "/for-investors/",
+        "width": 1181,
+        "file": "production-design-screenshots/investors-1181.png",
+        "purpose": "production-design craft breakpoint screenshot"
+      },
+      {
+        "page": "investors",
+        "route": "/for-investors/",
+        "width": 1280,
+        "file": "production-design-screenshots/investors-1280.png",
+        "purpose": "production-design craft breakpoint screenshot"
+      },
+      {
+        "page": "investors",
+        "route": "/for-investors/",
+        "width": 1728,
+        "file": "production-design-screenshots/investors-1728.png",
+        "purpose": "production-design craft breakpoint screenshot"
+      },
+      {
+        "page": "investors",
+        "route": "/for-investors/",
+        "width": 320,
+        "file": "production-design-screenshots/investors-320.png",
+        "purpose": "production-design craft breakpoint screenshot"
+      },
+      {
+        "page": "investors",
+        "route": "/for-investors/",
+        "width": 768,
+        "file": "production-design-screenshots/investors-768.png",
+        "purpose": "production-design craft breakpoint screenshot"
+      },
+      {
+        "page": "investors",
+        "route": "/for-investors/",
+        "width": 820,
+        "file": "production-design-screenshots/investors-820.png",
+        "purpose": "production-design craft breakpoint screenshot"
+      },
+      {
+        "page": "investors",
+        "route": "/for-investors/",
+        "width": 980,
+        "file": "production-design-screenshots/investors-980.png",
+        "purpose": "production-design craft breakpoint screenshot"
+      },
+      {
+        "page": "investors",
+        "route": "/for-investors/",
+        "width": 981,
+        "file": "production-design-screenshots/investors-981.png",
+        "purpose": "production-design craft breakpoint screenshot"
+      },
+      {
+        "page": "legal",
+        "route": "/legal/",
+        "width": 1180,
+        "file": "production-design-screenshots/legal-1180.png",
+        "purpose": "production-design craft breakpoint screenshot"
+      },
+      {
+        "page": "legal",
+        "route": "/legal/",
+        "width": 1181,
+        "file": "production-design-screenshots/legal-1181.png",
+        "purpose": "production-design craft breakpoint screenshot"
+      },
+      {
+        "page": "legal",
+        "route": "/legal/",
+        "width": 1280,
+        "file": "production-design-screenshots/legal-1280.png",
+        "purpose": "production-design craft breakpoint screenshot"
+      },
+      {
+        "page": "legal",
+        "route": "/legal/",
+        "width": 1728,
+        "file": "production-design-screenshots/legal-1728.png",
+        "purpose": "production-design craft breakpoint screenshot"
+      },
+      {
+        "page": "legal",
+        "route": "/legal/",
+        "width": 320,
+        "file": "production-design-screenshots/legal-320.png",
+        "purpose": "production-design craft breakpoint screenshot"
+      },
+      {
+        "page": "legal",
+        "route": "/legal/",
+        "width": 768,
+        "file": "production-design-screenshots/legal-768.png",
+        "purpose": "production-design craft breakpoint screenshot"
+      },
+      {
+        "page": "legal",
+        "route": "/legal/",
+        "width": 820,
+        "file": "production-design-screenshots/legal-820.png",
+        "purpose": "production-design craft breakpoint screenshot"
+      },
+      {
+        "page": "legal",
+        "route": "/legal/",
+        "width": 980,
+        "file": "production-design-screenshots/legal-980.png",
+        "purpose": "production-design craft breakpoint screenshot"
+      },
+      {
+        "page": "legal",
+        "route": "/legal/",
+        "width": 981,
+        "file": "production-design-screenshots/legal-981.png",
+        "purpose": "production-design craft breakpoint screenshot"
+      },
+      {
+        "page": "team",
+        "route": "/team/",
+        "width": 1180,
+        "file": "production-design-screenshots/team-1180.png",
+        "purpose": "production-design craft breakpoint screenshot"
+      },
+      {
+        "page": "team",
+        "route": "/team/",
+        "width": 1181,
+        "file": "production-design-screenshots/team-1181.png",
+        "purpose": "production-design craft breakpoint screenshot"
+      },
+      {
+        "page": "team",
+        "route": "/team/",
+        "width": 1280,
+        "file": "production-design-screenshots/team-1280.png",
+        "purpose": "production-design craft breakpoint screenshot"
+      },
+      {
+        "page": "team",
+        "route": "/team/",
+        "width": 1728,
+        "file": "production-design-screenshots/team-1728.png",
+        "purpose": "production-design craft breakpoint screenshot"
+      },
+      {
+        "page": "team",
+        "route": "/team/",
+        "width": 320,
+        "file": "production-design-screenshots/team-320.png",
+        "purpose": "production-design craft breakpoint screenshot"
+      },
+      {
+        "page": "team",
+        "route": "/team/",
+        "width": 768,
+        "file": "production-design-screenshots/team-768.png",
+        "purpose": "production-design craft breakpoint screenshot"
+      },
+      {
+        "page": "team",
+        "route": "/team/",
+        "width": 820,
+        "file": "production-design-screenshots/team-820.png",
+        "purpose": "production-design craft breakpoint screenshot"
+      },
+      {
+        "page": "team",
+        "route": "/team/",
+        "width": 980,
+        "file": "production-design-screenshots/team-980.png",
+        "purpose": "production-design craft breakpoint screenshot"
+      },
+      {
+        "page": "team",
+        "route": "/team/",
+        "width": 981,
+        "file": "production-design-screenshots/team-981.png",
+        "purpose": "production-design craft breakpoint screenshot"
+      }
+    ]
   }
 }

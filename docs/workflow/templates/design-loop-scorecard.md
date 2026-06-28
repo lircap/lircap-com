@@ -50,7 +50,7 @@ Required for visual/UI candidates before final scoring.
 |---|---|---|---|
 | Spacing rhythm / vertical cadence | PASS / ISSUE / BLOCKER | | yes/no |
 | Alignment / grid / container edges | PASS / ISSUE / BLOCKER | | yes/no |
-| Typography measure / leading / line breaks | PASS / ISSUE / BLOCKER | | yes/no |
+| Typography measure / leading / letter-spacing / kerning / line breaks / top alignment | PASS / ISSUE / BLOCKER | | yes/no |
 | Component consistency / repeated modules | PASS / ISSUE / BLOCKER | | yes/no |
 | Responsive polish across required widths | PASS / ISSUE / BLOCKER | | yes/no |
 | Visual hierarchy / focal order | PASS / ISSUE / BLOCKER | | yes/no |
@@ -101,7 +101,7 @@ Production-design findings should be reflected in the relevant existing dimensio
 - Console/page errors:
 - Axe/equivalent:
 - Performance budget/Lighthouse:
-- Production-design screenshots reviewed:
+- Production-design screenshots reviewed / expanded breakpoint matrix:
 - Production-design review path:
 - Craft defects / re-review status:
 - Pre-prod/auth smoke if relevant:
@@ -157,6 +157,8 @@ Explain why this candidate should or should not replace the baseline. Include wh
 Production-design required changes:
 - [ ] Route / viewport / screenshot:
       Defect:
+      Severity:
+      Proposed owner/profile:
       Required fix:
       Re-review result:
 

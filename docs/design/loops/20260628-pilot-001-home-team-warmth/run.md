@@ -53,6 +53,7 @@ Pilot 001 tests whether the homepage/team transition can become more distinctive
 - Browser QA JSON: `baseline/browser-qa.json`
 - Production-design baseline audit: `baseline/production-design-review.md`
 - Additional craft screenshots: `baseline/production-design-screenshots/`
+- Expanded baseline craft screenshot coverage: 320, 390, 768, 820, 980, 981, 1024, 1180, 1181, 1280, 1440, and 1728 for audited routes where practical
 - Known baseline craft defects:
   - high-severity `/team/` overflow around 1180px;
   - awkward tablet nav wrapping for two-word labels;
@@ -92,7 +93,7 @@ Required before any Pilot 001 candidate receives final scorecard scoring.
   - team hero and roster/card system;
   - contact CTA only if affected.
 - Required viewports/states:
-  - 320, 390, 768, 980, 981, 1024, 1180, 1181, 1280, 1440, and 1728/1920 where practical for affected routes;
+  - 320, 390, 768, 820, 980, 981, 1024, 1180, 1181, 1280, 1440, and 1728/1920 where practical for affected routes;
   - active nav states for all nav routes;
   - first focus / skip-link and relevant hover/focus states;
   - reduced motion where illustration or transition behaviour changes.
@@ -106,7 +107,7 @@ Required before any Pilot 001 candidate receives final scorecard scoring.
 - Craft checks in scope:
   - [x] spacing rhythm
   - [x] alignment/grid/container edges
-  - [x] typography measure/leading/line breaks
+  - [x] typography measure/leading/letter-spacing/kerning/line breaks/top alignment
   - [x] component consistency
   - [x] responsive polish
   - [x] visual hierarchy/focal order

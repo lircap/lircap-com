@@ -20,9 +20,11 @@ Evidence reviewed:
 
 ## Reviewed surfaces
 
-| Route / component | Mobile ~390 | Tablet/mid ~1024 | Desktop ~1440 | Notes |
-|---|---|---|---|---|
-| | reviewed / n/a | reviewed / n/a | reviewed / n/a | |
+| Route / component | 320 | 390 | 768 | 980 | 981 | 1024 | 1180 | 1181 | 1280 | 1440 | 1728/1920 | Notes |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| | reviewed / n/a | reviewed / n/a | reviewed / n/a | reviewed / n/a | reviewed / n/a | reviewed / n/a | reviewed / n/a | reviewed / n/a | reviewed / n/a | reviewed / n/a | reviewed / n/a | |
+
+If a width is not practical or not relevant to the run, record the omission and rationale. Candidate evidence should be comparable with baseline evidence at the same widths unless explicitly waived by the orchestrator.
 
 ## Craft checklist
 
@@ -30,7 +32,7 @@ Evidence reviewed:
 |---|---|---|---|---|
 | Spacing rhythm / vertical cadence | PASS / ISSUE / BLOCKER | | low/med/high/blocking | |
 | Grid / container alignment | PASS / ISSUE / BLOCKER | | low/med/high/blocking | |
-| Typography measure / leading / line breaks | PASS / ISSUE / BLOCKER | | low/med/high/blocking | |
+| Typography measure / leading / letter-spacing / kerning / line breaks / top alignment | PASS / ISSUE / BLOCKER | | low/med/high/blocking | |
 | Visual hierarchy / focal order | PASS / ISSUE / BLOCKER | | low/med/high/blocking | |
 | Component consistency | PASS / ISSUE / BLOCKER | | low/med/high/blocking | |
 | Responsive polish | PASS / ISSUE / BLOCKER | | low/med/high/blocking | |
@@ -52,6 +54,8 @@ Evidence reviewed:
       Viewport:
       Screenshot:
       Defect:
+      Severity:
+      Proposed owner/profile:
       Required fix:
       Blocks scoring? yes/no
 

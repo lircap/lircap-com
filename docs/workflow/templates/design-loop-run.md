@@ -71,9 +71,11 @@ Required for visual/UI candidates before final scoring.
   - Browser QA JSON:
 - Priority routes/components:
 - Required viewports/states:
-  - mobile ~390:
-  - tablet/mid ~1024:
-  - desktop ~1440:
+  - default smoke widths: mobile ~390, tablet/mid ~1024, desktop ~1440
+  - expanded craft breakpoint matrix: 320, 390, 768, 980, 981, 1024, 1180, 1181, 1280, 1440, and 1728/1920 where practical
+  - route/component-specific breakpoint edges:
+  - baseline/candidate comparability rule: capture the same widths for baseline and candidate, or document why a width is candidate-only / not practical
+  - active nav states for every nav-bearing route:
   - hover/focus states:
   - reduced motion, if relevant:
 - Known baseline craft defects not to worsen:
@@ -81,13 +83,14 @@ Required for visual/UI candidates before final scoring.
 - Craft checks in scope:
   - [ ] spacing rhythm
   - [ ] alignment/grid/container edges
-  - [ ] typography measure/leading/line breaks
+  - [ ] typography measure/leading/letter-spacing/kerning/line breaks/top alignment
   - [ ] component consistency
   - [ ] responsive polish
   - [ ] visual hierarchy/focal order
   - [ ] placeholder/imagery discipline
   - [ ] premium restraint / no cheap decoration
 - Candidate scoring blocked until production-design verdict is PASS or required changes are fixed and re-reviewed? yes/no
+- Expanded craft screenshots indexed in browser-QA JSON or production-design review? yes/no
 
 ## Audience-agent UX testing plan
 
