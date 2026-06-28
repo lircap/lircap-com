@@ -1,8 +1,12 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+
+import { getSeo } from '../data/seo.js';
+
+const seo = getSeo('/for-investors/');
 ---
 
-<BaseLayout title="For Investors — Lir Capital">
+<BaseLayout {...seo}>
   <section class="hero" aria-labelledby="page-title">
     <div>
       <p class="eyebrow">Draft route</p>

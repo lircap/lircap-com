@@ -38,6 +38,12 @@ This is the initial redirect map from the live-site audit. It must be updated af
 | `/wp-content/uploads/2025/12/samuel_beckett_bridge_night-scaled.png` | rights/art-direction review before reuse | Do not ship without source/rights confirmation. |
 | `/wp-content/uploads/2026/02/Brendan_the_Navigator-2.jpg` | rights/art-direction review before reuse | Do not ship without source/rights confirmation. |
 
+## #13 SEO baseline consideration
+
+This slice generates canonical URLs, `/sitemap.xml`, and `/robots.txt` for the new static Astro routes only. It does **not** configure Caddy redirects or recreate legacy WordPress URLs.
+
+Redirect decisions remain launch/deployment work: `/` and `/contact/` are preserved as canonical routes; `/privacy/` and `/terms/` should redirect or rewrite to approved legal/privacy surfaces once counsel-cleared; WordPress admin/runtime/API/feed/archive paths should remain unserved or deliberately return `404/410` at the edge.
+
 ## Launch checks
 
 Before production launch:

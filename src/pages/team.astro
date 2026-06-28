@@ -1,12 +1,12 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import { teamMembers } from '../content/team.js';
+import { getSeo } from '../data/seo.js';
+
+const seo = getSeo('/team/');
 ---
 
-<BaseLayout
-  title="Team — Lir Capital"
-  description="Concise partner and adviser biographies for Lir Capital."
->
+<BaseLayout {...seo}>
   <section class="team-page" aria-labelledby="page-title">
     <div class="team-hero">
       <p class="eyebrow">Partner-led judgement</p>
