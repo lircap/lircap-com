@@ -27,9 +27,9 @@ const seo = getSeo('/team/');
         </div>
       </div>
 
-      <div class="team-grid" role="list">
+      <ul class="team-grid" role="list">
         {teamMembers.map((member) => (
-          <article class="team-card" id={member.id} aria-labelledby={`${member.id}-name`} role="listitem">
+          <li class="team-card" id={member.id} aria-labelledby={`${member.id}-name`} role="listitem">
             <div class="portrait-placeholder" aria-label={`Portrait slot pending approved photography for ${member.name}`}>
               <span>IMAGE — PARTNER PORTRAIT</span>
               <strong>{member.portraitAssetId}</strong>
@@ -43,9 +43,9 @@ const seo = getSeo('/team/');
                 {member.focusAreas.map((focus) => <span>{focus}</span>)}
               </div>
             </div>
-          </article>
+          </li>
         ))}
-      </div>
+      </ul>
     </section>
 
   </section>

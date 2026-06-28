@@ -51,18 +51,18 @@ const enquiryIntents = [
         </p>
       </div>
 
-      <div class="intent-grid" role="list">
+      <ul class="intent-grid" role="list">
         {enquiryIntents.map((intent) => (
-          <article class="intent-card" role="listitem">
+          <li class="intent-card" role="listitem">
             <h3>{intent.label}</h3>
             <p>{intent.summary}</p>
             <small>{intent.instruction}</small>
-          </article>
+          </li>
         ))}
-      </div>
+      </ul>
     </section>
 
-    <aside class="contact-note" aria-labelledby="privacy-title">
+    <section class="contact-note" aria-labelledby="privacy-title">
       <div>
         <p class="eyebrow">Privacy and spam posture</p>
         <h2 id="privacy-title">No web form is active on this page.</h2>
@@ -76,6 +76,6 @@ const enquiryIntents = [
           A future self-hosted enquiry handler may be introduced only after privacy, retention, spam-protection, and counsel decisions are recorded.
         </p>
       </div>
-    </aside>
+    </section>
   </section>
 </BaseLayout>
