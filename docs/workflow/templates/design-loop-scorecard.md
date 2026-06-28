@@ -21,6 +21,8 @@ Evidence path or links:
 - Critical dimensions selected before implementation:
 - Regression guard selected before implementation:
 - Hard blockers: none / list
+- Production-design craft verdict: PASS / NEEDS FOCUSED CHANGES / REJECT / BLOCKER
+- Candidate scoring allowed after craft QA? yes/no
 
 ## Asset caps
 
@@ -40,9 +42,38 @@ This section is mandatory for brand-strategist review even when no new copy is a
 |---|---|---|---|
 | | | yes/no | |
 
+## Production-design craft QA
+
+Required for visual/UI candidates before final scoring.
+
+| Check | Verdict | Evidence / notes | Blocking? |
+|---|---|---|---|
+| Spacing rhythm / vertical cadence | PASS / ISSUE / BLOCKER | | yes/no |
+| Alignment / grid / container edges | PASS / ISSUE / BLOCKER | | yes/no |
+| Typography measure / leading / letter-spacing / kerning / line breaks / top alignment | PASS / ISSUE / BLOCKER | | yes/no |
+| Component consistency / repeated modules | PASS / ISSUE / BLOCKER | | yes/no |
+| Responsive polish across required widths | PASS / ISSUE / BLOCKER | | yes/no |
+| Visual hierarchy / focal order | PASS / ISSUE / BLOCKER | | yes/no |
+| Placeholder / imagery discipline | PASS / ISSUE / BLOCKER | | yes/no |
+| Premium restraint / no cheap decoration | PASS / ISSUE / BLOCKER | | yes/no |
+| Screenshot delta vs baseline | PASS / ISSUE / BLOCKER | | yes/no |
+
+Required craft changes before scoring:
+- [ ]
+
+Production-design reviewer verdict:
+- PASS / NEEDS FOCUSED CHANGES / REJECT / BLOCKER
+
+Scoring impact:
+- [ ] Scoring allowed
+- [ ] Scoring blocked pending focused changes
+- [ ] Candidate rejected for craft quality
+
 ## Weighted dimensions
 
 Score 0–5. Weighted score = score × weight. Use `BLOCKER` when promotion is impossible regardless of total.
+
+Production-design findings should be reflected in the relevant existing dimensions — especially Composition and hierarchy, Typographic rhythm/tension, Restraint, Imagery / placeholder discipline, Accessibility, and AI-template smell. Do not inflate scores by treating craft QA as separate from these dimensions. Unresolved material craft defects may block scoring regardless of total.
 
 | Dimension | Weight | Baseline score | Candidate score | Delta | Blocker? | Evidence / notes |
 |---|---:|---:|---:|---:|---|---|
@@ -70,6 +101,9 @@ Score 0–5. Weighted score = score × weight. Use `BLOCKER` when promotion is i
 - Console/page errors:
 - Axe/equivalent:
 - Performance budget/Lighthouse:
+- Production-design screenshots reviewed / expanded breakpoint matrix:
+- Production-design review path:
+- Craft defects / re-review status:
 - Pre-prod/auth smoke if relevant:
 
 ## Audience-agent UX findings
@@ -95,6 +129,17 @@ List any dimension that regressed even if the total score improved.
 |---|---|---|---|
 | | | yes/no | |
 
+## Craft regression guard
+
+| Craft area | Baseline state | Candidate state | Regression? | Accepted? | Rationale |
+|---|---|---|---|---|---|
+| Spacing rhythm | | | yes/no | yes/no | |
+| Alignment/grid | | | yes/no | yes/no | |
+| Typography/line breaks | | | yes/no | yes/no | |
+| Responsive polish | | | yes/no | yes/no | |
+| Component consistency | | | yes/no | yes/no | |
+| Placeholder/imagery discipline | | | yes/no | yes/no | |
+
 ## Promotion decision rationale
 
 Explain why this candidate should or should not replace the baseline. Include whether the change is a material improvement, merely different, blocked by missing inputs, or below expected improvement after effort/risk cost.
@@ -109,6 +154,15 @@ Explain why this candidate should or should not replace the baseline. Include wh
 
 ## Required changes, if any
 
+Production-design required changes:
+- [ ] Route / viewport / screenshot:
+      Defect:
+      Severity:
+      Proposed owner/profile:
+      Required fix:
+      Re-review result:
+
+Other required changes:
 - [ ]
 
 ## Does this look AI-generated?

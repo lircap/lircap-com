@@ -19,6 +19,9 @@ Candidate branch:
 - Priority dimensions improved:
 - Critical regressions: none / list with rationale
 - Hard blockers: none
+- Production-design craft gate: PASS
+- Material craft defects remaining: none / listed with accepted rationale
+- Craft regressions vs baseline: none / accepted rationale
 
 ### Evidence
 
@@ -26,6 +29,8 @@ Candidate branch:
 - Candidate scorecard:
 - Screenshots:
 - Browser QA / axe:
+- Production-design review:
+- Craft fix/re-review evidence:
 - Audience-agent UX findings, if used:
 - Performance:
 - Pre-prod deploy smoke, if applicable:
@@ -34,6 +39,7 @@ Candidate branch:
 
 - `agent:design-director`:
 - `agent:brand-strategist`:
+- `agent:production-design-reviewer`:
 - `agent:ux-researcher` / audience agents:
 - `agent:browser-qa-reviewer`:
 - `agent:code-security-reviewer`:
@@ -52,6 +58,7 @@ Candidate branch:
 ### Parent verification
 
 - `git status --short --branch`:
+- Production-design craft defects resolved/re-reviewed:
 - `git diff --check`:
 - `npm run typecheck`:
 - `npm run lint`:
