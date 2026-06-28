@@ -14,7 +14,8 @@ describe('global navigation shell', () => {
     expect(layout).toContain("{ href: '/team/', label: 'Team'");
     expect(layout).toContain("{ href: '/contact/', label: 'Contact'");
     expect(layout).toContain("aria-current={isActive(item.href) ? 'page' : undefined}");
-    expect(layout).not.toMatch(/client:load|client:visible|<script|addEventListener|fetch\(/i);
+    expect(layout).not.toMatch(/client:load|client:visible|addEventListener|fetch\(/i);
+    expect(layout).not.toMatch(/<script(?![^>]*type="application\/ld\+json")/i);
   });
 
   it('uses a structured footer with legal/contact links and compliance-safe disclosure', () => {

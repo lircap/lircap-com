@@ -1,10 +1,12 @@
 import { describe, expect, it } from 'vitest';
 import { readFileSync } from 'node:fs';
 import { teamClaimTraceability, teamMembers } from '../src/content/team.js';
+import { getSeo } from '../src/data/seo.js';
 
 const teamPage = readFileSync(new URL('../src/pages/team.astro', import.meta.url), 'utf8');
 const css = readFileSync(new URL('../src/styles/global.css', import.meta.url), 'utf8');
 const teamBrief = readFileSync(new URL('../content/pages/team.md', import.meta.url), 'utf8');
+const teamSeo = getSeo('/team/');
 
 const publicBioCopy = teamMembers
   .flatMap((member) => [member.name, member.role, member.locationLabel, ...member.focusAreas, ...member.webBio])
@@ -46,7 +48,8 @@ describe('team content model and route', () => {
     expect(teamPage).toContain('aria-labelledby="page-title"');
     expect(teamPage).toContain('role="list"');
     expect(teamPage).toContain('role="listitem"');
-    expect(teamPage).toContain('description="Concise partner and adviser biographies for Lir Capital."');
+    expect(teamPage).toContain("const seo = getSeo('/team/');");
+    expect(teamSeo.description).toMatch(/partners and advisers/i);
     expect(teamPage).not.toMatch(/draft compliance status|tracked for review|subject to partner and compliance sign-off|rights and releases are complete/i);
     expect(teamPage).not.toContain('<details class="team-card__review">');
     expect(teamPage).toContain('aria-label={`Portrait slot pending approved photography for ${member.name}`}');

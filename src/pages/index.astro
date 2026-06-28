@@ -1,12 +1,12 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import CrossingHero from '../components/CrossingHero.astro';
+import { getSeo } from '../data/seo.js';
+
+const seo = getSeo('/');
 ---
 
-<BaseLayout
-  title="Lir Capital — The crossing"
-  description="Lir Capital is a discreet, partner-led advisory firm working where capital and complex opportunities meet."
->
+<BaseLayout {...seo}>
   <CrossingHero />
 
   <section class="home-brief" aria-labelledby="home-brief-title">

@@ -1,11 +1,11 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import { getSeo } from '../data/seo.js';
+
+const seo = getSeo('/legal/');
 ---
 
-<BaseLayout
-  title="Legal — Lir Capital"
-  description="Compliance-safe legal and disclosure status for Lir Capital's pre-production website."
->
+<BaseLayout {...seo}>
   <section class="legal-page" aria-labelledby="page-title">
     <div class="legal-page__intro">
       <p class="eyebrow">Legal and disclosure status</p>

@@ -1,15 +1,19 @@
 import { describe, expect, it } from 'vitest';
 import { readFileSync } from 'node:fs';
+import { getSeo } from '../src/data/seo.js';
 
 const contactPage = readFileSync(new URL('../src/pages/contact.astro', import.meta.url), 'utf8');
 const contactBrief = readFileSync(new URL('../content/pages/contact.md', import.meta.url), 'utf8');
 const routingDoc = readFileSync(new URL('../docs/contact/enquiry-routing.md', import.meta.url), 'utf8');
 const css = readFileSync(new URL('../src/styles/global.css', import.meta.url), 'utf8');
 const combinedDocs = `${contactBrief}\n${routingDoc}`;
+const contactSeo = getSeo('/contact/');
 
 describe('contact enquiry route safe slice', () => {
   it('renders a static senior contact route with email-only routing', () => {
-    expect(contactPage).toContain('title="Contact — Lir Capital"');
+    expect(contactPage).toContain("const seo = getSeo('/contact/');");
+    expect(contactSeo.title).toBe('Contact — Lir Capital');
+    expect(contactSeo.description).toMatch(/avoids web forms, tracking and client-side enquiry capture/i);
     expect(contactPage).toContain('Discreet enquiry');
     expect(contactPage).toContain('Start with a direct note.');
     expect(contactPage).toContain('partners@lircap.com');

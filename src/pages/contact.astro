@@ -1,8 +1,10 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import { getSeo } from '../data/seo.js';
 
 const contactEmail = 'partners@lircap.com';
 const mailtoHref = `mailto:${contactEmail}?subject=Lir%20Capital%20enquiry`;
+const seo = getSeo('/contact/');
 
 const enquiryIntents = [
   {
@@ -23,10 +25,7 @@ const enquiryIntents = [
 ];
 ---
 
-<BaseLayout
-  title="Contact — Lir Capital"
-  description="Contact Lir Capital for a discreet first conversation. Email-only enquiry route; no forms, tracking, or client-side data capture."
->
+<BaseLayout {...seo}>
   <section class="contact-page" aria-labelledby="page-title">
     <div class="contact-hero">
       <p class="eyebrow">Discreet enquiry</p>
@@ -66,7 +65,7 @@ const enquiryIntents = [
     <aside class="contact-note" aria-labelledby="privacy-title">
       <div>
         <p class="eyebrow">Privacy and spam posture</p>
-        <h2 id="privacy-title">No web form is active in this slice.</h2>
+        <h2 id="privacy-title">No web form is active on this page.</h2>
       </div>
       <div class="contact-note__body">
         <p>
