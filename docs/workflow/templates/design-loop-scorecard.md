@@ -14,6 +14,7 @@ Evidence path or links:
 - Baseline weighted score:
 - Delta vs baseline:
 - Materiality threshold for this run:
+- Promotion gate: default +3 percentage points of max score unless run pre-declared otherwise; this is not the sole loop stopping rule.
 - Formula: `(candidate weighted score - baseline weighted score) / 75 × 100`; 75 is the default max weighted score.
 - Example: baseline 52.00, candidate 54.50 → +2.50 weighted points → +3.33 percentage points of max score, clearing the default 3-point threshold.
 - Priority dimensions selected before implementation:
@@ -71,6 +72,21 @@ Score 0–5. Weighted score = score × weight. Use `BLOCKER` when promotion is i
 - Performance budget/Lighthouse:
 - Pre-prod/auth smoke if relevant:
 
+## Audience-agent UX findings
+
+Use this section only when audience-agent testing is in scope for the run. Findings inform dimension scores but do not bypass hard blockers; simulated users are not real market proof, and real human/client testing outranks simulated evidence.
+
+| Audience role | Scenario / evidence used | Outcome | Confidence | Dimension implications | Notes / friction |
+|---|---|---|---:|---|---|
+| `audience:institutional-investor` | | PASSABLE / CONCERN / BLOCKING-FOR-THIS-AUDIENCE | | | |
+| `audience:founder-dealmaker` | | PASSABLE / CONCERN / BLOCKING-FOR-THIS-AUDIENCE | | | |
+| `audience:intermediary-adviser` | | PASSABLE / CONCERN / BLOCKING-FOR-THIS-AUDIENCE | | | |
+| `audience:compliance-conscious-reviewer` | | PASSABLE / CONCERN / BLOCKING-FOR-THIS-AUDIENCE | | | |
+
+- UX researcher synthesis:
+- Real human/client testing available? yes/no; if yes, how it outweighs or conflicts with simulated findings:
+- Any hard blockers surfaced separately above? yes/no
+
 ## Regression guard
 
 List any dimension that regressed even if the total score improved.
@@ -81,7 +97,15 @@ List any dimension that regressed even if the total score improved.
 
 ## Promotion decision rationale
 
-Explain why this candidate should or should not replace the baseline. Include whether the change is a material improvement, merely different, or blocked by missing inputs.
+Explain why this candidate should or should not replace the baseline. Include whether the change is a material improvement, merely different, blocked by missing inputs, or below expected improvement after effort/risk cost.
+
+## Trend contribution
+
+- Marginal gain for this candidate vs baseline:
+- Dimensions improved:
+- Dimensions regressed:
+- Likely noise vs real improvement:
+- Effect on next loop mode: continue broad / surgical / request new inputs / stop
 
 ## Required changes, if any
 
