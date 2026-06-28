@@ -10,6 +10,17 @@ const {
   title = 'Lir Capital',
   description = 'A discreet, partner-led advisory and capital platform.',
 } = Astro.props;
+
+const currentPath = Astro.url.pathname;
+const primaryNav = [
+  { href: '/', label: 'Home', cue: 'Crossing' },
+  { href: '/for-investors/', label: 'For investors', cue: 'Capital' },
+  { href: '/for-deals/', label: 'For deals', cue: 'Opportunities' },
+  { href: '/team/', label: 'Team', cue: 'People' },
+  { href: '/contact/', label: 'Contact', cue: 'Discreet enquiry' },
+];
+
+const isActive = (href: string) => currentPath === href || (href !== '/' && currentPath.startsWith(href));
 ---
 
 <!doctype html>
@@ -21,24 +32,42 @@ const {
     <title>{title}</title>
   </head>
   <body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+    <div class="site-frame" aria-hidden="true"></div>
     <div class="site-shell">
       <header class="site-header" aria-label="Site header">
-        <a class="brand-mark" href="/">Lir Capital</a>
-        <nav aria-label="Primary navigation">
+        <a class="brand-lockup" href="/" aria-label="Lir Capital home">
+          <span class="brand-lockup__mark">Lir</span>
+          <span class="brand-lockup__meta">Capital Partners</span>
+        </a>
+        <nav class="primary-nav" aria-label="Primary navigation">
           <ul class="nav-list">
-            <li><a href="/for-investors/">For investors</a></li>
-            <li><a href="/for-deals/">For deals</a></li>
-            <li><a href="/team/">Team</a></li>
-            <li><a href="/contact/">Contact</a></li>
+            {primaryNav.map((item) => (
+              <li>
+                <a href={item.href} aria-current={isActive(item.href) ? 'page' : undefined}>
+                  <span>{item.label}</span>
+                  <small>{item.cue}</small>
+                </a>
+              </li>
+            ))}
           </ul>
         </nav>
       </header>
-      <main>
+      <main id="main-content" tabindex="-1">
         <slot />
       </main>
       <footer class="site-footer">
-        <span>Harmonycove Limited trading as Lir Capital Partners. Registered in Ireland. Company No. 801328.</span>
-        <a href="/legal/">Legal</a>
+        <div class="footer-register" aria-label="Entity disclosure">
+          <span class="footer-register__label">Pre-production disclosure</span>
+          <p>
+            Harmonycove Limited trading as Lir Capital Partners. Registered in Ireland. Company No. 801328.
+          </p>
+        </div>
+        <nav class="footer-nav" aria-label="Footer navigation">
+          <a href="/legal/">Legal</a>
+          <a href="/contact/">Contact</a>
+          <a href="/">Home</a>
+        </nav>
       </footer>
     </div>
   </body>
