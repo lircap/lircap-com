@@ -1,13 +1,82 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+
+const contactEmail = 'partners@lircap.com';
+const mailtoHref = `mailto:${contactEmail}?subject=Lir%20Capital%20enquiry`;
+
+const enquiryIntents = [
+  {
+    label: 'Capital relationships',
+    summary: 'For institutional, family-office, or professional counterparties who want to understand whether a conversation is appropriate.',
+    instruction: 'Please include your organisation, jurisdiction, and the context for the discussion.',
+  },
+  {
+    label: 'Company or transaction introductions',
+    summary: 'For owners, companies, advisers, and trusted introducers considering a discreet first discussion.',
+    instruction: 'Please outline the business, situation, timing, and whether confidentiality restrictions apply.',
+  },
+  {
+    label: 'General or senior introductions',
+    summary: 'For other relationship-led enquiries where a direct email is the most proportionate route.',
+    instruction: 'Please say who you are hoping to reach and the nature of the introduction.',
+  },
+];
 ---
 
-<BaseLayout title="Contact — Lir Capital">
-  <section class="hero" aria-labelledby="page-title">
-    <div>
-      <p class="eyebrow">Draft route</p>
-      <h1 id="page-title">Contact</h1>
-      <p class="lede">This route is scaffolded for future issue-bounded content and design work. Copy is not frozen.</p>
+<BaseLayout
+  title="Contact — Lir Capital"
+  description="Contact Lir Capital for a discreet first conversation. Email-only enquiry route; no forms, tracking, or client-side data capture."
+>
+  <section class="contact-page" aria-labelledby="page-title">
+    <div class="contact-hero">
+      <p class="eyebrow">Discreet enquiry</p>
+      <h1 id="page-title">Start with a direct note.</h1>
+      <p class="lede">
+        Lir’s public contact route is deliberately simple while form-handling, privacy, and regulatory decisions remain under review.
+        If a conversation may be appropriate, email the team directly and include enough context for the enquiry to be routed carefully.
+      </p>
+      <a class="contact-email" href={mailtoHref} aria-label={`Email Lir Capital at ${contactEmail}`}>
+        {contactEmail}
+      </a>
     </div>
+
+    <section class="contact-section" aria-labelledby="routing-title">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Routing model</p>
+          <h2 id="routing-title">Help us understand the nature of the enquiry.</h2>
+        </div>
+        <p>
+          Please use the email subject or opening line to identify the route below. This is not an offer, invitation, or solicitation;
+          it is a way to establish whether a senior conversation is relevant and properly directed.
+        </p>
+      </div>
+
+      <div class="intent-grid" role="list">
+        {enquiryIntents.map((intent) => (
+          <article class="intent-card" role="listitem">
+            <h3>{intent.label}</h3>
+            <p>{intent.summary}</p>
+            <small>{intent.instruction}</small>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <aside class="contact-note" aria-labelledby="privacy-title">
+      <div>
+        <p class="eyebrow">Privacy and spam posture</p>
+        <h2 id="privacy-title">No web form is active in this slice.</h2>
+      </div>
+      <div class="contact-note__body">
+        <p>
+          This page does not submit a form, run client-side scripts, call external services, or place enquiry data into a website database.
+          Enquiries are routed through your own email client to Lir’s team address.
+        </p>
+        <p>
+          A future self-hosted enquiry handler may be introduced only after privacy, retention, spam-protection, and counsel decisions are recorded.
+        </p>
+      </div>
+    </aside>
   </section>
 </BaseLayout>

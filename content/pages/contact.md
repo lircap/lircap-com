@@ -49,20 +49,64 @@ Draft the page narrative before any build work. This page brief is a planning/co
 | `CL-003` | See claims register | Use fallback until cleared | See claims register |
 | `CL-017` | See claims register | Use fallback until cleared | See claims register |
 
-## Draft copy
+## Implemented safe slice for issue #12
 
-Not frozen. Draft copy must be produced under issue #12 using `docs/content/copy-review-checklist.md`.
+The public `/contact/` route is implemented as a static, email-only route. It uses direct `mailto:` routing to `partners@lircap.com` and does **not** include a live form, form endpoint, client-side scripts, analytics, CAPTCHA widget, third-party processor, or website database capture.
+
+Supporting routing documentation: `docs/contact/enquiry-routing.md`.
+
+## Public copy posture
+
+- Tone: senior, discreet, concise, and human.
+- CTA: direct note / first conversation / understand fit only.
+- Avoids: offer, invitation, solicitation, product language, guaranteed access, active professional-investor gating, and regulated-status implications.
+- Traceability: public route is controlled by `CL-002`, `CL-003`, and `CL-017` until counsel/compliance closeout.
+
+## Routing model
+
+Visitors are asked to identify one of three broad enquiry intents in the email subject or opening line:
+
+1. Capital relationships.
+2. Company or transaction introductions.
+3. General or senior introductions.
+
+This is a triage aid only. It is not a suitability process, investor categorisation, or financial-promotion gate.
+
+## Spam protection and future form default
+
+Selected current posture: **email-only now**. Spam protection is limited to ordinary mailbox-layer controls because no public submission endpoint exists.
+
+Selected future default after privacy/counsel decision: self-hosted handler with honeypot, Turnstile or equivalent privacy-reviewed challenge, server-side validation, rate limiting, and email delivery to the approved team mailbox. No third-party form processor should be introduced unless processor terms, data location, sub-processors, and retention are approved and documented.
+
+## Privacy / GDPR implications before deploy
+
+Before any live form, analytics, or processor is enabled, record:
+
+- controller identity and privacy contact;
+- personal data fields collected;
+- lawful basis;
+- recipient mailbox and access controls;
+- retention for enquiry emails, logs, and backups;
+- treatment of confidential transaction data and over-sharing warnings;
+- data-subject rights process;
+- cross-border transfer and processor/sub-processor position;
+- incident/security process;
+- privacy-policy copy aligned to the actual data flow.
+
+## No secrets policy
+
+The contact route must not expose SMTP hosts, SMTP usernames/passwords, API keys, Turnstile secret keys, webhook URLs, CRM endpoints, private mailbox routing rules, or environment-variable values. Any future server-side form handler must keep secrets in GitHub/VPS/server secret stores only.
 
 ## Voice review
 
-- [ ] proof before claim
-- [ ] specific over generic
-- [ ] senior, restrained, human
-- [ ] no forbidden generic phrases
-- [ ] not pasted from deck copy
+- [x] proof before claim
+- [x] specific over generic
+- [x] senior, restrained, human
+- [x] no forbidden generic phrases
+- [x] not pasted from deck copy
 
 ## Build handoff
 
-- Components needed: to be defined by implementation issue.
-- Imagery/placeholder requirements: use neutral placeholders only until real assets land.
-- Open decisions: see `docs/brief/open-decisions.md` and `docs/compliance/gate-status.md`.
+- Components implemented: static contact hero, direct email link, intent cards, privacy/spam posture note.
+- Imagery/placeholder requirements: no imagery or placeholders used.
+- Open decisions: form handler, retention, privacy policy, counsel review, spam processor/Turnstile posture remain deploy blockers for any live form.
