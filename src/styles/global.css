@@ -88,13 +88,13 @@ a { color: inherit; }
 .site-header {
   min-height: 6.25rem;
   display: grid;
-  grid-template-columns: minmax(10rem, 0.7fr) minmax(0, 1.3fr);
-  gap: clamp(1.5rem, 4vw, 4rem);
+  grid-template-columns: minmax(10rem, 0.62fr) minmax(0, 1.38fr);
+  gap: clamp(1.25rem, 3vw, 3.5rem);
   align-items: stretch;
   padding: 1.15rem 0;
   position: relative;
   z-index: 2;
-  border-bottom: 1px solid rgba(245, 241, 235, 0.11);
+  border-bottom: 1px solid rgba(245, 241, 235, 0.08);
 }
 
 .brand-lockup {
@@ -137,9 +137,9 @@ a { color: inherit; }
   list-style: none;
   margin: 0;
   padding: 0;
-  min-width: min(100%, 43rem);
-  background: rgba(245, 241, 235, 0.13);
-  border-inline: 1px solid rgba(245, 241, 235, 0.13);
+  min-width: min(100%, 46rem);
+  background: rgba(245, 241, 235, 0.08);
+  border-inline: 1px solid rgba(245, 241, 235, 0.08);
 }
 
 .nav-list li {
@@ -153,23 +153,24 @@ a { color: inherit; }
   flex-direction: column;
   justify-content: space-between;
   gap: 0.42rem;
-  padding: 0.78rem clamp(0.62rem, 1vw, 0.95rem);
-  background: rgba(18, 21, 28, 0.82);
+  padding: 0.78rem clamp(0.56rem, 0.85vw, 0.88rem);
+  background: rgba(18, 21, 28, 0.68);
   color: rgba(245, 241, 235, 0.75);
   text-decoration: none;
   transition: background var(--motion-fast) var(--ease-standard), color var(--motion-fast) var(--ease-standard);
 }
 
 .nav-list a span {
-  font-size: 0.82rem;
-  letter-spacing: 0.08em;
+  white-space: nowrap;
+  font-size: clamp(0.72rem, 0.9vw, 0.82rem);
+  letter-spacing: 0.06em;
   line-height: 1.2;
   text-transform: uppercase;
 }
 
 .nav-list a small {
   color: rgba(122, 155, 168, 0.84);
-  font-size: 0.68rem;
+  font-size: clamp(0.62rem, 0.75vw, 0.68rem);
   line-height: 1.25;
 }
 
@@ -228,10 +229,7 @@ a { color: inherit; }
 
 .crossing-hero {
   min-height: min(43rem, calc(100vh - 5.5rem));
-  display: grid;
-  grid-template-columns: minmax(0, 1.02fr) minmax(20rem, 0.98fr);
-  gap: clamp(2.5rem, 7vw, 7rem);
-  align-items: center;
+  display: block;
   padding: clamp(4rem, 8vw, 7rem) 0 clamp(5rem, 10vw, 8rem);
   position: relative;
   isolation: isolate;
@@ -255,6 +253,17 @@ a { color: inherit; }
   z-index: 1;
 }
 
+.crossing-hero__copy {
+  max-width: 72rem;
+}
+
+.crossing-hero__lockup {
+  display: grid;
+  grid-template-columns: minmax(0, 0.98fr) minmax(19rem, 0.72fr);
+  gap: clamp(1.75rem, 5vw, 5rem);
+  align-items: center;
+}
+
 .eyebrow {
   margin: 0 0 1.05rem;
   color: var(--aged-gold);
@@ -273,16 +282,16 @@ h3 {
 }
 
 h1 {
-  max-width: 12.6ch;
+  max-width: 12.8ch;
   margin: 0;
-  font-size: clamp(3.7rem, 10.5vw, 8.75rem);
+  font-size: clamp(3.55rem, 9.2vw, 8rem);
   font-weight: 520;
 }
 
 h2 {
-  max-width: 14ch;
+  max-width: 15ch;
   margin: 0;
-  font-size: clamp(2.5rem, 6vw, 5.5rem);
+  font-size: clamp(2.35rem, 5.2vw, 4.7rem);
   font-weight: 520;
 }
 
@@ -339,15 +348,15 @@ h3 {
 }
 
 .crossing-hero__chart {
-  align-self: stretch;
-  min-height: 34rem;
+  align-self: center;
+  min-height: 0;
   display: grid;
   place-items: center;
 }
 
 .chart-frame {
-  width: min(100%, 34rem);
-  aspect-ratio: 0.86;
+  width: min(100%, 30rem);
+  aspect-ratio: 0.98;
   position: relative;
   border: 1px solid rgba(245, 241, 235, 0.14);
   background:
@@ -356,7 +365,7 @@ h3 {
     radial-gradient(circle at 51% 45%, rgba(184, 151, 90, 0.14), transparent 7rem),
     linear-gradient(180deg, rgba(12, 43, 53, 0.55), rgba(18, 21, 28, 0.18));
   background-size: 5.5rem 5.5rem, 5.5rem 5.5rem, auto, auto;
-  box-shadow: inset 0 0 0 1px rgba(184, 151, 90, 0.08), 0 2rem 6rem rgba(0, 0, 0, 0.28);
+  box-shadow: inset 0 0 0 1px rgba(184, 151, 90, 0.08), 0 1.4rem 4.5rem rgba(0, 0, 0, 0.24);
   overflow: hidden;
 }
 
@@ -437,7 +446,7 @@ h3 {
 
 .home-brief {
   padding: clamp(4rem, 8vw, 7rem) 0;
-  border-top: 1px solid rgba(245, 241, 235, 0.12);
+  border-top: 1px solid rgba(184, 151, 90, 0.2);
 }
 
 .section-heading {
@@ -543,9 +552,70 @@ h3 {
 }
 
 .team-hero {
-  max-width: 64rem;
+  max-width: none;
+  display: grid;
+  grid-template-columns: minmax(0, 0.62fr) minmax(17rem, 0.38fr);
+  gap: clamp(2rem, 6vw, 6rem);
+  align-items: end;
   padding-bottom: clamp(3rem, 7vw, 6rem);
-  border-bottom: 1px solid rgba(245, 241, 235, 0.1);
+  border-bottom: 1px solid rgba(184, 151, 90, 0.2);
+}
+
+.team-hero__copy {
+  max-width: 64rem;
+}
+
+.team-crossing-map {
+  min-height: clamp(11rem, 18vw, 16rem);
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(245, 241, 235, 0.1);
+  background:
+    linear-gradient(90deg, rgba(245, 241, 235, 0.045) 1px, transparent 1px),
+    linear-gradient(rgba(245, 241, 235, 0.04) 1px, transparent 1px),
+    radial-gradient(circle at 52% 48%, rgba(184, 151, 90, 0.15), transparent 5rem),
+    rgba(18, 21, 28, 0.42);
+  background-size: 4.25rem 4.25rem, 4.25rem 4.25rem, auto, auto;
+}
+
+.team-crossing-map__label,
+.team-crossing-map__note {
+  position: absolute;
+  color: rgba(245, 241, 235, 0.48);
+  font-size: 0.66rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.team-crossing-map__label { left: 1rem; top: 0.85rem; color: rgba(184, 151, 90, 0.72); }
+.team-crossing-map__note--one { right: 1rem; top: 1.5rem; }
+.team-crossing-map__note--two { left: 1rem; bottom: 1rem; }
+
+.team-crossing-map__track {
+  position: absolute;
+  left: -12%;
+  top: 52%;
+  width: 124%;
+  height: 1px;
+  background: rgba(184, 151, 90, 0.68);
+  transform: rotate(-16deg);
+}
+
+.team-crossing-map__track--opportunity {
+  background: rgba(122, 155, 168, 0.56);
+  transform: rotate(31deg);
+}
+
+.team-crossing-map__fix {
+  position: absolute;
+  left: 52%;
+  top: 48%;
+  width: 0.7rem;
+  height: 0.7rem;
+  border: 1px solid var(--aged-gold);
+  border-radius: 999px;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0 0 0.45rem rgba(184, 151, 90, 0.08);
 }
 
 .team-roster {
@@ -561,32 +631,36 @@ h3 {
 .team-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 1px;
+  gap: clamp(1rem, 2vw, 1.35rem);
   list-style: none;
   margin: 0;
   padding: 0;
-  background: rgba(245, 241, 235, 0.14);
-  border: 1px solid rgba(245, 241, 235, 0.14);
+  background: transparent;
+  border: 0;
 }
 
 .team-card {
   min-width: 0;
   display: grid;
-  grid-template-columns: minmax(8rem, 0.36fr) minmax(0, 0.64fr);
+  grid-template-columns: minmax(7rem, 0.28fr) minmax(0, 0.72fr);
   gap: clamp(1rem, 2vw, 1.5rem);
-  padding: clamp(1rem, 2.4vw, 1.7rem);
-  background: rgba(18, 21, 28, 0.82);
+  padding: clamp(1rem, 2vw, 1.45rem);
+  border: 1px solid rgba(245, 241, 235, 0.1);
+  background: linear-gradient(150deg, rgba(245, 241, 235, 0.045), rgba(18, 21, 28, 0.58));
 }
 
 .portrait-placeholder {
   aspect-ratio: 4 / 5;
-  min-height: 13rem;
+  min-height: 0;
+  max-height: 14rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   padding: 0.8rem;
   border: 1px solid rgba(245, 241, 235, 0.14);
-  background: #1b1f27;
+  background:
+    linear-gradient(145deg, rgba(184, 151, 90, 0.1), transparent 44%),
+    #1b1f27;
   color: rgba(245, 241, 235, 0.64);
 }
 
@@ -745,7 +819,29 @@ h3 {
 
   .portrait-placeholder {
     aspect-ratio: 16 / 9;
-    min-height: 10.5rem;
+    min-height: 0;
+    max-height: 11.5rem;
+  }
+}
+
+@media (max-width: 1120px) and (min-width: 981px) {
+  .site-header {
+    grid-template-columns: minmax(8rem, 0.42fr) minmax(0, 1.58fr);
+    gap: 1rem;
+  }
+
+  .brand-lockup__meta {
+    max-width: 7.5rem;
+    font-size: 0.62rem;
+  }
+
+  .nav-list a {
+    min-height: 3.7rem;
+    padding: 0.66rem 0.48rem;
+  }
+
+  .nav-list a small {
+    display: none;
   }
 }
 
@@ -769,18 +865,22 @@ h3 {
     grid-template-columns: 1fr;
   }
 
+  .crossing-hero__lockup,
+  .team-hero {
+    grid-template-columns: 1fr;
+  }
+
   .section-heading .eyebrow {
     padding-top: 0;
   }
 
   .crossing-hero__chart {
-    min-height: 24rem;
-    order: -1;
+    justify-items: start;
   }
 
   .chart-frame {
-    width: min(100%, 26rem);
-    aspect-ratio: 1.12;
+    width: min(100%, 23rem);
+    aspect-ratio: 1.18;
   }
 
   .brief-grid,
@@ -800,7 +900,7 @@ h3 {
   }
 
   .team-card {
-    grid-template-columns: minmax(7rem, 0.3fr) minmax(0, 0.7fr);
+    grid-template-columns: minmax(6.5rem, 0.26fr) minmax(0, 0.74fr);
   }
 
   .brief-grid article {
@@ -827,16 +927,30 @@ h3 {
   }
 
   .nav-list {
-    grid-template-columns: 1fr;
-    border-block: 1px solid rgba(245, 241, 235, 0.13);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    background: transparent;
+    border: 0;
+  }
+
+  .nav-list li {
+    flex: 1 1 calc(50% - 0.5rem);
   }
 
   .nav-list a {
-    min-height: 3.1rem;
-    display: grid;
-    grid-template-columns: minmax(0, 0.48fr) minmax(0, 0.52fr);
+    min-height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
     align-items: center;
-    padding: 0.72rem 0.82rem;
+    padding: 0.68rem 0.72rem;
+    border: 1px solid rgba(245, 241, 235, 0.1);
+    background: rgba(18, 21, 28, 0.5);
+  }
+
+  .nav-list a small {
+    display: none;
   }
 
   .site-footer {
@@ -852,7 +966,11 @@ h3 {
   }
 
   h1 {
-    font-size: clamp(3rem, 17vw, 4.8rem);
+    font-size: clamp(2.9rem, 15vw, 4.55rem);
+  }
+
+  h2 {
+    font-size: clamp(2.2rem, 11vw, 3.7rem);
   }
 
   .hero-actions {
@@ -869,7 +987,8 @@ h3 {
 
   .portrait-placeholder {
     aspect-ratio: 16 / 9;
-    min-height: 10rem;
+    min-height: 0;
+    max-height: 10rem;
   }
 }
 

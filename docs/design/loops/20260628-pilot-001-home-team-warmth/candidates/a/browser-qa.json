@@ -1,0 +1,2687 @@
+{
+  "capturedAt": "2026-06-28T19:30:16.041457Z",
+  "base": "http://127.0.0.1:5301",
+  "candidate": "a",
+  "screenshots": [
+    {
+      "page": "home",
+      "route": "/",
+      "width": 320,
+      "file": "screenshots/home-320.png"
+    },
+    {
+      "page": "home",
+      "route": "/",
+      "width": 390,
+      "file": "screenshots/home-390.png"
+    },
+    {
+      "page": "home",
+      "route": "/",
+      "width": 768,
+      "file": "screenshots/home-768.png"
+    },
+    {
+      "page": "home",
+      "route": "/",
+      "width": 980,
+      "file": "screenshots/home-980.png"
+    },
+    {
+      "page": "home",
+      "route": "/",
+      "width": 981,
+      "file": "screenshots/home-981.png"
+    },
+    {
+      "page": "home",
+      "route": "/",
+      "width": 1024,
+      "file": "screenshots/home-1024.png"
+    },
+    {
+      "page": "home",
+      "route": "/",
+      "width": 1180,
+      "file": "screenshots/home-1180.png"
+    },
+    {
+      "page": "home",
+      "route": "/",
+      "width": 1181,
+      "file": "screenshots/home-1181.png"
+    },
+    {
+      "page": "home",
+      "route": "/",
+      "width": 1280,
+      "file": "screenshots/home-1280.png"
+    },
+    {
+      "page": "home",
+      "route": "/",
+      "width": 1440,
+      "file": "screenshots/home-1440.png"
+    },
+    {
+      "page": "home",
+      "route": "/",
+      "width": 1728,
+      "file": "screenshots/home-1728.png"
+    },
+    {
+      "page": "team",
+      "route": "/team/",
+      "width": 320,
+      "file": "screenshots/team-320.png"
+    },
+    {
+      "page": "team",
+      "route": "/team/",
+      "width": 390,
+      "file": "screenshots/team-390.png"
+    },
+    {
+      "page": "team",
+      "route": "/team/",
+      "width": 768,
+      "file": "screenshots/team-768.png"
+    },
+    {
+      "page": "team",
+      "route": "/team/",
+      "width": 980,
+      "file": "screenshots/team-980.png"
+    },
+    {
+      "page": "team",
+      "route": "/team/",
+      "width": 981,
+      "file": "screenshots/team-981.png"
+    },
+    {
+      "page": "team",
+      "route": "/team/",
+      "width": 1024,
+      "file": "screenshots/team-1024.png"
+    },
+    {
+      "page": "team",
+      "route": "/team/",
+      "width": 1180,
+      "file": "screenshots/team-1180.png"
+    },
+    {
+      "page": "team",
+      "route": "/team/",
+      "width": 1181,
+      "file": "screenshots/team-1181.png"
+    },
+    {
+      "page": "team",
+      "route": "/team/",
+      "width": 1280,
+      "file": "screenshots/team-1280.png"
+    },
+    {
+      "page": "team",
+      "route": "/team/",
+      "width": 1440,
+      "file": "screenshots/team-1440.png"
+    },
+    {
+      "page": "team",
+      "route": "/team/",
+      "width": 1728,
+      "file": "screenshots/team-1728.png"
+    },
+    {
+      "page": "contact",
+      "route": "/contact/",
+      "width": 320,
+      "file": "screenshots/contact-320.png"
+    },
+    {
+      "page": "contact",
+      "route": "/contact/",
+      "width": 390,
+      "file": "screenshots/contact-390.png"
+    },
+    {
+      "page": "contact",
+      "route": "/contact/",
+      "width": 768,
+      "file": "screenshots/contact-768.png"
+    },
+    {
+      "page": "contact",
+      "route": "/contact/",
+      "width": 980,
+      "file": "screenshots/contact-980.png"
+    },
+    {
+      "page": "contact",
+      "route": "/contact/",
+      "width": 981,
+      "file": "screenshots/contact-981.png"
+    },
+    {
+      "page": "contact",
+      "route": "/contact/",
+      "width": 1024,
+      "file": "screenshots/contact-1024.png"
+    },
+    {
+      "page": "contact",
+      "route": "/contact/",
+      "width": 1180,
+      "file": "screenshots/contact-1180.png"
+    },
+    {
+      "page": "contact",
+      "route": "/contact/",
+      "width": 1181,
+      "file": "screenshots/contact-1181.png"
+    },
+    {
+      "page": "contact",
+      "route": "/contact/",
+      "width": 1280,
+      "file": "screenshots/contact-1280.png"
+    },
+    {
+      "page": "contact",
+      "route": "/contact/",
+      "width": 1440,
+      "file": "screenshots/contact-1440.png"
+    },
+    {
+      "page": "contact",
+      "route": "/contact/",
+      "width": 1728,
+      "file": "screenshots/contact-1728.png"
+    }
+  ],
+  "metrics": [
+    {
+      "width": 320,
+      "route": "/",
+      "scrollWidth": 320,
+      "clientWidth": 320,
+      "overflowX": 0,
+      "navItems": [
+        {
+          "text": "Home",
+          "rectCount": 1,
+          "height": 13.8125,
+          "width": 37.3125
+        },
+        {
+          "text": "For investors",
+          "rectCount": 1,
+          "height": 13.8125,
+          "width": 102.84375
+        },
+        {
+          "text": "For deals",
+          "rectCount": 1,
+          "height": 13.8125,
+          "width": 71.5
+        },
+        {
+          "text": "Team",
+          "rectCount": 1,
+          "height": 13.8125,
+          "width": 34.765625
+        },
+        {
+          "text": "Contact",
+          "rectCount": 1,
+          "height": 13.8125,
+          "width": 59.640625
+        }
+      ],
+      "h1Text": "Where capital and opportunity take a bearing.",
+      "h1LineCount": 3,
+      "h1Rects": [
+        {
+          "x": 16,
+          "y": 282.78125,
+          "width": 233.515625,
+          "height": 53
+        },
+        {
+          "x": 16,
+          "y": 325.015625,
+          "width": 265.703125,
+          "height": 53
+        },
+        {
+          "x": 16,
+          "y": 367.25,
+          "width": 241.59375,
+          "height": 53
+        }
+      ],
+      "heroChartIntersectsH1": false,
+      "firstFoldHeight": 844,
+      "chartBox": {
+        "x": 16,
+        "y": 443.484375,
+        "width": 288,
+        "height": 244.0625
+      },
+      "h1Box": {
+        "x": 16,
+        "y": 288.78125,
+        "width": 288,
+        "height": 126.703125
+      }
+    },
+    {
+      "width": 390,
+      "route": "/",
+      "scrollWidth": 390,
+      "clientWidth": 390,
+      "overflowX": 0,
+      "navItems": [
+        {
+          "text": "Home",
+          "rectCount": 1,
+          "height": 13.8125,
+          "width": 37.3125
+        },
+        {
+          "text": "For investors",
+          "rectCount": 1,
+          "height": 13.8125,
+          "width": 102.84375
+        },
+        {
+          "text": "For deals",
+          "rectCount": 1,
+          "height": 13.8125,
+          "width": 71.5
+        },
+        {
+          "text": "Team",
+          "rectCount": 1,
+          "height": 13.8125,
+          "width": 34.765625
+        },
+        {
+          "text": "Contact",
+          "rectCount": 1,
+          "height": 13.8125,
+          "width": 59.640625
+        }
+      ],
+      "h1Text": "Where capital and opportunity take a bearing.",
+      "h1LineCount": 3,
+      "h1Rects": [
+        {
+          "x": 16,
+          "y": 281.78125,
+          "width": 284.59375,
+          "height": 65
+        },
+        {
+          "x": 16,
+          "y": 333.25,
+          "width": 323.828125,
+          "height": 65
+        },
+        {
+          "x": 16,
+          "y": 384.71875,
+          "width": 294.4375,
+          "height": 65
+        }
+      ],
+      "heroChartIntersectsH1": false,
+      "firstFoldHeight": 844,
+      "chartBox": {
+        "x": 16,
+        "y": 471.1875,
+        "width": 358,
+        "height": 303.375
+      },
+      "h1Box": {
+        "x": 16,
+        "y": 288.78125,
+        "width": 358,
+        "height": 154.40625
+      }
+    },
+    {
+      "width": 768,
+      "route": "/",
+      "scrollWidth": 768,
+      "clientWidth": 768,
+      "overflowX": 0,
+      "navItems": [
+        {
+          "text": "Home",
+          "rectCount": 1,
+          "height": 13.8125,
+          "width": 122.203125
+        },
+        {
+          "text": "For investors",
+          "rectCount": 1,
+          "height": 13.8125,
+          "width": 122.203125
+        },
+        {
+          "text": "For deals",
+          "rectCount": 1,
+          "height": 13.8125,
+          "width": 122.203125
+        },
+        {
+          "text": "Team",
+          "rectCount": 1,
+          "height": 13.8125,
+          "width": 122.203125
+        },
+        {
+          "text": "Contact",
+          "rectCount": 1,
+          "height": 13.8125,
+          "width": 122.203125
+        }
+      ],
+      "h1Text": "Where capital and opportunity take a bearing.",
+      "h1LineCount": 3,
+      "h1Rects": [
+        {
+          "x": 30.71875,
+          "y": 273.765625,
+          "width": 447.75,
+          "height": 78
+        },
+        {
+          "x": 30.71875,
+          "y": 335.9375,
+          "width": 444.03125,
+          "height": 78
+        },
+        {
+          "x": 30.71875,
+          "y": 398.109375,
+          "width": 198.390625,
+          "height": 78
+        }
+      ],
+      "heroChartIntersectsH1": false,
+      "firstFoldHeight": 900,
+      "chartBox": {
+        "x": 30.71875,
+        "y": 506.671875,
+        "width": 706.546875,
+        "height": 311.859375
+      },
+      "h1Box": {
+        "x": 30.71875,
+        "y": 281.765625,
+        "width": 452.09375,
+        "height": 186.515625
+      }
+    },
+    {
+      "width": 980,
+      "route": "/",
+      "scrollWidth": 980,
+      "clientWidth": 980,
+      "overflowX": 0,
+      "navItems": [
+        {
+          "text": "Home",
+          "rectCount": 1,
+          "height": 13.8125,
+          "width": 161.203125
+        },
+        {
+          "text": "For investors",
+          "rectCount": 1,
+          "height": 13.8125,
+          "width": 161.21875
+        },
+        {
+          "text": "For deals",
+          "rectCount": 1,
+          "height": 13.8125,
+          "width": 161.203125
+        },
+        {
+          "text": "Team",
+          "rectCount": 1,
+          "height": 13.8125,
+          "width": 161.21875
+        },
+        {
+          "text": "Contact",
+          "rectCount": 1,
+          "height": 13.8125,
+          "width": 161.203125
+        }
+      ],
+      "h1Text": "Where capital and opportunity take a bearing.",
+      "h1LineCount": 3,
+      "h1Rects": [
+        {
+          "x": 39.203125,
+          "y": 285.15625,
+          "width": 571.453125,
+          "height": 100
+        },
+        {
+          "x": 39.203125,
+          "y": 364.484375,
+          "width": 566.71875,
+          "height": 100
+        },
+        {
+          "x": 39.203125,
+          "y": 443.8125,
+          "width": 253.21875,
+          "height": 100
+        }
+      ],
+      "heroChartIntersectsH1": false,
+      "firstFoldHeight": 900,
+      "chartBox": {
+        "x": 39.203125,
+        "y": 583.140625,
+        "width": 901.59375,
+        "height": 311.859375
+      },
+      "h1Box": {
+        "x": 39.203125,
+        "y": 296.15625,
+        "width": 577,
+        "height": 237.984375
+      }
+    },
+    {
+      "width": 981,
+      "route": "/",
+      "scrollWidth": 981,
+      "clientWidth": 981,
+      "overflowX": 0,
+      "navItems": [
+        {
+          "text": "Home",
+          "rectCount": 1,
+          "height": 13.8125,
+          "width": 123.515625
+        },
+        {
+          "text": "For investors",
+          "rectCount": 1,
+          "height": 13.8125,
+          "width": 123.53125
+        },
+        {
+          "text": "For deals",
+          "rectCount": 1,
+          "height": 13.8125,
+          "width": 123.53125
+        },
+        {
+          "text": "Team",
+          "rectCount": 1,
+          "height": 13.8125,
+          "width": 123.53125
+        },
+        {
+          "text": "Contact",
+          "rectCount": 1,
+          "height": 13.8125,
+          "width": 123.515625
+        }
+      ],
+      "h1Text": "Where capital and opportunity take a bearing.",
+      "h1LineCount": 4,
+      "h1Rects": [
+        {
+          "x": 39.234375,
+          "y": 230.84375,
+          "width": 439.03125,
+          "height": 100
+        },
+        {
+          "x": 39.234375,
+          "y": 310.25,
+          "width": 115.421875,
+          "height": 100
+        },
+        {
+          "x": 39.234375,
+          "y": 389.65625,
+          "width": 366.5625,
+          "height": 100
+        },
+        {
+          "x": 39.234375,
+          "y": 469.0625,
+          "width": 454.21875,
+          "height": 100
+        }
+      ],
+      "heroChartIntersectsH1": false,
+      "firstFoldHeight": 900,
+      "chartBox": {
+        "x": 580.265625,
+        "y": 216.234375,
+        "width": 361.484375,
+        "height": 368.859375
+      },
+      "h1Box": {
+        "x": 39.234375,
+        "y": 241.84375,
+        "width": 491.984375,
+        "height": 317.625
+      }
+    },
+    {
+      "width": 1024,
+      "route": "/",
+      "scrollWidth": 1024,
+      "clientWidth": 1024,
+      "overflowX": 0,
+      "navItems": [
+        {
+          "text": "Home",
+          "rectCount": 1,
+          "height": 13.8125,
+          "width": 129.765625
+        },
+        {
+          "text": "For investors",
+          "rectCount": 1,
+          "height": 13.8125,
+          "width": 129.78125
+        },
+        {
+          "text": "For deals",
+          "rectCount": 1,
+          "height": 13.8125,
+          "width": 129.78125
+        },
+        {
+          "text": "Team",
+          "rectCount": 1,
+          "height": 13.8125,
+          "width": 129.78125
+        },
+        {
+          "text": "Contact",
+          "rectCount": 1,
+          "height": 13.8125,
+          "width": 129.765625
+        }
+      ],
+      "h1Text": "Where capital and opportunity take a bearing.",
+      "h1LineCount": 4,
+      "h1Rects": [
+        {
+          "x": 40.953125,
+          "y": 235.390625,
+          "width": 458.171875,
+          "height": 104
+        },
+        {
+          "x": 40.953125,
+          "y": 318.28125,
+          "width": 120.453125,
+          "height": 104
+        },
+        {
+          "x": 40.953125,
+          "y": 401.171875,
+          "width": 382.53125,
+          "height": 104
+        },
+        {
+          "x": 40.953125,
+          "y": 484.0625,
+          "width": 474.03125,
+          "height": 104
+        }
+      ],
+      "heroChartIntersectsH1": false,
+      "firstFoldHeight": 900,
+      "chartBox": {
+        "x": 605.703125,
+        "y": 219.671875,
+        "width": 377.3125,
+        "height": 385
+      },
+      "h1Box": {
+        "x": 40.953125,
+        "y": 246.390625,
+        "width": 513.5625,
+        "height": 331.5625
+      }
+    },
+    {
+      "width": 1180,
+      "route": "/",
+      "scrollWidth": 1180,
+      "clientWidth": 1180,
+      "overflowX": 0,
+      "navItems": [
+        {
+          "text": "Home",
+          "rectCount": 1,
+          "height": 13.8125,
+          "width": 123.6875
+        },
+        {
+          "text": "For investors",
+          "rectCount": 1,
+          "height": 13.8125,
+          "width": 123.703125
+        },
+        {
+          "text": "For deals",
+          "rectCount": 1,
+          "height": 13.8125,
+          "width": 123.6875
+        },
+        {
+          "text": "Team",
+          "rectCount": 1,
+          "height": 13.8125,
+          "width": 123.703125
+        },
+        {
+          "text": "Contact",
+          "rectCount": 1,
+          "height": 13.8125,
+          "width": 123.6875
+        }
+      ],
+      "h1Text": "Where capital and opportunity take a bearing.",
+      "h1LineCount": 4,
+      "h1Rects": [
+        {
+          "x": 47.203125,
+          "y": 249.921875,
+          "width": 528.03125,
+          "height": 120
+        },
+        {
+          "x": 47.203125,
+          "y": 345.453125,
+          "width": 138.828125,
+          "height": 120
+        },
+        {
+          "x": 47.203125,
+          "y": 440.984375,
+          "width": 440.859375,
+          "height": 120
+        },
+        {
+          "x": 47.203125,
+          "y": 536.515625,
+          "width": 546.296875,
+          "height": 120
+        }
+      ],
+      "heroChartIntersectsH1": false,
+      "firstFoldHeight": 900,
+      "chartBox": {
+        "x": 698,
+        "y": 232.15625,
+        "width": 434.796875,
+        "height": 443.65625
+      },
+      "h1Box": {
+        "x": 47.203125,
+        "y": 262.921875,
+        "width": 591.796875,
+        "height": 382.125
+      }
+    },
+    {
+      "width": 1181,
+      "route": "/",
+      "scrollWidth": 1181,
+      "clientWidth": 1181,
+      "overflowX": 0,
+      "navItems": [
+        {
+          "text": "Home",
+          "rectCount": 1,
+          "height": 13.8125,
+          "width": 123.78125
+        },
+        {
+          "text": "For investors",
+          "rectCount": 1,
+          "height": 13.8125,
+          "width": 123.796875
+        },
+        {
+          "text": "For deals",
+          "rectCount": 1,
+          "height": 13.8125,
+          "width": 123.78125
+        },
+        {
+          "text": "Team",
+          "rectCount": 1,
+          "height": 13.8125,
+          "width": 123.796875
+        },
+        {
+          "text": "Contact",
+          "rectCount": 1,
+          "height": 13.8125,
+          "width": 123.78125
+        }
+      ],
+      "h1Text": "Where capital and opportunity take a bearing.",
+      "h1LineCount": 4,
+      "h1Rects": [
+        {
+          "x": 47.234375,
+          "y": 250.03125,
+          "width": 528.484375,
+          "height": 121
+        },
+        {
+          "x": 47.234375,
+          "y": 345.640625,
+          "width": 138.9375,
+          "height": 121
+        },
+        {
+          "x": 47.234375,
+          "y": 441.25,
+          "width": 441.25,
+          "height": 121
+        },
+        {
+          "x": 47.234375,
+          "y": 536.859375,
+          "width": 546.78125,
+          "height": 121
+        }
+      ],
+      "heroChartIntersectsH1": false,
+      "firstFoldHeight": 900,
+      "chartBox": {
+        "x": 698.578125,
+        "y": 232.234375,
+        "width": 435.171875,
+        "height": 444.046875
+      },
+      "h1Box": {
+        "x": 47.234375,
+        "y": 263.03125,
+        "width": 592.296875,
+        "height": 382.4375
+      }
+    },
+    {
+      "width": 1280,
+      "route": "/",
+      "scrollWidth": 1280,
+      "clientWidth": 1280,
+      "overflowX": 0,
+      "navItems": [
+        {
+          "text": "Home",
+          "rectCount": 1,
+          "height": 13.8125,
+          "width": 124.25
+        },
+        {
+          "text": "For investors",
+          "rectCount": 1,
+          "height": 13.8125,
+          "width": 124.25
+        },
+        {
+          "text": "For deals",
+          "rectCount": 1,
+          "height": 13.8125,
+          "width": 124.25
+        },
+        {
+          "text": "Team",
+          "rectCount": 1,
+          "height": 13.8125,
+          "width": 124.25
+        },
+        {
+          "text": "Contact",
+          "rectCount": 1,
+          "height": 13.8125,
+          "width": 124.25
+        }
+      ],
+      "h1Text": "Where capital and opportunity take a bearing.",
+      "h1LineCount": 4,
+      "h1Rects": [
+        {
+          "x": 48,
+          "y": 254,
+          "width": 572.8125,
+          "height": 130
+        },
+        {
+          "x": 48,
+          "y": 357.625,
+          "width": 150.59375,
+          "height": 130
+        },
+        {
+          "x": 48,
+          "y": 461.25,
+          "width": 478.25,
+          "height": 130
+        },
+        {
+          "x": 48,
+          "y": 564.875,
+          "width": 592.625,
+          "height": 130
+        }
+      ],
+      "heroChartIntersectsH1": false,
+      "firstFoldHeight": 900,
+      "chartBox": {
+        "x": 739.1875,
+        "y": 240.15625,
+        "width": 460.8125,
+        "height": 470.203125
+      },
+      "h1Box": {
+        "x": 48,
+        "y": 268,
+        "width": 627.1875,
+        "height": 414.5
+      }
+    },
+    {
+      "width": 1440,
+      "route": "/",
+      "scrollWidth": 1440,
+      "clientWidth": 1440,
+      "overflowX": 0,
+      "navItems": [
+        {
+          "text": "Home",
+          "rectCount": 1,
+          "height": 15.53125,
+          "width": 121.53125
+        },
+        {
+          "text": "For investors",
+          "rectCount": 1,
+          "height": 15.53125,
+          "width": 121.53125
+        },
+        {
+          "text": "For deals",
+          "rectCount": 1,
+          "height": 15.53125,
+          "width": 121.53125
+        },
+        {
+          "text": "Team",
+          "rectCount": 1,
+          "height": 15.53125,
+          "width": 121.53125
+        },
+        {
+          "text": "Contact",
+          "rectCount": 1,
+          "height": 15.53125,
+          "width": 121.53125
+        }
+      ],
+      "h1Text": "Where capital and opportunity take a bearing.",
+      "h1LineCount": 5,
+      "h1Rects": [
+        {
+          "x": 100,
+          "y": 234.765625,
+          "width": 305.875,
+          "height": 142
+        },
+        {
+          "x": 100,
+          "y": 347.390625,
+          "width": 480.5,
+          "height": 142
+        },
+        {
+          "x": 100,
+          "y": 460.015625,
+          "width": 519.875,
+          "height": 142
+        },
+        {
+          "x": 100,
+          "y": 572.640625,
+          "width": 259.765625,
+          "height": 142
+        },
+        {
+          "x": 100,
+          "y": 685.265625,
+          "width": 359.5,
+          "height": 142
+        }
+      ],
+      "heroChartIntersectsH1": false,
+      "firstFoldHeight": 900,
+      "chartBox": {
+        "x": 794.578125,
+        "y": 297.953125,
+        "width": 457.421875,
+        "height": 466.75
+      },
+      "h1Box": {
+        "x": 100,
+        "y": 249.765625,
+        "width": 622.578125,
+        "height": 563.125
+      }
+    },
+    {
+      "width": 1728,
+      "route": "/",
+      "scrollWidth": 1728,
+      "clientWidth": 1728,
+      "overflowX": 0,
+      "navItems": [
+        {
+          "text": "Home",
+          "rectCount": 1,
+          "height": 15.75,
+          "width": 117.84375
+        },
+        {
+          "text": "For investors",
+          "rectCount": 1,
+          "height": 15.75,
+          "width": 117.84375
+        },
+        {
+          "text": "For deals",
+          "rectCount": 1,
+          "height": 15.75,
+          "width": 117.84375
+        },
+        {
+          "text": "Team",
+          "rectCount": 1,
+          "height": 15.75,
+          "width": 117.84375
+        },
+        {
+          "text": "Contact",
+          "rectCount": 1,
+          "height": 15.75,
+          "width": 117.84375
+        }
+      ],
+      "h1Text": "Where capital and opportunity take a bearing.",
+      "h1LineCount": 5,
+      "h1Rects": [
+        {
+          "x": 244,
+          "y": 234.765625,
+          "width": 305.875,
+          "height": 142
+        },
+        {
+          "x": 244,
+          "y": 347.390625,
+          "width": 480.5,
+          "height": 142
+        },
+        {
+          "x": 244,
+          "y": 460.015625,
+          "width": 519.875,
+          "height": 142
+        },
+        {
+          "x": 244,
+          "y": 572.640625,
+          "width": 259.765625,
+          "height": 142
+        },
+        {
+          "x": 244,
+          "y": 685.265625,
+          "width": 359.5,
+          "height": 142
+        }
+      ],
+      "heroChartIntersectsH1": false,
+      "firstFoldHeight": 1117,
+      "chartBox": {
+        "x": 941.96875,
+        "y": 299.6875,
+        "width": 454.015625,
+        "height": 463.28125
+      },
+      "h1Box": {
+        "x": 244,
+        "y": 249.765625,
+        "width": 617.96875,
+        "height": 563.125
+      }
+    },
+    {
+      "width": 320,
+      "route": "/team/",
+      "scrollWidth": 320,
+      "clientWidth": 320,
+      "overflowX": 0,
+      "navItems": [
+        {
+          "text": "Home",
+          "rectCount": 1,
+          "height": 13.8125,
+          "width": 37.3125
+        },
+        {
+          "text": "For investors",
+          "rectCount": 1,
+          "height": 13.8125,
+          "width": 102.84375
+        },
+        {
+          "text": "For deals",
+          "rectCount": 1,
+          "height": 13.8125,
+          "width": 71.5
+        },
+        {
+          "text": "Team",
+          "rectCount": 1,
+          "height": 13.8125,
+          "width": 34.765625
+        },
+        {
+          "text": "Contact",
+          "rectCount": 1,
+          "height": 13.8125,
+          "width": 59.640625
+        }
+      ],
+      "h1Text": "Senior attention, clear accountability.",
+      "h1LineCount": 3,
+      "h1Rects": [
+        {
+          "x": 16,
+          "y": 305.1875,
+          "width": 272.40625,
+          "height": 53
+        },
+        {
+          "x": 16,
+          "y": 347.421875,
+          "width": 80.046875,
+          "height": 53
+        },
+        {
+          "x": 16,
+          "y": 389.65625,
+          "width": 241.1875,
+          "height": 53
+        }
+      ],
+      "heroChartIntersectsH1": false,
+      "firstFoldHeight": 844,
+      "chartBox": null,
+      "h1Box": {
+        "x": 16,
+        "y": 311.1875,
+        "width": 288,
+        "height": 126.703125
+      }
+    },
+    {
+      "width": 390,
+      "route": "/team/",
+      "scrollWidth": 390,
+      "clientWidth": 390,
+      "overflowX": 0,
+      "navItems": [
+        {
+          "text": "Home",
+          "rectCount": 1,
+          "height": 13.8125,
+          "width": 37.3125
+        },
+        {
+          "text": "For investors",
+          "rectCount": 1,
+          "height": 13.8125,
+          "width": 102.84375
+        },
+        {
+          "text": "For deals",
+          "rectCount": 1,
+          "height": 13.8125,
+          "width": 71.5
+        },
+        {
+          "text": "Team",
+          "rectCount": 1,
+          "height": 13.8125,
+          "width": 34.765625
+        },
+        {
+          "text": "Contact",
+          "rectCount": 1,
+          "height": 13.8125,
+          "width": 59.640625
+        }
+      ],
+      "h1Text": "Senior attention, clear accountability.",
+      "h1LineCount": 3,
+      "h1Rects": [
+        {
+          "x": 16,
+          "y": 304.1875,
+          "width": 331.984375,
+          "height": 65
+        },
+        {
+          "x": 16,
+          "y": 355.65625,
+          "width": 97.546875,
+          "height": 65
+        },
+        {
+          "x": 16,
+          "y": 407.125,
+          "width": 293.953125,
+          "height": 65
+        }
+      ],
+      "heroChartIntersectsH1": false,
+      "firstFoldHeight": 844,
+      "chartBox": null,
+      "h1Box": {
+        "x": 16,
+        "y": 311.1875,
+        "width": 358,
+        "height": 154.40625
+      }
+    },
+    {
+      "width": 768,
+      "route": "/team/",
+      "scrollWidth": 768,
+      "clientWidth": 768,
+      "overflowX": 0,
+      "navItems": [
+        {
+          "text": "Home",
+          "rectCount": 1,
+          "height": 13.8125,
+          "width": 122.203125
+        },
+        {
+          "text": "For investors",
+          "rectCount": 1,
+          "height": 13.8125,
+          "width": 122.203125
+        },
+        {
+          "text": "For deals",
+          "rectCount": 1,
+          "height": 13.8125,
+          "width": 122.203125
+        },
+        {
+          "text": "Team",
+          "rectCount": 1,
+          "height": 13.8125,
+          "width": 122.203125
+        },
+        {
+          "text": "Contact",
+          "rectCount": 1,
+          "height": 13.8125,
+          "width": 122.203125
+        }
+      ],
+      "h1Text": "Senior attention, clear accountability.",
+      "h1LineCount": 3,
+      "h1Rects": [
+        {
+          "x": 30.71875,
+          "y": 273.765625,
+          "width": 400.875,
+          "height": 78
+        },
+        {
+          "x": 30.71875,
+          "y": 335.9375,
+          "width": 117.78125,
+          "height": 78
+        },
+        {
+          "x": 30.71875,
+          "y": 398.109375,
+          "width": 354.9375,
+          "height": 78
+        }
+      ],
+      "heroChartIntersectsH1": false,
+      "firstFoldHeight": 900,
+      "chartBox": null,
+      "h1Box": {
+        "x": 30.71875,
+        "y": 281.765625,
+        "width": 452.09375,
+        "height": 186.515625
+      }
+    },
+    {
+      "width": 980,
+      "route": "/team/",
+      "scrollWidth": 980,
+      "clientWidth": 980,
+      "overflowX": 0,
+      "navItems": [
+        {
+          "text": "Home",
+          "rectCount": 1,
+          "height": 13.8125,
+          "width": 161.203125
+        },
+        {
+          "text": "For investors",
+          "rectCount": 1,
+          "height": 13.8125,
+          "width": 161.21875
+        },
+        {
+          "text": "For deals",
+          "rectCount": 1,
+          "height": 13.8125,
+          "width": 161.203125
+        },
+        {
+          "text": "Team",
+          "rectCount": 1,
+          "height": 13.8125,
+          "width": 161.21875
+        },
+        {
+          "text": "Contact",
+          "rectCount": 1,
+          "height": 13.8125,
+          "width": 161.203125
+        }
+      ],
+      "h1Text": "Senior attention, clear accountability.",
+      "h1LineCount": 3,
+      "h1Rects": [
+        {
+          "x": 39.203125,
+          "y": 285.15625,
+          "width": 511.625,
+          "height": 100
+        },
+        {
+          "x": 39.203125,
+          "y": 364.484375,
+          "width": 150.328125,
+          "height": 100
+        },
+        {
+          "x": 39.203125,
+          "y": 443.8125,
+          "width": 453,
+          "height": 100
+        }
+      ],
+      "heroChartIntersectsH1": false,
+      "firstFoldHeight": 900,
+      "chartBox": null,
+      "h1Box": {
+        "x": 39.203125,
+        "y": 296.15625,
+        "width": 577,
+        "height": 237.984375
+      }
+    },
+    {
+      "width": 981,
+      "route": "/team/",
+      "scrollWidth": 981,
+      "clientWidth": 981,
+      "overflowX": 0,
+      "navItems": [
+        {
+          "text": "Home",
+          "rectCount": 1,
+          "height": 13.8125,
+          "width": 123.515625
+        },
+        {
+          "text": "For investors",
+          "rectCount": 1,
+          "height": 13.8125,
+          "width": 123.53125
+        },
+        {
+          "text": "For deals",
+          "rectCount": 1,
+          "height": 13.8125,
+          "width": 123.53125
+        },
+        {
+          "text": "Team",
+          "rectCount": 1,
+          "height": 13.8125,
+          "width": 123.53125
+        },
+        {
+          "text": "Contact",
+          "rectCount": 1,
+          "height": 13.8125,
+          "width": 123.515625
+        }
+      ],
+      "h1Text": "Senior attention, clear accountability.",
+      "h1LineCount": 3,
+      "h1Rects": [
+        {
+          "x": 39.234375,
+          "y": 205.234375,
+          "width": 512.15625,
+          "height": 100
+        },
+        {
+          "x": 39.234375,
+          "y": 284.640625,
+          "width": 150.484375,
+          "height": 100
+        },
+        {
+          "x": 39.234375,
+          "y": 364.046875,
+          "width": 453.484375,
+          "height": 100
+        }
+      ],
+      "heroChartIntersectsH1": false,
+      "firstFoldHeight": 900,
+      "chartBox": null,
+      "h1Box": {
+        "x": 39.234375,
+        "y": 216.234375,
+        "width": 523.0625,
+        "height": 238.21875
+      }
+    },
+    {
+      "width": 1024,
+      "route": "/team/",
+      "scrollWidth": 1024,
+      "clientWidth": 1024,
+      "overflowX": 0,
+      "navItems": [
+        {
+          "text": "Home",
+          "rectCount": 1,
+          "height": 13.8125,
+          "width": 129.765625
+        },
+        {
+          "text": "For investors",
+          "rectCount": 1,
+          "height": 13.8125,
+          "width": 129.78125
+        },
+        {
+          "text": "For deals",
+          "rectCount": 1,
+          "height": 13.8125,
+          "width": 129.78125
+        },
+        {
+          "text": "Team",
+          "rectCount": 1,
+          "height": 13.8125,
+          "width": 129.78125
+        },
+        {
+          "text": "Contact",
+          "rectCount": 1,
+          "height": 13.8125,
+          "width": 129.765625
+        }
+      ],
+      "h1Text": "Senior attention, clear accountability.",
+      "h1LineCount": 3,
+      "h1Rects": [
+        {
+          "x": 40.953125,
+          "y": 208.671875,
+          "width": 534.484375,
+          "height": 104
+        },
+        {
+          "x": 40.953125,
+          "y": 291.5625,
+          "width": 157.046875,
+          "height": 104
+        },
+        {
+          "x": 40.953125,
+          "y": 374.453125,
+          "width": 473.25,
+          "height": 104
+        }
+      ],
+      "heroChartIntersectsH1": false,
+      "firstFoldHeight": 900,
+      "chartBox": null,
+      "h1Box": {
+        "x": 40.953125,
+        "y": 219.671875,
+        "width": 545.984375,
+        "height": 248.671875
+      }
+    },
+    {
+      "width": 1180,
+      "route": "/team/",
+      "scrollWidth": 1180,
+      "clientWidth": 1180,
+      "overflowX": 0,
+      "navItems": [
+        {
+          "text": "Home",
+          "rectCount": 1,
+          "height": 13.8125,
+          "width": 123.6875
+        },
+        {
+          "text": "For investors",
+          "rectCount": 1,
+          "height": 13.8125,
+          "width": 123.703125
+        },
+        {
+          "text": "For deals",
+          "rectCount": 1,
+          "height": 13.8125,
+          "width": 123.6875
+        },
+        {
+          "text": "Team",
+          "rectCount": 1,
+          "height": 13.8125,
+          "width": 123.703125
+        },
+        {
+          "text": "Contact",
+          "rectCount": 1,
+          "height": 13.8125,
+          "width": 123.6875
+        }
+      ],
+      "h1Text": "Senior attention, clear accountability.",
+      "h1LineCount": 3,
+      "h1Rects": [
+        {
+          "x": 47.203125,
+          "y": 219.15625,
+          "width": 615.984375,
+          "height": 120
+        },
+        {
+          "x": 47.203125,
+          "y": 314.6875,
+          "width": 181,
+          "height": 120
+        },
+        {
+          "x": 47.203125,
+          "y": 410.21875,
+          "width": 545.40625,
+          "height": 120
+        }
+      ],
+      "heroChartIntersectsH1": false,
+      "firstFoldHeight": 900,
+      "chartBox": null,
+      "h1Box": {
+        "x": 47.203125,
+        "y": 232.15625,
+        "width": 629.171875,
+        "height": 286.59375
+      }
+    },
+    {
+      "width": 1181,
+      "route": "/team/",
+      "scrollWidth": 1181,
+      "clientWidth": 1181,
+      "overflowX": 0,
+      "navItems": [
+        {
+          "text": "Home",
+          "rectCount": 1,
+          "height": 13.8125,
+          "width": 123.78125
+        },
+        {
+          "text": "For investors",
+          "rectCount": 1,
+          "height": 13.8125,
+          "width": 123.796875
+        },
+        {
+          "text": "For deals",
+          "rectCount": 1,
+          "height": 13.8125,
+          "width": 123.78125
+        },
+        {
+          "text": "Team",
+          "rectCount": 1,
+          "height": 13.8125,
+          "width": 123.796875
+        },
+        {
+          "text": "Contact",
+          "rectCount": 1,
+          "height": 13.8125,
+          "width": 123.78125
+        }
+      ],
+      "h1Text": "Senior attention, clear accountability.",
+      "h1LineCount": 3,
+      "h1Rects": [
+        {
+          "x": 47.234375,
+          "y": 219.234375,
+          "width": 616.515625,
+          "height": 121
+        },
+        {
+          "x": 47.234375,
+          "y": 314.84375,
+          "width": 181.15625,
+          "height": 121
+        },
+        {
+          "x": 47.234375,
+          "y": 410.453125,
+          "width": 545.875,
+          "height": 121
+        }
+      ],
+      "heroChartIntersectsH1": false,
+      "firstFoldHeight": 900,
+      "chartBox": null,
+      "h1Box": {
+        "x": 47.234375,
+        "y": 232.234375,
+        "width": 629.703125,
+        "height": 286.828125
+      }
+    },
+    {
+      "width": 1280,
+      "route": "/team/",
+      "scrollWidth": 1280,
+      "clientWidth": 1280,
+      "overflowX": 0,
+      "navItems": [
+        {
+          "text": "Home",
+          "rectCount": 1,
+          "height": 13.8125,
+          "width": 124.25
+        },
+        {
+          "text": "For investors",
+          "rectCount": 1,
+          "height": 13.8125,
+          "width": 124.25
+        },
+        {
+          "text": "For deals",
+          "rectCount": 1,
+          "height": 13.8125,
+          "width": 124.25
+        },
+        {
+          "text": "Team",
+          "rectCount": 1,
+          "height": 13.8125,
+          "width": 124.25
+        },
+        {
+          "text": "Contact",
+          "rectCount": 1,
+          "height": 13.8125,
+          "width": 124.25
+        }
+      ],
+      "h1Text": "Senior attention, clear accountability.",
+      "h1LineCount": 3,
+      "h1Rects": [
+        {
+          "x": 48,
+          "y": 226.15625,
+          "width": 668.21875,
+          "height": 130
+        },
+        {
+          "x": 48,
+          "y": 329.78125,
+          "width": 196.34375,
+          "height": 130
+        },
+        {
+          "x": 48,
+          "y": 433.40625,
+          "width": 591.640625,
+          "height": 130
+        }
+      ],
+      "heroChartIntersectsH1": false,
+      "firstFoldHeight": 900,
+      "chartBox": null,
+      "h1Box": {
+        "x": 48,
+        "y": 240.15625,
+        "width": 686.453125,
+        "height": 310.875
+      }
+    },
+    {
+      "width": 1440,
+      "route": "/team/",
+      "scrollWidth": 1440,
+      "clientWidth": 1440,
+      "overflowX": 0,
+      "navItems": [
+        {
+          "text": "Home",
+          "rectCount": 1,
+          "height": 15.53125,
+          "width": 121.53125
+        },
+        {
+          "text": "For investors",
+          "rectCount": 1,
+          "height": 15.53125,
+          "width": 121.53125
+        },
+        {
+          "text": "For deals",
+          "rectCount": 1,
+          "height": 15.53125,
+          "width": 121.53125
+        },
+        {
+          "text": "Team",
+          "rectCount": 1,
+          "height": 15.53125,
+          "width": 121.53125
+        },
+        {
+          "text": "Contact",
+          "rectCount": 1,
+          "height": 15.53125,
+          "width": 121.53125
+        }
+      ],
+      "h1Text": "Senior attention, clear accountability.",
+      "h1LineCount": 3,
+      "h1Rects": [
+        {
+          "x": 100,
+          "y": 234.765625,
+          "width": 291.953125,
+          "height": 142
+        },
+        {
+          "x": 100,
+          "y": 347.390625,
+          "width": 647.875,
+          "height": 142
+        },
+        {
+          "x": 100,
+          "y": 460.015625,
+          "width": 643.15625,
+          "height": 142
+        }
+      ],
+      "heroChartIntersectsH1": false,
+      "firstFoldHeight": 900,
+      "chartBox": null,
+      "h1Box": {
+        "x": 100,
+        "y": 249.765625,
+        "width": 715.234375,
+        "height": 337.875
+      }
+    },
+    {
+      "width": 1728,
+      "route": "/team/",
+      "scrollWidth": 1728,
+      "clientWidth": 1728,
+      "overflowX": 0,
+      "navItems": [
+        {
+          "text": "Home",
+          "rectCount": 1,
+          "height": 15.75,
+          "width": 117.84375
+        },
+        {
+          "text": "For investors",
+          "rectCount": 1,
+          "height": 15.75,
+          "width": 117.84375
+        },
+        {
+          "text": "For deals",
+          "rectCount": 1,
+          "height": 15.75,
+          "width": 117.84375
+        },
+        {
+          "text": "Team",
+          "rectCount": 1,
+          "height": 15.75,
+          "width": 117.84375
+        },
+        {
+          "text": "Contact",
+          "rectCount": 1,
+          "height": 15.75,
+          "width": 117.84375
+        }
+      ],
+      "h1Text": "Senior attention, clear accountability.",
+      "h1LineCount": 3,
+      "h1Rects": [
+        {
+          "x": 244,
+          "y": 234.765625,
+          "width": 291.953125,
+          "height": 142
+        },
+        {
+          "x": 244,
+          "y": 347.390625,
+          "width": 647.875,
+          "height": 142
+        },
+        {
+          "x": 244,
+          "y": 460.015625,
+          "width": 643.15625,
+          "height": 142
+        }
+      ],
+      "heroChartIntersectsH1": false,
+      "firstFoldHeight": 1117,
+      "chartBox": null,
+      "h1Box": {
+        "x": 244,
+        "y": 249.765625,
+        "width": 709.265625,
+        "height": 337.875
+      }
+    },
+    {
+      "width": 320,
+      "route": "/contact/",
+      "scrollWidth": 320,
+      "clientWidth": 320,
+      "overflowX": 0,
+      "navItems": [
+        {
+          "text": "Home",
+          "rectCount": 1,
+          "height": 13.8125,
+          "width": 37.3125
+        },
+        {
+          "text": "For investors",
+          "rectCount": 1,
+          "height": 13.8125,
+          "width": 102.84375
+        },
+        {
+          "text": "For deals",
+          "rectCount": 1,
+          "height": 13.8125,
+          "width": 71.5
+        },
+        {
+          "text": "Team",
+          "rectCount": 1,
+          "height": 13.8125,
+          "width": 34.765625
+        },
+        {
+          "text": "Contact",
+          "rectCount": 1,
+          "height": 13.8125,
+          "width": 59.640625
+        }
+      ],
+      "h1Text": "Start with a direct note.",
+      "h1LineCount": 2,
+      "h1Rects": [
+        {
+          "x": 16,
+          "y": 305.1875,
+          "width": 189.625,
+          "height": 53
+        },
+        {
+          "x": 16,
+          "y": 347.421875,
+          "width": 184.234375,
+          "height": 53
+        }
+      ],
+      "heroChartIntersectsH1": false,
+      "firstFoldHeight": 844,
+      "chartBox": null,
+      "h1Box": {
+        "x": 16,
+        "y": 311.1875,
+        "width": 288,
+        "height": 84.46875
+      }
+    },
+    {
+      "width": 390,
+      "route": "/contact/",
+      "scrollWidth": 390,
+      "clientWidth": 390,
+      "overflowX": 0,
+      "navItems": [
+        {
+          "text": "Home",
+          "rectCount": 1,
+          "height": 13.8125,
+          "width": 37.3125
+        },
+        {
+          "text": "For investors",
+          "rectCount": 1,
+          "height": 13.8125,
+          "width": 102.84375
+        },
+        {
+          "text": "For deals",
+          "rectCount": 1,
+          "height": 13.8125,
+          "width": 71.5
+        },
+        {
+          "text": "Team",
+          "rectCount": 1,
+          "height": 13.8125,
+          "width": 34.765625
+        },
+        {
+          "text": "Contact",
+          "rectCount": 1,
+          "height": 13.8125,
+          "width": 59.640625
+        }
+      ],
+      "h1Text": "Start with a direct note.",
+      "h1LineCount": 2,
+      "h1Rects": [
+        {
+          "x": 16,
+          "y": 304.1875,
+          "width": 356.375,
+          "height": 65
+        },
+        {
+          "x": 16,
+          "y": 355.65625,
+          "width": 99.265625,
+          "height": 65
+        }
+      ],
+      "heroChartIntersectsH1": false,
+      "firstFoldHeight": 844,
+      "chartBox": null,
+      "h1Box": {
+        "x": 16,
+        "y": 311.1875,
+        "width": 358,
+        "height": 102.9375
+      }
+    },
+    {
+      "width": 768,
+      "route": "/contact/",
+      "scrollWidth": 768,
+      "clientWidth": 768,
+      "overflowX": 0,
+      "navItems": [
+        {
+          "text": "Home",
+          "rectCount": 1,
+          "height": 13.8125,
+          "width": 122.203125
+        },
+        {
+          "text": "For investors",
+          "rectCount": 1,
+          "height": 13.8125,
+          "width": 122.203125
+        },
+        {
+          "text": "For deals",
+          "rectCount": 1,
+          "height": 13.8125,
+          "width": 122.203125
+        },
+        {
+          "text": "Team",
+          "rectCount": 1,
+          "height": 13.8125,
+          "width": 122.203125
+        },
+        {
+          "text": "Contact",
+          "rectCount": 1,
+          "height": 13.8125,
+          "width": 122.203125
+        }
+      ],
+      "h1Text": "Start with a direct note.",
+      "h1LineCount": 2,
+      "h1Rects": [
+        {
+          "x": 30.71875,
+          "y": 273.765625,
+          "width": 430.3125,
+          "height": 78
+        },
+        {
+          "x": 30.71875,
+          "y": 335.9375,
+          "width": 119.859375,
+          "height": 78
+        }
+      ],
+      "heroChartIntersectsH1": false,
+      "firstFoldHeight": 900,
+      "chartBox": null,
+      "h1Box": {
+        "x": 30.71875,
+        "y": 281.765625,
+        "width": 452.09375,
+        "height": 124.34375
+      }
+    },
+    {
+      "width": 980,
+      "route": "/contact/",
+      "scrollWidth": 980,
+      "clientWidth": 980,
+      "overflowX": 0,
+      "navItems": [
+        {
+          "text": "Home",
+          "rectCount": 1,
+          "height": 13.8125,
+          "width": 161.203125
+        },
+        {
+          "text": "For investors",
+          "rectCount": 1,
+          "height": 13.8125,
+          "width": 161.21875
+        },
+        {
+          "text": "For deals",
+          "rectCount": 1,
+          "height": 13.8125,
+          "width": 161.203125
+        },
+        {
+          "text": "Team",
+          "rectCount": 1,
+          "height": 13.8125,
+          "width": 161.21875
+        },
+        {
+          "text": "Contact",
+          "rectCount": 1,
+          "height": 13.8125,
+          "width": 161.203125
+        }
+      ],
+      "h1Text": "Start with a direct note.",
+      "h1LineCount": 2,
+      "h1Rects": [
+        {
+          "x": 39.203125,
+          "y": 285.15625,
+          "width": 549.203125,
+          "height": 100
+        },
+        {
+          "x": 39.203125,
+          "y": 364.484375,
+          "width": 152.96875,
+          "height": 100
+        }
+      ],
+      "heroChartIntersectsH1": false,
+      "firstFoldHeight": 900,
+      "chartBox": null,
+      "h1Box": {
+        "x": 39.203125,
+        "y": 296.15625,
+        "width": 577,
+        "height": 158.65625
+      }
+    },
+    {
+      "width": 981,
+      "route": "/contact/",
+      "scrollWidth": 981,
+      "clientWidth": 981,
+      "overflowX": 0,
+      "navItems": [
+        {
+          "text": "Home",
+          "rectCount": 1,
+          "height": 13.8125,
+          "width": 123.515625
+        },
+        {
+          "text": "For investors",
+          "rectCount": 1,
+          "height": 13.8125,
+          "width": 123.53125
+        },
+        {
+          "text": "For deals",
+          "rectCount": 1,
+          "height": 13.8125,
+          "width": 123.53125
+        },
+        {
+          "text": "Team",
+          "rectCount": 1,
+          "height": 13.8125,
+          "width": 123.53125
+        },
+        {
+          "text": "Contact",
+          "rectCount": 1,
+          "height": 13.8125,
+          "width": 123.515625
+        }
+      ],
+      "h1Text": "Start with a direct note.",
+      "h1LineCount": 2,
+      "h1Rects": [
+        {
+          "x": 39.234375,
+          "y": 205.234375,
+          "width": 549.78125,
+          "height": 100
+        },
+        {
+          "x": 39.234375,
+          "y": 284.640625,
+          "width": 153.125,
+          "height": 100
+        }
+      ],
+      "heroChartIntersectsH1": false,
+      "firstFoldHeight": 900,
+      "chartBox": null,
+      "h1Box": {
+        "x": 39.234375,
+        "y": 216.234375,
+        "width": 577.59375,
+        "height": 158.8125
+      }
+    },
+    {
+      "width": 1024,
+      "route": "/contact/",
+      "scrollWidth": 1024,
+      "clientWidth": 1024,
+      "overflowX": 0,
+      "navItems": [
+        {
+          "text": "Home",
+          "rectCount": 1,
+          "height": 13.8125,
+          "width": 129.765625
+        },
+        {
+          "text": "For investors",
+          "rectCount": 1,
+          "height": 13.8125,
+          "width": 129.78125
+        },
+        {
+          "text": "For deals",
+          "rectCount": 1,
+          "height": 13.8125,
+          "width": 129.78125
+        },
+        {
+          "text": "Team",
+          "rectCount": 1,
+          "height": 13.8125,
+          "width": 129.78125
+        },
+        {
+          "text": "Contact",
+          "rectCount": 1,
+          "height": 13.8125,
+          "width": 129.765625
+        }
+      ],
+      "h1Text": "Start with a direct note.",
+      "h1LineCount": 2,
+      "h1Rects": [
+        {
+          "x": 40.953125,
+          "y": 208.671875,
+          "width": 573.75,
+          "height": 104
+        },
+        {
+          "x": 40.953125,
+          "y": 291.5625,
+          "width": 159.8125,
+          "height": 104
+        }
+      ],
+      "heroChartIntersectsH1": false,
+      "firstFoldHeight": 900,
+      "chartBox": null,
+      "h1Box": {
+        "x": 40.953125,
+        "y": 219.671875,
+        "width": 602.796875,
+        "height": 165.78125
+      }
+    },
+    {
+      "width": 1180,
+      "route": "/contact/",
+      "scrollWidth": 1180,
+      "clientWidth": 1180,
+      "overflowX": 0,
+      "navItems": [
+        {
+          "text": "Home",
+          "rectCount": 1,
+          "height": 13.8125,
+          "width": 123.6875
+        },
+        {
+          "text": "For investors",
+          "rectCount": 1,
+          "height": 13.8125,
+          "width": 123.703125
+        },
+        {
+          "text": "For deals",
+          "rectCount": 1,
+          "height": 13.8125,
+          "width": 123.6875
+        },
+        {
+          "text": "Team",
+          "rectCount": 1,
+          "height": 13.8125,
+          "width": 123.703125
+        },
+        {
+          "text": "Contact",
+          "rectCount": 1,
+          "height": 13.8125,
+          "width": 123.6875
+        }
+      ],
+      "h1Text": "Start with a direct note.",
+      "h1LineCount": 2,
+      "h1Rects": [
+        {
+          "x": 47.203125,
+          "y": 219.15625,
+          "width": 661.234375,
+          "height": 120
+        },
+        {
+          "x": 47.203125,
+          "y": 314.6875,
+          "width": 184.171875,
+          "height": 120
+        }
+      ],
+      "heroChartIntersectsH1": false,
+      "firstFoldHeight": 900,
+      "chartBox": null,
+      "h1Box": {
+        "x": 47.203125,
+        "y": 232.15625,
+        "width": 694.6875,
+        "height": 191.0625
+      }
+    },
+    {
+      "width": 1181,
+      "route": "/contact/",
+      "scrollWidth": 1181,
+      "clientWidth": 1181,
+      "overflowX": 0,
+      "navItems": [
+        {
+          "text": "Home",
+          "rectCount": 1,
+          "height": 13.8125,
+          "width": 123.78125
+        },
+        {
+          "text": "For investors",
+          "rectCount": 1,
+          "height": 13.8125,
+          "width": 123.796875
+        },
+        {
+          "text": "For deals",
+          "rectCount": 1,
+          "height": 13.8125,
+          "width": 123.78125
+        },
+        {
+          "text": "Team",
+          "rectCount": 1,
+          "height": 13.8125,
+          "width": 123.796875
+        },
+        {
+          "text": "Contact",
+          "rectCount": 1,
+          "height": 13.8125,
+          "width": 123.78125
+        }
+      ],
+      "h1Text": "Start with a direct note.",
+      "h1LineCount": 2,
+      "h1Rects": [
+        {
+          "x": 47.234375,
+          "y": 219.234375,
+          "width": 661.796875,
+          "height": 121
+        },
+        {
+          "x": 47.234375,
+          "y": 314.84375,
+          "width": 184.328125,
+          "height": 121
+        }
+      ],
+      "heroChartIntersectsH1": false,
+      "firstFoldHeight": 900,
+      "chartBox": null,
+      "h1Box": {
+        "x": 47.234375,
+        "y": 232.234375,
+        "width": 695.296875,
+        "height": 191.21875
+      }
+    },
+    {
+      "width": 1280,
+      "route": "/contact/",
+      "scrollWidth": 1280,
+      "clientWidth": 1280,
+      "overflowX": 0,
+      "navItems": [
+        {
+          "text": "Home",
+          "rectCount": 1,
+          "height": 13.8125,
+          "width": 124.25
+        },
+        {
+          "text": "For investors",
+          "rectCount": 1,
+          "height": 13.8125,
+          "width": 124.25
+        },
+        {
+          "text": "For deals",
+          "rectCount": 1,
+          "height": 13.8125,
+          "width": 124.25
+        },
+        {
+          "text": "Team",
+          "rectCount": 1,
+          "height": 13.8125,
+          "width": 124.25
+        },
+        {
+          "text": "Contact",
+          "rectCount": 1,
+          "height": 13.8125,
+          "width": 124.25
+        }
+      ],
+      "h1Text": "Start with a direct note.",
+      "h1LineCount": 2,
+      "h1Rects": [
+        {
+          "x": 48,
+          "y": 226.15625,
+          "width": 717.296875,
+          "height": 130
+        },
+        {
+          "x": 48,
+          "y": 329.78125,
+          "width": 199.796875,
+          "height": 130
+        }
+      ],
+      "heroChartIntersectsH1": false,
+      "firstFoldHeight": 900,
+      "chartBox": null,
+      "h1Box": {
+        "x": 48,
+        "y": 240.15625,
+        "width": 753.59375,
+        "height": 207.25
+      }
+    },
+    {
+      "width": 1440,
+      "route": "/contact/",
+      "scrollWidth": 1440,
+      "clientWidth": 1440,
+      "overflowX": 0,
+      "navItems": [
+        {
+          "text": "Home",
+          "rectCount": 1,
+          "height": 15.53125,
+          "width": 121.53125
+        },
+        {
+          "text": "For investors",
+          "rectCount": 1,
+          "height": 15.53125,
+          "width": 121.53125
+        },
+        {
+          "text": "For deals",
+          "rectCount": 1,
+          "height": 15.53125,
+          "width": 121.53125
+        },
+        {
+          "text": "Team",
+          "rectCount": 1,
+          "height": 15.53125,
+          "width": 121.53125
+        },
+        {
+          "text": "Contact",
+          "rectCount": 1,
+          "height": 15.53125,
+          "width": 121.53125
+        }
+      ],
+      "h1Text": "Start with a direct note.",
+      "h1LineCount": 2,
+      "h1Rects": [
+        {
+          "x": 100,
+          "y": 234.765625,
+          "width": 779.75,
+          "height": 142
+        },
+        {
+          "x": 100,
+          "y": 347.390625,
+          "width": 217.1875,
+          "height": 142
+        }
+      ],
+      "heroChartIntersectsH1": false,
+      "firstFoldHeight": 900,
+      "chartBox": null,
+      "h1Box": {
+        "x": 100,
+        "y": 249.765625,
+        "width": 819.1875,
+        "height": 225.25
+      }
+    },
+    {
+      "width": 1728,
+      "route": "/contact/",
+      "scrollWidth": 1728,
+      "clientWidth": 1728,
+      "overflowX": 0,
+      "navItems": [
+        {
+          "text": "Home",
+          "rectCount": 1,
+          "height": 15.75,
+          "width": 117.84375
+        },
+        {
+          "text": "For investors",
+          "rectCount": 1,
+          "height": 15.75,
+          "width": 117.84375
+        },
+        {
+          "text": "For deals",
+          "rectCount": 1,
+          "height": 15.75,
+          "width": 117.84375
+        },
+        {
+          "text": "Team",
+          "rectCount": 1,
+          "height": 15.75,
+          "width": 117.84375
+        },
+        {
+          "text": "Contact",
+          "rectCount": 1,
+          "height": 15.75,
+          "width": 117.84375
+        }
+      ],
+      "h1Text": "Start with a direct note.",
+      "h1LineCount": 2,
+      "h1Rects": [
+        {
+          "x": 244,
+          "y": 234.765625,
+          "width": 779.75,
+          "height": 142
+        },
+        {
+          "x": 244,
+          "y": 347.390625,
+          "width": 217.1875,
+          "height": 142
+        }
+      ],
+      "heroChartIntersectsH1": false,
+      "firstFoldHeight": 1117,
+      "chartBox": null,
+      "h1Box": {
+        "x": 244,
+        "y": 249.765625,
+        "width": 819.1875,
+        "height": 225.25
+      }
+    }
+  ],
+  "consoleErrors": {
+    "home-320": [],
+    "home-390": [],
+    "home-768": [],
+    "home-980": [],
+    "home-981": [],
+    "home-1024": [],
+    "home-1180": [],
+    "home-1181": [],
+    "home-1280": [],
+    "home-1440": [],
+    "home-1728": [],
+    "team-320": [],
+    "team-390": [],
+    "team-768": [],
+    "team-980": [],
+    "team-981": [],
+    "team-1024": [],
+    "team-1180": [],
+    "team-1181": [],
+    "team-1280": [],
+    "team-1440": [],
+    "team-1728": [],
+    "contact-320": [],
+    "contact-390": [],
+    "contact-768": [],
+    "contact-980": [],
+    "contact-981": [],
+    "contact-1024": [],
+    "contact-1180": [],
+    "contact-1181": [],
+    "contact-1280": [],
+    "contact-1440": [],
+    "contact-1728": []
+  },
+  "pageErrors": {
+    "home-320": [],
+    "home-390": [],
+    "home-768": [],
+    "home-980": [],
+    "home-981": [],
+    "home-1024": [],
+    "home-1180": [],
+    "home-1181": [],
+    "home-1280": [],
+    "home-1440": [],
+    "home-1728": [],
+    "team-320": [],
+    "team-390": [],
+    "team-768": [],
+    "team-980": [],
+    "team-981": [],
+    "team-1024": [],
+    "team-1180": [],
+    "team-1181": [],
+    "team-1280": [],
+    "team-1440": [],
+    "team-1728": [],
+    "contact-320": [],
+    "contact-390": [],
+    "contact-768": [],
+    "contact-980": [],
+    "contact-981": [],
+    "contact-1024": [],
+    "contact-1180": [],
+    "contact-1181": [],
+    "contact-1280": [],
+    "contact-1440": [],
+    "contact-1728": []
+  },
+  "focus": {
+    "firstTab": {
+      "active": {
+        "tag": "A",
+        "text": "Skip to content",
+        "cls": "skip-link",
+        "href": "#main-content"
+      },
+      "file": "screenshots/focus-first-tab-desktop.png"
+    }
+  },
+  "reducedMotion": {
+    "homeDesktop": {
+      "width": 1440,
+      "file": "screenshots/home-1440-reduced-motion.png"
+    }
+  },
+  "semanticSmoke": {
+    "homeMobile": [
+      {
+        "tag": "HEADER",
+        "text": "LirCapital PartnersHomeCrossingFor investorsCapitalFor dealsOpportunitiesTeamPeo",
+        "role": null,
+        "aria": "Site header"
+      },
+      {
+        "tag": "NAV",
+        "text": "HomeCrossingFor investorsCapitalFor dealsOpportunitiesTeamPeopleContactDiscreet ",
+        "role": null,
+        "aria": "Primary navigation"
+      },
+      {
+        "tag": "MAIN",
+        "text": "The crossingWhere capital and opportunity take a bearing.43\u00b0N08\u00b0WfixLir Capital ",
+        "role": null,
+        "aria": null
+      },
+      {
+        "tag": "H1",
+        "text": "Where capital and opportunity take a bearing.",
+        "role": null,
+        "aria": null
+      },
+      {
+        "tag": "FOOTER",
+        "text": "Pre-production disclosureHarmonycove Limited trading as Lir Capital Partners. Re",
+        "role": null,
+        "aria": null
+      },
+      {
+        "tag": "NAV",
+        "text": "LegalContactHome",
+        "role": null,
+        "aria": "Footer navigation"
+      }
+    ]
+  }
+}
