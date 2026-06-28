@@ -1,6 +1,6 @@
 # Agent operating model
 
-**Control issue:** #19
+**Control issues:** #19, #15
 
 This project uses Morwenna as orchestrator plus bounded specialist subagents/profiles. The aim is to protect context, avoid iteration drift, and prevent unreviewed AI-looking output.
 
@@ -25,6 +25,22 @@ Use the smallest capable agent for each issue slice. The orchestrator owns seque
 | `agent:photography-producer` | `lircapphoto` | photography brief, asset inventory, design needs | asset requirements, rights/release checklist, placeholder status | asset rights unknown; production imagery missing |
 | `agent:seo-analytics-specialist` | `lircapseo` | page map, existing-site audit, metadata/schema issues | SEO/analytics/redirect recommendations | compliance-sensitive schema/copy unclear; old-site crawl incomplete |
 | `agent:client-review-coordinator` | `lircapclient` | review URL, screenshots, feedback, issue list | review pack, triage, change-control issues | ambiguous feedback; compliance-sensitive request not routed |
+
+## Issue #15 orchestration roles
+
+These are the required protected-context roles for issue-sized development. Each role receives only the inputs needed for its slice, not the full artefact set.
+
+| Role | Scope | Inputs | Outputs | Stop conditions |
+|---|---|---|---|---|
+| Orchestrator | Selects and sequences issue-sized work; prepares bounded prompts; owns repo state, PR evidence, deployment decisions, and final verification. | GitHub issue, current branch/status, relevant canonical brief/compliance/design excerpts, prior review results. | Agent dispatch prompts, reconciled review plan, verified diff/check evidence, PR/issue closeout evidence. | Unsafe/destructive action would be required; user decision needed; no independent verification path exists. |
+| Brand strategist | Reviews strategic fit, positioning, tone, and brand risk against LirCap source-of-truth material. | Strategic brief/canonical brief excerpts, brand guide, page/design spec, screenshots or copy under review. | Brand-fit verdict, positioning/tone findings, required changes or PASS. | Cannot judge without relevant copy/render; conflict in brand source hierarchy; recommendation would change approved positioning. |
+| Design director | Reviews visual quality, hierarchy, interaction feel, and avoidance of generic AI-template output. | Design spec, component/page issue, rendered screenshots or local URL, relevant brand/design constraints. | Design-quality verdict, visual defects, required changes or PASS. | No render/screenshot; imagery or copy is too incomplete to judge; findings require new design direction. |
+| Frontend implementer | Implements the smallest viable code/content slice for a single issue or explicit dependency cluster. | Issue body, exact files, canonical section excerpts, relevant claim IDs/design constraints, commands to run. | Commit-ready diff, local check output, implementation notes and blockers. | Scope broadens beyond issue; missing content/design/compliance decision; required checks cannot run. |
+| Compliance copy reviewer | Reviews claims, copy, forms, privacy, legal/entity language, and regulated phrasing before shipping. | Copy diff, claims register IDs, compliance review excerpts, page/form context. | Allowed/soften/remove verdicts, claim-risk findings, Gate A/B status or required changes. | Claim source missing; legal/counsel decision required; requested wording exceeds approved evidence. |
+| Browser QA reviewer | Verifies rendered behavior, responsive layout, console state, accessibility/performance basics, and screenshot evidence. | Local/deployed URL, browser steps, acceptance criteria, expected viewports/states. | QA evidence, screenshots/console notes, PASS or reproducible defects. | No runnable URL/build; cannot reproduce steps; visual evidence cannot be captured. |
+| DevOps deployer | Handles deploy/runbook/infrastructure slices under explicit constraints and proves smoke behavior. | Deploy issue, repo state, VPS/Caddy/DNS context, secret-handling constraints, smoke-check plan. | Deploy/runbook changes, commands run, smoke-check output, rollback/blocker notes. | Credentials missing; destructive infra action requires approval; smoke checks cannot verify the change. |
+
+Implementation tasks must remain issue-sized and pass both spec-compliance review and quality review before the orchestrator treats them as shippable. Subagent reports are inputs to the decision; the orchestrator retains final repo and deploy verification responsibility.
 
 ## Default issue loop
 
