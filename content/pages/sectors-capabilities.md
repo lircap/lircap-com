@@ -12,6 +12,7 @@ compliance_claim_ids:
   - "CL-006"
   - "CL-011"
   - "CL-012"
+  - "CL-013"
 copy_freeze: false
 content_model: "docs/content/content-model.md"
 ---
@@ -49,10 +50,11 @@ Draft the page narrative before any build work. This page brief is a planning/co
 | `CL-006` | See claims register | Use fallback until cleared | See claims register |
 | `CL-011` | See claims register | Use fallback until cleared | See claims register |
 | `CL-012` | See claims register | Use fallback until cleared | See claims register |
+| `CL-013` | See claims register | Use fallback until cleared | See claims register |
 
 ## Draft copy
 
-Not frozen. Draft copy must be produced under issue #8 using `docs/content/copy-review-checklist.md`.
+Draft implementation copy is captured in `docs/content/proposition-copy.md` under `/sectors/`. It remains unfrozen until the listed claim IDs are cleared, softened, or accepted as safe-default wording.
 
 ## Voice review
 

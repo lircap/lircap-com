@@ -50,7 +50,7 @@ Draft the page narrative before any build work. This page brief is a planning/co
 
 ## Draft copy
 
-Not frozen. Draft copy must be produced under issue #8 using `docs/content/copy-review-checklist.md`.
+Draft implementation copy is captured in `docs/content/proposition-copy.md` under `/private-markets/`. It remains unfrozen until the listed claim IDs are cleared, softened, or accepted as safe-default wording; the conservative fallback is to omit the standalone page and keep only a one-line by-introduction-only reference.
 
 ## Voice review
 
