@@ -9,11 +9,21 @@ const seo = getSeo('/team/');
 <BaseLayout {...seo}>
   <section class="team-page" aria-labelledby="page-title">
     <div class="team-hero">
-      <p class="eyebrow">Partner-led judgement</p>
-      <h1 id="page-title">Senior attention, clear accountability.</h1>
-      <p class="lede">
-        Lir Capital is built around senior people who bring sector judgement, relationships and operating context to private conversations.
-      </p>
+      <div class="team-hero__copy">
+        <p class="eyebrow">Partner-led judgement</p>
+        <h1 id="page-title">Senior attention, clear accountability.</h1>
+        <p class="lede">
+          Lir Capital is built around senior people who bring sector judgement, relationships and operating context to private conversations.
+        </p>
+      </div>
+      <div class="team-crossing-map" aria-hidden="true">
+        <span class="team-crossing-map__label">route</span>
+        <span class="team-crossing-map__track team-crossing-map__track--capital"></span>
+        <span class="team-crossing-map__track team-crossing-map__track--opportunity"></span>
+        <span class="team-crossing-map__fix"></span>
+        <span class="team-crossing-map__note team-crossing-map__note--one">capital</span>
+        <span class="team-crossing-map__note team-crossing-map__note--two">opportunity</span>
+      </div>
     </div>
 
     <section class="team-roster" aria-labelledby="team-roster-title">
