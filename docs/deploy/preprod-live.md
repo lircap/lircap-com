@@ -32,17 +32,23 @@ Do not commit or print the password or password hash. Client review packages mus
 /opt/lircap-preprod/
   Caddyfile
   docker-compose.yml
-  site/
-    index.html
-    contact/index.html
-    for-deals/index.html
-    for-investors/index.html
-    legal/index.html
-    team/index.html
+  site -> releases/<active-release>/  # symlink managed by auto deploy
+  releases/
+    <utc-stamp>-<run-id>-<attempt>-<sha>/
+      index.html
+      contact/index.html
+      for-deals/index.html
+      for-investors/index.html
+      legal/index.html
+      team/index.html
+      robots.txt
+      sitemap.xml
   secrets/preview.env       # not in git; root-only
   caddy-data/               # ACME/cert state
   caddy-config/
 ```
+
+The first automated deploy moves any pre-existing non-symlink `site/` directory to `releases/pre-automation-backup-<release-id>` before creating the `site` symlink. Each later deploy creates a timestamped release, atomically moves a temporary `site.next` symlink into place as `site`, and force-recreates only the Caddy container so Docker's `./site` bind mount resolves to the newly active release.
 
 ## Current verification evidence
 
@@ -88,19 +94,24 @@ docker compose logs --tail=100 caddy
 docker compose restart caddy
 ```
 
-## Redeploy static build
+## Automated redeploy static build
 
-From a trusted operator machine with repository access:
+Primary redeploy path is GitHub Actions workflow `.github/workflows/deploy-preprod.yml` using the `preprod` Environment.
 
-```bash
-cd /root/lircap/repos/lircap-com
-npm ci
-npm run build
-python3 scripts/check-placeholders.py
-tar -C dist -czf /tmp/lircap-dist.tgz .
-scp -i /root/.ssh/pendragon_hetzner_ed25519 /tmp/lircap-dist.tgz root@100.106.234.125:/tmp/lircap-dist.tgz
-ssh -i /root/.ssh/pendragon_hetzner_ed25519 root@100.106.234.125 'tar -xzf /tmp/lircap-dist.tgz -C /opt/lircap-preprod/site && cd /opt/lircap-preprod && docker compose restart caddy'
-```
+Automatic path:
+
+1. Merge reviewed code to `main`.
+2. `CI` runs on `main`.
+3. `Deploy pre-prod` starts on `workflow_run` only after successful same-repository `push` CI completion on `main`.
+4. The deploy workflow rebuilds/verifies, joins the Tailscale tailnet, uploads a tarball over SSH with pinned `known_hosts`, activates a timestamped release under `/opt/lircap-preprod/releases/`, force-recreates Caddy for the symlinked bind mount, and smokes the password gate.
+
+Manual fallback:
+
+1. Open **Actions → Deploy pre-prod → Run workflow**.
+2. Run the workflow; it redeploys `main` only and does not accept arbitrary refs.
+3. Confirm the `preprod` environment and smoke checks pass.
+
+Required GitHub Environment configuration is documented in `docs/deploy/ci-and-deploy.md`. The `preprod` Environment must be restricted to `main` deployments only. Values must be stored as Environment secrets/vars only; do not commit them.
 
 ## Credential rotation
 
@@ -146,15 +157,19 @@ docker compose restart caddy
 
 ## Rollback
 
-1. Keep DNS in place but stop the service:
+Preferred rollback is to repoint `/opt/lircap-preprod/site` to a previous timestamped release and keep Caddy running with the existing password gate:
 
 ```bash
 cd /opt/lircap-preprod
-docker compose down
+readlink -f site
+find releases -maxdepth 1 -mindepth 1 -type d -printf '%TY-%Tm-%Td %TH:%TM %p\n' | sort
+ln -sfn /opt/lircap-preprod/releases/<previous-release> site
+docker compose up -d --force-recreate --no-deps caddy
 ```
 
-2. Or restore a previous `site/` bundle from backup and restart Caddy.
-3. If public exposure must be removed, delete or disable the `lircap.pendragon.bot` DNS record in Cloudflare.
+After rollback, verify unauthenticated `/` returns `401` with a case-insensitive `WWW-Authenticate` Basic challenge, then verify authenticated `/`, `/team/`, `/contact/`, `/robots.txt`, and `/sitemap.xml` load expected content.
+
+If public exposure must be removed, delete or disable the `lircap.pendragon.bot` DNS record in Cloudflare.
 
 ## Closeout notes
 
