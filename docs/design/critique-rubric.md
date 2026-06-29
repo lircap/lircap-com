@@ -106,6 +106,21 @@ Does this look AI-generated?
 Verdict: PASS / NEEDS WORK / BLOCKER
 ```
 
+## Whole-site wall review
+
+For a design-loop promotion or public-site readiness claim, reviewers must place the route screenshots together as a system and answer:
+
+- Is every public route in nav/CTA/footer intentionally complete enough to show the client?
+- Does the mobile nav follow the expected right-aligned hamburger/menu convention, unless an alternative is explicitly approved?
+- Does desktop nav copy have a clear public-facing point of view rather than dual-label indecision?
+- At 1728/1920, does the hero remain composed without accidental one-word line breaks, overlap, or degraded image/text balance?
+- Is the hero illustration refined enough to function as a brand-defining asset, or should it be reduced until proper art direction exists?
+- Do section dividers/rules and empty bands form a deliberate system rather than accidental repetition or missing-module placeholders?
+- Do `/for-investors/`, `/for-deals/`, `/contact/`, `/legal/`, and the footer each perform their expected page job?
+- What is the one thing a high-end agency creative director would refuse to show tomorrow?
+
+Any `BLOCKER` answer prevents promotion even if the weighted score improves.
+
 ## Page/issue applicability
 
 Mandatory for:

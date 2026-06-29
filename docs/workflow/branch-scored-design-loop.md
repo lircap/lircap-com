@@ -146,6 +146,7 @@ For each candidate:
 
 - build and capture the same evidence set as the baseline;
 - complete `templates/design-loop-scorecard.md`, including proof/provenance evidence for any claims or proof points touched by the candidate;
+- complete a concise durable scorecard/rejection record for **every** candidate, including losing or failed variants, so B/C-style failures are not left only in worktree screenshots or delegation summaries;
 - dispatch design, brand, production-design, browser-QA, and code/security review as relevant;
 - run production-design review after rendered screenshots/browser evidence exist and before final scorecard scoring;
 - record craft defects separately from strategic/design disagreements and from score improvements;
@@ -317,6 +318,12 @@ Any of these blocks promotion regardless of score:
 - stock/AI/generated/fake imagery;
 - placeholder marker or placeholder asset leaking beyond approved pre-prod usage;
 - compliance-risky new claim or regulated phrasing without source/sign-off;
+- public route in primary nav, footer nav, or hero CTA that is blank, scaffold-like, or not production-grade;
+- mobile nav pattern that violates common responsive expectations without explicit client/design approval;
+- desktop nav IA/copy that keeps confusing dual descriptors or internal taxonomy in public labels without explicit approval;
+- super-wide hero failure at 1728/1920, including overlap, accidental one-word line breaks, or materially degraded composition;
+- contact page that does not satisfy the basic user task of how/why to contact and what happens next;
+- legal page that contains nonsense, placeholder legal copy, false specificity, or unsourced legal/privacy claims;
 - broken pre-prod password gate or route smoke;
 - PR branch not based on current accepted baseline;
 - unresolved production-design `BLOCKER`;

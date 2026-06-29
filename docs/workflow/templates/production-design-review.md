@@ -41,6 +41,23 @@ If a width is not practical or not relevant to the run, record the omission and 
 | Premium restraint / no cheap decoration | PASS / ISSUE / BLOCKER | | low/med/high/blocking | |
 | Screenshot delta vs baseline | PASS / ISSUE / BLOCKER | | low/med/high/blocking | |
 
+## Whole-site agency-readiness checks
+
+These checks are mandatory before promotion even when the candidate hypothesis is narrow. If a public route is visible in primary nav, footer nav, or hero CTAs, it must be production-grade or deliberately hidden/renamed.
+
+| Area | Verdict | Evidence / defect | Severity | Required fix |
+|---|---|---|---|---|
+| Public route completeness: `/`, `/for-investors/`, `/for-deals/`, `/team/`, `/contact/`, `/legal/` | PASS / ISSUE / BLOCKER | | low/med/high/blocking | |
+| Mobile nav expected pattern: conventional right-aligned hamburger/menu or approved alternative | PASS / ISSUE / BLOCKER | | low/med/high/blocking | |
+| Desktop nav IA/copy: clean labels, no confusing dual descriptors or internal taxonomy feel | PASS / ISSUE / BLOCKER | | low/med/high/blocking | |
+| Super-wide hero: 1728/1920 composition, line breaks, image/text relationship | PASS / ISSUE / BLOCKER | | low/med/high/blocking | |
+| Hero illustration craft: line weight, optical spacing, scale, originality, art-direction adequacy | PASS / ISSUE / BLOCKER | | low/med/high/blocking | |
+| Section flow/divider hierarchy: no orphaned sections, repeated accidental rules, missing-module feel | PASS / ISSUE / BLOCKER | | low/med/high/blocking | |
+| Contact page task fit: user knows how/why to contact and what happens next | PASS / ISSUE / BLOCKER | | low/med/high/blocking | |
+| Legal page sanity: coherent, conservative, sourced/approved or clearly minimal; no nonsense | PASS / ISSUE / BLOCKER | | low/med/high/blocking | |
+| Footer closure/refinement: simple-but-finished, not default/basic | PASS / ISSUE / BLOCKER | | low/med/high/blocking | |
+| Contact-sheet wall review: all public routes together feel like one crafted system | PASS / ISSUE / BLOCKER | | low/med/high/blocking | |
+
 ## Baseline comparison
 
 - Craft improvements vs baseline:

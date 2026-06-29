@@ -89,6 +89,34 @@ For UI work, capture:
 - relevant hover/focus/navigation states;
 - authenticated and unauthenticated states when testing pre-prod.
 
+## Whole-site agency-readiness gate
+
+For design-loop promotion or any PR that changes the public shell, homepage hero, nav, footer, or public-route content, browser QA must include a whole-site readiness pass. Technical checks are necessary but not sufficient: a route can pass axe/console/build and still be blocked for being blank, nonsensical, conventionally confusing, or below the agreed craft bar.
+
+Required public routes unless explicitly hidden/removed from navigation:
+
+- `/`
+- `/for-investors/`
+- `/for-deals/`
+- `/team/`
+- `/contact/`
+- `/legal/`
+- footer links and primary CTA destinations
+
+Blocking findings include:
+
+- visible public route is blank, scaffold-like, or lacks a clear page job;
+- primary nav or hero CTA points to a non-production-grade destination;
+- mobile nav does not use the conventional right-aligned hamburger/menu pattern unless an alternative is explicitly approved;
+- desktop nav labels/descriptors feel like internal taxonomy or copy indecision;
+- hero fails at 1728/1920 via overlap, accidental one-word lines, or degraded hierarchy;
+- contact page does not explain how/why to contact and what happens next;
+- legal page contains nonsense, placeholder legal wording, false specificity, or unsourced claims;
+- footer looks default/basic rather than intentionally simple and refined;
+- repeated dividers/rules, spacing, headings, CTAs, or components are inconsistent across routes.
+
+Recommended evidence: a contact-sheet artifact showing all public routes at 320, 390, 768, 1024, 1180, 1280, 1440, 1728, and 1920 where practical, plus any route-specific danger widths.
+
 ## Design gate integration
 
 Use `docs/design/critique-rubric.md` for major visual slices. Design work is not done until:
