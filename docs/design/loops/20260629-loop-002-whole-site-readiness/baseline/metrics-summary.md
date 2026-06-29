@@ -63,4 +63,3 @@
 - 1440px: status=200 overflowX=0 h1Lines=2 narrowH1=[] bodyH=1529 textLen=1172 draft=True navWrap=[]
 - 1728px: status=200 overflowX=0 h1Lines=2 narrowH1=[] bodyH=1542 textLen=1172 draft=True navWrap=[]
 - 1920px: status=200 overflowX=0 h1Lines=2 narrowH1=[] bodyH=1542 textLen=1172 draft=True navWrap=[]
-
