@@ -52,7 +52,10 @@ describe('team content model and route', () => {
     expect(teamSeo.description).toMatch(/partners and advisers/i);
     expect(teamPage).not.toMatch(/draft compliance status|tracked for review|subject to partner and compliance sign-off|rights and releases are complete/i);
     expect(teamPage).not.toContain('<details class="team-card__review">');
-    expect(teamPage).toContain('aria-label={`Portrait slot pending approved photography for ${member.name}`}');
+    expect(teamPage).toContain('aria-label={`No portrait currently published for ${member.name}`}');
+    expect(teamPage).toContain('Portrait pending');
+    expect(teamPage).not.toContain('IMAGE — PARTNER PORTRAIT');
+    expect(teamPage).not.toContain('{member.portraitAssetId}');
     expect(teamPage).not.toContain('data-placeholder={`lircap-${member.portraitAssetId}`}');
     expect(teamPage).not.toMatch(/data-placeholder=["']lircap-/i);
     expect(teamPage).not.toMatch(/<img|src=https?:|client:load|client:visible|<script|<form|fetch\(/i);

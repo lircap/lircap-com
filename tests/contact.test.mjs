@@ -21,6 +21,7 @@ describe('contact enquiry route safe slice', () => {
     expect(contactPage).toContain('Capital relationships');
     expect(contactPage).toContain('Company or transaction introductions');
     expect(contactPage).toContain('General or senior introductions');
+    expect(contactPage).toContain('non-confidential and light on attachments');
     expect(contactPage).toMatch(/not an offer, invitation, or solicitation/i);
   });
 

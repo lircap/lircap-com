@@ -18,7 +18,7 @@ describe('public route readiness', () => {
     }
 
     expect(investorsPage).toContain('For investors');
-    expect(investorsPage).toContain('A discreet route for capital relationships.');
+    expect(investorsPage).toContain('A discreet path for capital relationships.');
     expect(dealsPage).toContain('For deals');
     expect(dealsPage).toContain('A careful first conversation for complex situations.');
   });
@@ -27,7 +27,7 @@ describe('public route readiness', () => {
     expect(getSeo('/legal/').description).toMatch(/confirmed company registration details/i);
     expect(legalPage).toContain('Harmonycove Limited trading as Lir Capital Partners');
     expect(legalPage).toContain('Company No. 801328');
-    expect(legalPage).toMatch(/does not add regulatory, jurisdictional, office-location, or legal-status wording/i);
+    expect(legalPage).toMatch(/confirmed company disclosure and general notes/i);
     expect(legalPage).toMatch(/Nothing on this website is an offer, invitation, solicitation/i);
     expect(legalPage).not.toMatch(/pre-production|compliance gate|status summary|counsel review/i);
   });

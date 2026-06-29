@@ -17,7 +17,7 @@ const seo = getSeo('/team/');
         </p>
       </div>
       <div class="team-crossing-map" aria-hidden="true">
-        <span class="team-crossing-map__label">route</span>
+        <span class="team-crossing-map__label">bearing</span>
         <span class="team-crossing-map__track team-crossing-map__track--capital"></span>
         <span class="team-crossing-map__track team-crossing-map__track--opportunity"></span>
         <span class="team-crossing-map__fix"></span>
@@ -32,7 +32,8 @@ const seo = getSeo('/team/');
         <div>
           <h2 id="team-roster-title">Partners and advisers</h2>
           <p>
-            Each profile reserves a neutral portrait slot for the approved photography set. No stock or generated imagery is used.
+            Team profiles are presented without stock or generated imagery while the approved photography set remains
+            pending.
           </p>
         </div>
       </div>
@@ -40,9 +41,9 @@ const seo = getSeo('/team/');
       <ul class="team-grid" role="list">
         {teamMembers.map((member) => (
           <li class="team-card" id={member.id} aria-labelledby={`${member.id}-name`} role="listitem">
-            <div class="portrait-placeholder" aria-label={`Portrait slot pending approved photography for ${member.name}`}>
-              <span>IMAGE — PARTNER PORTRAIT</span>
-              <strong>{member.portraitAssetId}</strong>
+            <div class="portrait-placeholder" aria-label={`No portrait currently published for ${member.name}`}>
+              <span class="portrait-placeholder__mark" aria-hidden="true">{member.name.split(' ').map((part) => part[0]).join('')}</span>
+              <span class="portrait-placeholder__note">Portrait pending</span>
             </div>
             <div class="team-card__body">
               <p class="team-card__meta">{member.role}</p>
