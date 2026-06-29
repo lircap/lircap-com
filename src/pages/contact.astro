@@ -9,18 +9,18 @@ const seo = getSeo('/contact/');
 const enquiryIntents = [
   {
     label: 'Capital relationships',
-    summary: 'For institutional, family-office, or professional counterparties who want to understand whether a conversation is appropriate.',
-    instruction: 'Please include your organisation, jurisdiction, and the context for the discussion.',
+    summary: 'For institutional, family-office, or professional counterparties exploring whether a conversation is appropriate.',
+    instruction: 'Include your organisation, jurisdiction, areas of focus, and why the timing is relevant.',
   },
   {
     label: 'Company or transaction introductions',
     summary: 'For owners, companies, advisers, and trusted introducers considering a discreet first discussion.',
-    instruction: 'Please outline the business, situation, timing, and whether confidentiality restrictions apply.',
+    instruction: 'Outline the business, your role, the situation, timing, and any confidentiality restrictions.',
   },
   {
     label: 'General or senior introductions',
-    summary: 'For other relationship-led enquiries where a direct email is the most proportionate route.',
-    instruction: 'Please say who you are hoping to reach and the nature of the introduction.',
+    summary: 'For relationship-led enquiries where a direct note is the most proportionate starting point.',
+    instruction: 'Say who you are hoping to reach, the nature of the introduction, and preferred follow-up details.',
   },
 ];
 ---
@@ -28,11 +28,11 @@ const enquiryIntents = [
 <BaseLayout {...seo}>
   <section class="contact-page" aria-labelledby="page-title">
     <div class="contact-hero">
-      <p class="eyebrow">Discreet enquiry</p>
+      <p class="eyebrow">Contact</p>
       <h1 id="page-title">Start with a direct note.</h1>
       <p class="lede">
-        Lir’s public contact route is deliberately simple while form-handling, privacy, and regulatory decisions remain under review.
-        If a conversation may be appropriate, email the team directly and include enough context for the enquiry to be routed carefully.
+        For a discreet first conversation with Lir Capital, email the team directly. A short, practical note helps us
+        understand fit, context and timing, and route the enquiry carefully.
       </p>
       <a class="contact-email" href={mailtoHref} aria-label={`Email Lir Capital at ${contactEmail}`}>
         {contactEmail}
@@ -42,12 +42,11 @@ const enquiryIntents = [
     <section class="contact-section" aria-labelledby="routing-title">
       <div class="section-heading">
         <div>
-          <p class="eyebrow">Routing model</p>
-          <h2 id="routing-title">Help us understand the nature of the enquiry.</h2>
+          <p class="eyebrow">What to include</p>
+          <h2 id="routing-title">Give enough context for a sensible first response.</h2>
         </div>
         <p>
-          Please use the email subject or opening line to identify the route below. This is not an offer, invitation, or solicitation;
-          it is a way to establish whether a senior conversation is relevant and properly directed.
+          Please use the subject line or opening sentence to make the nature of the enquiry clear. This is not an offer, invitation, or solicitation, nor a suitability process or investor categorisation.
         </p>
       </div>
 
@@ -64,16 +63,17 @@ const enquiryIntents = [
 
     <section class="contact-note" aria-labelledby="privacy-title">
       <div>
-        <p class="eyebrow">Privacy and spam posture</p>
-        <h2 id="privacy-title">No web form is active on this page.</h2>
+        <p class="eyebrow">What happens next</p>
+        <h2 id="privacy-title">A careful reply, then an appropriate route.</h2>
       </div>
       <div class="contact-note__body">
         <p>
-          This page does not submit a form, run client-side scripts, call external services, or place enquiry data into a website database.
-          Enquiries are routed through your own email client to Lir’s team address.
+          If the enquiry appears relevant, a member of the team will respond by email to arrange a suitable next step or
+          ask for clarifying context. If it is not a fit, we may say so directly.
         </p>
         <p>
-          A future self-hosted enquiry handler may be introduced only after privacy, retention, spam-protection, and counsel decisions are recorded.
+          Please do not send login credentials, bank details, inside information, personal identification documents, or
+          confidential transaction materials until an appropriate channel has been agreed.
         </p>
       </div>
     </section>

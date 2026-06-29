@@ -13,8 +13,8 @@ describe('contact enquiry route safe slice', () => {
   it('renders a static senior contact route with email-only routing', () => {
     expect(contactPage).toContain("const seo = getSeo('/contact/');");
     expect(contactSeo.title).toBe('Contact — Lir Capital');
-    expect(contactSeo.description).toMatch(/avoids web forms, tracking and client-side enquiry capture/i);
-    expect(contactPage).toContain('Discreet enquiry');
+    expect(contactSeo.description).toMatch(/direct email for a discreet first conversation/i);
+    expect(contactPage).toContain('Contact');
     expect(contactPage).toContain('Start with a direct note.');
     expect(contactPage).toContain('partners@lircap.com');
     expect(contactPage).toContain('mailto:${contactEmail}?subject=Lir%20Capital%20enquiry');

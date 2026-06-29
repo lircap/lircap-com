@@ -9,6 +9,12 @@ const seo = getSeo('/');
 <BaseLayout {...seo}>
   <CrossingHero />
 
+  <div class="home-transition" aria-hidden="true">
+    <span class="home-transition__rule"></span>
+    <span class="home-transition__fix"></span>
+    <span class="home-transition__rule"></span>
+  </div>
+
   <section class="home-brief" aria-labelledby="home-brief-title">
     <div class="section-heading">
       <p class="eyebrow">One function, two directions</p>
