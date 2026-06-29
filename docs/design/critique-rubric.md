@@ -35,8 +35,10 @@ Score each dimension: `PASS`, `NEEDS WORK`, or `BLOCKER`.
 |---|---|---|
 | Strategic fit | Does it feel like senior Lir: elite advisory proof machine + human warmth? | generic fintech, VC SaaS, or luxury template |
 | The crossing | Is the crossing/navigational fix ownable and generative? | decorative lines/waves with no structural idea |
+| Headline / visual lockup | Do the headline and illustration reinforce the same ownable idea in plain, premium language? | headline uses a different metaphor from the visual, feels clever but imprecise, or makes the illustration carry the meaning alone |
 | Composition | Is there real hierarchy, tension, and editorial judgement? | centered hero + cards + gradient = template |
 | Typography | Does Newsreader/Inter create authority and rhythm? | oversized generic serif, weak measure, poor hierarchy |
+| Brand lockup | Is the temporary/permanent wordmark optically aligned, deliberately spaced, and presentation-ready across breakpoints? | mark/descriptor baseline drift, accidental wrapping, uneven gaps, sloppy relationship to frame/nav |
 | Restraint | Is the page confident enough to remove excess? | too many effects, icons, badges, stats, glows |
 | Institutional credibility | Would a sovereign/family-office/institutional visitor trust it? | startup-pitch energy, hype, unsubstantiated claims |
 | Human warmth | Is partner-led credibility present without becoming lifestyle content? | sterile corporate anonymity or overfriendly startup tone |
@@ -112,10 +114,14 @@ For a design-loop promotion or public-site readiness claim, reviewers must place
 
 - Is every public route in nav/CTA/footer intentionally complete enough to show the client?
 - Does the mobile nav follow the expected right-aligned hamburger/menu convention, unless an alternative is explicitly approved?
+- Is the mobile menu toggle itself optically precise: icon centred, label hidden unless necessary, hit target clear, and no border/frame collision?
 - Does desktop nav copy have a clear public-facing point of view rather than dual-label indecision?
+- Is the wordmark/logo lockup optically aligned and presentation-ready, even if the mark is temporary?
 - At 1728/1920, does the hero remain composed without accidental one-word line breaks, overlap, or degraded image/text balance?
 - Is the hero illustration refined enough to function as a brand-defining asset, or should it be reduced until proper art direction exists?
+- Does the hero headline precisely match the illustration's ownable idea, or is there a metaphor mismatch/strained phrase?
 - Do section dividers/rules and empty bands form a deliberate system rather than accidental repetition or missing-module placeholders?
+- At each section boundary, is there one intentional divider/transition source rather than two nearby competing lines?
 - Do `/for-investors/`, `/for-deals/`, `/contact/`, `/legal/`, and the footer each perform their expected page job?
 - What is the one thing a high-end agency creative director would refuse to show tomorrow?
 

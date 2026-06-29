@@ -8,7 +8,7 @@ const css = readFileSync(new URL('../src/styles/global.css', import.meta.url), '
 describe('homepage crossing hero', () => {
   it('uses the crossing hero component and compliance-safe copy', () => {
     expect(home).toContain('<CrossingHero />');
-    expect(hero).toContain('Where capital and opportunity take a bearing.');
+    expect(hero).toContain('Where capital and opportunity intersect.');
     expect(hero).toContain('Discreet, partner-led conversations');
     expect(hero).not.toMatch(/authori[sz]ed|guarantee|exclusive access|exceptional founders|trusted adviser to leading companies/i);
   });

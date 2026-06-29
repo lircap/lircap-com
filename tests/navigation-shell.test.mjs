@@ -15,6 +15,7 @@ describe('global navigation shell', () => {
     expect(layout).toContain("{ href: '/contact/', label: 'Contact'");
     expect(layout).toContain("aria-current={isActive(item.href) ? 'page' : undefined}");
     expect(layout).toContain('aria-controls="primary-nav-list"');
+    expect(layout).toContain('aria-label="Open menu"');
     expect(layout).toContain('aria-expanded="false"');
     expect(layout).toContain('data-nav-toggle');
     expect(layout).toContain("event.key === 'Escape'");
@@ -36,6 +37,8 @@ describe('global navigation shell', () => {
     expect(css).toContain('grid-template-columns: repeat(5, minmax(0, 1fr))');
     expect(css).toContain(".nav-list a[aria-current='page']");
     expect(css).toContain('.nav-toggle');
+    expect(css).toContain('.nav-toggle__label');
+    expect(css).toContain('clip-path: inset(50%)');
     expect(css).toContain(".site-header[data-nav-ready='true'] .nav-list");
     expect(css).toContain('.site-header.is-nav-open');
     expect(css).toContain('.skip-link:focus-visible');
