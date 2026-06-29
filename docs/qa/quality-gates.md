@@ -108,12 +108,16 @@ Blocking findings include:
 - visible public route is blank, scaffold-like, or lacks a clear page job;
 - primary nav or hero CTA points to a non-production-grade destination;
 - mobile nav does not use the conventional right-aligned hamburger/menu pattern unless an alternative is explicitly approved;
+- mobile menu toggle shows visible icon/text misalignment, unnecessary label clutter, undersized/unclear hit target, or border collision with frame/container lines;
 - desktop nav labels/descriptors feel like internal taxonomy or copy indecision;
+- wordmark/logo lockup has visible optical alignment defects, accidental wrapping, uneven descriptor line rhythm, or sloppy relationship to frame/nav; temporary marks are not exempt from craft QA;
 - hero fails at 1728/1920 via overlap, accidental one-word lines, or degraded hierarchy;
+- hero headline and hero illustration use mismatched or strained metaphors, weakening the ownable idea;
 - contact page does not explain how/why to contact and what happens next;
 - legal page contains nonsense, placeholder legal wording, false specificity, or unsourced claims;
 - footer looks default/basic rather than intentionally simple and refined;
 - repeated dividers/rules, spacing, headings, CTAs, or components are inconsistent across routes.
+- adjacent section boundaries show two competing horizontal dividers/ornaments where one intentional transition should own the separation.
 
 Recommended evidence: a contact-sheet artifact showing all public routes at 320, 390, 768, 1024, 1180, 1280, 1440, 1728, and 1920 where practical, plus any route-specific danger widths.
 
