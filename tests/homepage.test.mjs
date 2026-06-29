@@ -10,6 +10,8 @@ describe('homepage crossing hero', () => {
     expect(home).toContain('<CrossingHero />');
     expect(hero).toContain('Where capital and opportunity intersect.');
     expect(hero).toContain('Discreet, partner-led conversations');
+    expect(hero).toContain('Capital counterparties exploring fit and timing');
+    expect(hero).toContain('Owners and advisers exploring capital context');
     expect(hero).not.toMatch(/authori[sz]ed|guarantee|exclusive access|exceptional founders|trusted adviser to leading companies/i);
   });
 

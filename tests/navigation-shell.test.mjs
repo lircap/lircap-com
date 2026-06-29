@@ -16,6 +16,7 @@ describe('global navigation shell', () => {
     expect(layout).toContain("aria-current={isActive(item.href) ? 'page' : undefined}");
     expect(layout).toContain('aria-controls="primary-nav-list"');
     expect(layout).toContain('aria-label="Open menu"');
+    expect(layout).toContain("button.setAttribute('aria-label', isOpen ? 'Close menu' : 'Open menu')");
     expect(layout).toContain('aria-expanded="false"');
     expect(layout).toContain('data-nav-toggle');
     expect(layout).toContain("event.key === 'Escape'");

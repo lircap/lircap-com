@@ -29,10 +29,10 @@ const enquiryIntents = [
   <section class="contact-page" aria-labelledby="page-title">
     <div class="contact-hero">
       <p class="eyebrow">Contact</p>
-      <h1 id="page-title">Start with a direct note.</h1>
+      <h1 id="page-title" class="route-hero__title">Start with a direct note.</h1>
       <p class="lede">
         For a discreet first conversation with Lir Capital, email the team directly. A short, practical note helps us
-        understand fit, context and timing, and route the enquiry carefully.
+        understand fit, context and timing, and direct the enquiry carefully.
       </p>
       <a class="contact-email" href={mailtoHref} aria-label={`Email Lir Capital at ${contactEmail}`}>
         {contactEmail}
@@ -46,7 +46,9 @@ const enquiryIntents = [
           <h2 id="routing-title">Give enough context for a sensible first response.</h2>
         </div>
         <p>
-          Please use the subject line or opening sentence to make the nature of the enquiry clear. This is not an offer, invitation, or solicitation, nor a suitability process or investor categorisation.
+          Please use the subject line or opening sentence to make the nature of the enquiry clear. A first note should be
+          non-confidential and light on attachments unless we have agreed otherwise. This is not an offer, invitation, or solicitation,
+          nor a suitability process or investor categorisation.
         </p>
       </div>
 
@@ -64,7 +66,7 @@ const enquiryIntents = [
     <section class="contact-note" aria-labelledby="privacy-title">
       <div>
         <p class="eyebrow">What happens next</p>
-        <h2 id="privacy-title">A careful reply, then an appropriate route.</h2>
+        <h2 id="privacy-title">A careful reply, then an appropriate next step.</h2>
       </div>
       <div class="contact-note__body">
         <p>
@@ -73,7 +75,8 @@ const enquiryIntents = [
         </p>
         <p>
           Please do not send login credentials, bank details, inside information, personal identification documents, or
-          confidential transaction materials until an appropriate channel has been agreed.
+          confidential transaction materials in an initial email. If more detail is needed, we will agree a suitable
+          channel first.
         </p>
       </div>
     </section>

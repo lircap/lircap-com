@@ -50,6 +50,9 @@ const isActive = (href: string) => currentPath === href || (href !== '/' && curr
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
+    <script is:inline>
+      document.documentElement.classList.add('js');
+    </script>
     <script type="application/ld+json" set:html={jsonLdString}></script>
     <title>{title}</title>
   </head>
@@ -90,8 +93,14 @@ const isActive = (href: string) => currentPath === href || (href !== '/' && curr
           <p>
             Harmonycove Limited trading as Lir Capital Partners. Registered in Ireland. Company No. 801328.
           </p>
+          <p>
+            Lir Capital Partners is the trading name used for this website.
+          </p>
         </div>
         <nav class="footer-nav" aria-label="Footer navigation">
+          <a href="/for-investors/">Investors</a>
+          <a href="/for-deals/">Deals</a>
+          <a href="/team/">Team</a>
           <a href="/legal/">Legal</a>
           <a href="/contact/">Contact</a>
           <a href="/">Home</a>
@@ -111,6 +120,7 @@ const isActive = (href: string) => currentPath === href || (href !== '/' && curr
         const setOpen = (isOpen, focusMenu = false) => {
           header.classList.toggle('is-nav-open', isOpen);
           button.setAttribute('aria-expanded', String(isOpen));
+          button.setAttribute('aria-label', isOpen ? 'Close menu' : 'Open menu');
 
           if (isOpen && focusMenu) {
             links[0]?.focus();
