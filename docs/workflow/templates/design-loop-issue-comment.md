@@ -84,6 +84,18 @@ Control issue:
 - Consecutive below-threshold/no-promotion runs:
 - Next mode: continue broad / surgical optimisation / request new inputs / stop
 
+### Post-loop retrospective / client feedback
+
+- Failed/non-promoted variants analysed? yes/no
+- Agents completed self-review of prompt/process gaps? yes/no
+- Best-practice/process check completed? yes/no
+- Raw client feedback captured/linked:
+- Client feedback decomposed into product defects:
+- Client feedback decomposed into process defects:
+- High-leverage client questions for next loop:
+- Default assumptions if unanswered:
+- Process/templates/prompts/QA patched before next loop? yes/no
+
 ### Parent verification
 
 - Commands run:
