@@ -38,7 +38,7 @@ export const routeSeo = [
     path: '/contact/',
     title: 'Contact — Lir Capital',
     description:
-      'Contact Lir Capital for a discreet first conversation by email. The current contact route avoids web forms, tracking and client-side enquiry capture.',
+      'Contact Lir Capital by direct email for a discreet first conversation with clear context and appropriate handling of sensitive information.',
     changefreq: 'monthly',
     priority: 0.7,
   },
@@ -46,7 +46,7 @@ export const routeSeo = [
     path: '/legal/',
     title: 'Legal — Lir Capital',
     description:
-      'Legal and disclosure information for Lir Capital, limited to confirmed company registration details pending fuller legal and privacy wording.',
+      'Legal and disclosure information for Lir Capital, limited to confirmed company registration details and conservative website-use notes.',
     changefreq: 'monthly',
     priority: 0.5,
   },

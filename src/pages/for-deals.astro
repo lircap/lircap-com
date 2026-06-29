@@ -4,14 +4,65 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import { getSeo } from '../data/seo.js';
 
 const seo = getSeo('/for-deals/');
+
+const dealNotes = [
+  {
+    title: 'Situation-led',
+    copy: 'Early conversations centre on the company, ownership context, capital need, counterparties, and timing rather than a predetermined process.',
+  },
+  {
+    title: 'Discreet by default',
+    copy: 'Introductions are handled carefully. Confidential details should be shared only after the appropriate route and permissions are understood.',
+  },
+  {
+    title: 'Senior judgement',
+    copy: 'The first step is to decide whether Lir can be useful and whether a more private conversation with relevant participants should follow.',
+  },
+];
 ---
 
 <BaseLayout {...seo}>
-  <section class="hero" aria-labelledby="page-title">
-    <div>
-      <p class="eyebrow">Draft route</p>
-      <h1 id="page-title">For Deals</h1>
-      <p class="lede">This route is scaffolded for future issue-bounded content and design work. Copy is not frozen.</p>
+  <section class="route-page" aria-labelledby="page-title">
+    <div class="route-hero">
+      <p class="eyebrow">For deals</p>
+      <h1 id="page-title">A careful first conversation for complex situations.</h1>
+      <p class="lede">
+        Lir Capital is approached by owners, companies, advisers, and trusted introducers when a situation may need
+        thoughtful capital context. We begin by understanding the facts that shape fit, timing, and discretion.
+      </p>
     </div>
+
+    <section class="route-section" aria-labelledby="deals-approach-title">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Approach</p>
+          <h2 id="deals-approach-title">Understand the context before discussing route.</h2>
+        </div>
+        <p>
+          This page does not advertise transactions or promise outcomes. It explains how to start a conservative,
+          relationship-led discussion when a company or situation may benefit from capital perspective.
+        </p>
+      </div>
+
+      <div class="route-card-grid">
+        {dealNotes.map((item) => (
+          <article>
+            <h3>{item.title}</h3>
+            <p>{item.copy}</p>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <section class="route-note" aria-labelledby="deals-next-title">
+      <p class="eyebrow">First conversation</p>
+      <h2 id="deals-next-title">What helps at the outset.</h2>
+      <p>
+        A short summary is sufficient: business description, ownership or adviser role, capital context, desired timing,
+        and any confidentiality limits. Please do not send sensitive materials until Lir confirms an appropriate way to
+        receive them.
+      </p>
+      <a href="/contact/">Contact Lir Capital</a>
+    </section>
   </section>
 </BaseLayout>

@@ -1,0 +1,15 @@
+{
+  "open": {
+    "expanded": "true",
+    "active": "Home",
+    "navVisible": "grid",
+    "links": [
+      "Home",
+      "Investors",
+      "Deals",
+      "Team",
+      "Contact"
+    ]
+  },
+  "afterEscape": "false"
+}

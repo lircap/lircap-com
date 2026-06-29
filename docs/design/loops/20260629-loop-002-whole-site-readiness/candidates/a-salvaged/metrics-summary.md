@@ -1,0 +1,66 @@
+## /
+- 320px: status=200 overflowX=0 h1Lines=4 narrowH1=[70.6] bodyH=2188 textLen=792 draft=False navWrap=[]
+- 390px: status=200 overflowX=0 h1Lines=3 narrowH1=[] bodyH=2142 textLen=792 draft=False navWrap=[]
+- 768px: status=200 overflowX=0 h1Lines=3 narrowH1=[] bodyH=1946 textLen=792 draft=False navWrap=[]
+- 1024px: status=200 overflowX=0 h1Lines=3 narrowH1=[] bodyH=1614 textLen=792 draft=False navWrap=[]
+- 1180px: status=200 overflowX=0 h1Lines=3 narrowH1=[] bodyH=1769 textLen=792 draft=False navWrap=[]
+- 1280px: status=200 overflowX=0 h1Lines=3 narrowH1=[] bodyH=1861 textLen=792 draft=False navWrap=[]
+- 1440px: status=200 overflowX=0 h1Lines=3 narrowH1=[] bodyH=1948 textLen=792 draft=False navWrap=[]
+- 1728px: status=200 overflowX=0 h1Lines=3 narrowH1=[] bodyH=1960 textLen=792 draft=False navWrap=[]
+- 1920px: status=200 overflowX=0 h1Lines=3 narrowH1=[] bodyH=1958 textLen=792 draft=False navWrap=[]
+
+## /for-investors/
+- 320px: status=200 overflowX=0 h1Lines=3 narrowH1=[] bodyH=2472 textLen=1412 draft=False navWrap=[]
+- 390px: status=200 overflowX=0 h1Lines=3 narrowH1=[] bodyH=2393 textLen=1412 draft=False navWrap=[]
+- 768px: status=200 overflowX=0 h1Lines=3 narrowH1=[] bodyH=2275 textLen=1412 draft=False navWrap=[]
+- 1024px: status=200 overflowX=0 h1Lines=3 narrowH1=[] bodyH=1830 textLen=1412 draft=False navWrap=[]
+- 1180px: status=200 overflowX=0 h1Lines=3 narrowH1=[] bodyH=1999 textLen=1412 draft=False navWrap=[]
+- 1280px: status=200 overflowX=0 h1Lines=3 narrowH1=[] bodyH=2104 textLen=1412 draft=False navWrap=[]
+- 1440px: status=200 overflowX=0 h1Lines=3 narrowH1=[] bodyH=2314 textLen=1412 draft=False navWrap=[]
+- 1728px: status=200 overflowX=0 h1Lines=3 narrowH1=[] bodyH=2328 textLen=1412 draft=False navWrap=[]
+- 1920px: status=200 overflowX=0 h1Lines=3 narrowH1=[] bodyH=2328 textLen=1412 draft=False navWrap=[]
+
+## /for-deals/
+- 320px: status=200 overflowX=0 h1Lines=4 narrowH1=[] bodyH=2461 textLen=1315 draft=False navWrap=[]
+- 390px: status=200 overflowX=0 h1Lines=4 narrowH1=[] bodyH=2392 textLen=1315 draft=False navWrap=[]
+- 768px: status=200 overflowX=0 h1Lines=4 narrowH1=[] bodyH=2337 textLen=1315 draft=False navWrap=[]
+- 1024px: status=200 overflowX=0 h1Lines=4 narrowH1=[] bodyH=1913 textLen=1315 draft=False navWrap=[]
+- 1180px: status=200 overflowX=0 h1Lines=4 narrowH1=[] bodyH=2094 textLen=1315 draft=False navWrap=[]
+- 1280px: status=200 overflowX=0 h1Lines=4 narrowH1=[] bodyH=2208 textLen=1315 draft=False navWrap=[]
+- 1440px: status=200 overflowX=0 h1Lines=4 narrowH1=[] bodyH=2328 textLen=1315 draft=False navWrap=[]
+- 1728px: status=200 overflowX=0 h1Lines=4 narrowH1=[] bodyH=2341 textLen=1315 draft=False navWrap=[]
+- 1920px: status=200 overflowX=0 h1Lines=4 narrowH1=[] bodyH=2341 textLen=1315 draft=False navWrap=[]
+
+## /team/
+- 320px: status=200 overflowX=0 h1Lines=3 narrowH1=[80.0] bodyH=5447 textLen=3431 draft=False navWrap=[]
+- 390px: status=200 overflowX=0 h1Lines=3 narrowH1=[] bodyH=5147 textLen=3431 draft=False navWrap=[]
+- 768px: status=200 overflowX=0 h1Lines=3 narrowH1=[] bodyH=3426 textLen=3431 draft=False navWrap=[]
+- 1024px: status=200 overflowX=0 h1Lines=3 narrowH1=[] bodyH=2958 textLen=3431 draft=False navWrap=[]
+- 1180px: status=200 overflowX=0 h1Lines=3 narrowH1=[] bodyH=3036 textLen=3431 draft=False navWrap=[]
+- 1280px: status=200 overflowX=0 h1Lines=3 narrowH1=[] bodyH=2772 textLen=3431 draft=False navWrap=[]
+- 1440px: status=200 overflowX=0 h1Lines=3 narrowH1=[] bodyH=2783 textLen=3431 draft=False navWrap=[]
+- 1728px: status=200 overflowX=0 h1Lines=3 narrowH1=[] bodyH=2796 textLen=3431 draft=False navWrap=[]
+- 1920px: status=200 overflowX=0 h1Lines=3 narrowH1=[] bodyH=2796 textLen=3431 draft=False navWrap=[]
+
+## /contact/
+- 320px: status=200 overflowX=0 h1Lines=2 narrowH1=[] bodyH=2632 textLen=1623 draft=False navWrap=[]
+- 390px: status=200 overflowX=0 h1Lines=2 narrowH1=[] bodyH=2519 textLen=1623 draft=False navWrap=[]
+- 768px: status=200 overflowX=0 h1Lines=2 narrowH1=[] bodyH=2404 textLen=1623 draft=False navWrap=[]
+- 1024px: status=200 overflowX=0 h1Lines=2 narrowH1=[] bodyH=1883 textLen=1623 draft=False navWrap=[]
+- 1180px: status=200 overflowX=0 h1Lines=2 narrowH1=[] bodyH=2035 textLen=1623 draft=False navWrap=[]
+- 1280px: status=200 overflowX=0 h1Lines=2 narrowH1=[] bodyH=2084 textLen=1623 draft=False navWrap=[]
+- 1440px: status=200 overflowX=0 h1Lines=2 narrowH1=[] bodyH=2255 textLen=1623 draft=False navWrap=[]
+- 1728px: status=200 overflowX=0 h1Lines=2 narrowH1=[] bodyH=2269 textLen=1623 draft=False navWrap=[]
+- 1920px: status=200 overflowX=0 h1Lines=2 narrowH1=[] bodyH=2269 textLen=1623 draft=False navWrap=[]
+
+## /legal/
+- 320px: status=200 overflowX=0 h1Lines=2 narrowH1=[] bodyH=1754 textLen=985 draft=False navWrap=[]
+- 390px: status=200 overflowX=0 h1Lines=2 narrowH1=[] bodyH=1595 textLen=985 draft=False navWrap=[]
+- 768px: status=200 overflowX=0 h1Lines=2 narrowH1=[] bodyH=1423 textLen=985 draft=False navWrap=[]
+- 1024px: status=200 overflowX=0 h1Lines=2 narrowH1=[] bodyH=1400 textLen=985 draft=False navWrap=[]
+- 1180px: status=200 overflowX=0 h1Lines=2 narrowH1=[] bodyH=1400 textLen=985 draft=False navWrap=[]
+- 1280px: status=200 overflowX=0 h1Lines=2 narrowH1=[] bodyH=1438 textLen=985 draft=False navWrap=[]
+- 1440px: status=200 overflowX=0 h1Lines=2 narrowH1=[] bodyH=1537 textLen=985 draft=False navWrap=[]
+- 1728px: status=200 overflowX=0 h1Lines=2 narrowH1=[] bodyH=1549 textLen=985 draft=False navWrap=[]
+- 1920px: status=200 overflowX=0 h1Lines=2 narrowH1=[] bodyH=1549 textLen=985 draft=False navWrap=[]
+

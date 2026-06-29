@@ -24,11 +24,11 @@ const jsonLdItems = [organizationJsonLd(), websiteJsonLd(), ...(Array.isArray(st
   .filter(Boolean);
 const jsonLdString = JSON.stringify(jsonLdItems.length === 1 ? jsonLdItems[0] : jsonLdItems).replace(/</g, '\\u003c');
 const primaryNav = [
-  { href: '/', label: 'Home', cue: 'Crossing' },
-  { href: '/for-investors/', label: 'For investors', cue: 'Capital' },
-  { href: '/for-deals/', label: 'For deals', cue: 'Opportunities' },
-  { href: '/team/', label: 'Team', cue: 'People' },
-  { href: '/contact/', label: 'Contact', cue: 'Discreet enquiry' },
+  { href: '/', label: 'Home' },
+  { href: '/for-investors/', label: 'Investors' },
+  { href: '/for-deals/', label: 'Deals' },
+  { href: '/team/', label: 'Team' },
+  { href: '/contact/', label: 'Contact' },
 ];
 
 const isActive = (href: string) => currentPath === href || (href !== '/' && currentPath.startsWith(href));
@@ -57,18 +57,21 @@ const isActive = (href: string) => currentPath === href || (href !== '/' && curr
     <a class="skip-link" href="#main-content">Skip to content</a>
     <div class="site-frame" aria-hidden="true"></div>
     <div class="site-shell">
-      <header class="site-header" aria-label="Site header">
+      <header class="site-header" aria-label="Site header" data-site-header>
         <a class="brand-lockup" href="/" aria-label="Lir Capital home">
           <span class="brand-lockup__mark">Lir</span>
           <span class="brand-lockup__meta">Capital Partners</span>
         </a>
+        <button class="nav-toggle" type="button" aria-controls="primary-nav-list" aria-expanded="false" data-nav-toggle>
+          <span class="nav-toggle__label">Menu</span>
+          <span class="nav-toggle__icon" aria-hidden="true"><span></span></span>
+        </button>
         <nav class="primary-nav" aria-label="Primary navigation">
-          <ul class="nav-list">
+          <ul class="nav-list" id="primary-nav-list" data-nav-list>
             {primaryNav.map((item) => (
               <li>
                 <a href={item.href} aria-current={isActive(item.href) ? 'page' : undefined}>
                   <span>{item.label}</span>
-                  <small>{item.cue}</small>
                 </a>
               </li>
             ))}
@@ -80,7 +83,7 @@ const isActive = (href: string) => currentPath === href || (href !== '/' && curr
       </main>
       <footer class="site-footer">
         <div class="footer-register" aria-label="Entity disclosure">
-          <span class="footer-register__label">Pre-production disclosure</span>
+          <span class="footer-register__label">Entity disclosure</span>
           <p>
             Harmonycove Limited trading as Lir Capital Partners. Registered in Ireland. Company No. 801328.
           </p>
@@ -92,5 +95,51 @@ const isActive = (href: string) => currentPath === href || (href !== '/' && curr
         </nav>
       </footer>
     </div>
+    <script is:inline>
+      (() => {
+        const header = document.querySelector('[data-site-header]');
+        const button = document.querySelector('[data-nav-toggle]');
+        const navList = document.querySelector('[data-nav-list]');
+
+        if (!header || !button || !navList) return;
+
+        const links = Array.from(navList.querySelectorAll('a'));
+
+        const setOpen = (isOpen, focusMenu = false) => {
+          header.classList.toggle('is-nav-open', isOpen);
+          button.setAttribute('aria-expanded', String(isOpen));
+
+          if (isOpen && focusMenu) {
+            links[0]?.focus();
+          }
+        };
+
+        header.setAttribute('data-nav-ready', 'true');
+
+        button.addEventListener('click', () => {
+          const willOpen = button.getAttribute('aria-expanded') !== 'true';
+          setOpen(willOpen, willOpen);
+        });
+
+        navList.addEventListener('click', (event) => {
+          if (event.target instanceof Element && event.target.closest('a')) {
+            setOpen(false);
+          }
+        });
+
+        document.addEventListener('keydown', (event) => {
+          if (event.key === 'Escape' && button.getAttribute('aria-expanded') === 'true') {
+            setOpen(false);
+            button.focus();
+          }
+        });
+
+        document.addEventListener('click', (event) => {
+          if (event.target instanceof Node && !header.contains(event.target)) {
+            setOpen(false);
+          }
+        });
+      })();
+    </script>
   </body>
 </html>

@@ -4,14 +4,66 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import { getSeo } from '../data/seo.js';
 
 const seo = getSeo('/for-investors/');
+
+const investorNotes = [
+  {
+    title: 'Fit before volume',
+    copy: 'A first exchange is used to understand mandate shape, preferred exposure, geography, governance needs, and where a private conversation would be useful.',
+  },
+  {
+    title: 'Context before materials',
+    copy: 'We keep early discussions focused on the situation, counterparties, timing, and confidentiality considerations rather than broad circulation of information.',
+  },
+  {
+    title: 'Timing before process',
+    copy: 'Where there is alignment, the next step is a discreet senior conversation. Where there is not, we aim to make that clear quickly and respectfully.',
+  },
+];
 ---
 
 <BaseLayout {...seo}>
-  <section class="hero" aria-labelledby="page-title">
-    <div>
-      <p class="eyebrow">Draft route</p>
-      <h1 id="page-title">For Investors</h1>
-      <p class="lede">This route is scaffolded for future issue-bounded content and design work. Copy is not frozen.</p>
+  <section class="route-page" aria-labelledby="page-title">
+    <div class="route-hero">
+      <p class="eyebrow">For investors</p>
+      <h1 id="page-title">A discreet route for capital relationships.</h1>
+      <p class="lede">
+        Lir Capital starts with fit, context and timing. The aim is a careful first conversation: what type of
+        relationship may be relevant, what information is appropriate to share, and whether the situation merits a
+        private follow-up.
+      </p>
     </div>
+
+    <section class="route-section" aria-labelledby="investor-approach-title">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Approach</p>
+          <h2 id="investor-approach-title">A measured introduction, not a public marketplace.</h2>
+        </div>
+        <p>
+          This page is for institutional, family-office, and professional relationships where discretion and senior
+          judgement matter. It does not describe an offer, product, assured outcome, or recommendation.
+        </p>
+      </div>
+
+      <div class="route-card-grid">
+        {investorNotes.map((item) => (
+          <article>
+            <h3>{item.title}</h3>
+            <p>{item.copy}</p>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <section class="route-note" aria-labelledby="investor-next-title">
+      <p class="eyebrow">First conversation</p>
+      <h2 id="investor-next-title">What to share initially.</h2>
+      <p>
+        A concise note is usually enough: organisation, jurisdiction, preferred areas of focus, relevant constraints,
+        and the reason timing matters. Please avoid sending confidential transaction materials until an appropriate
+        route for sharing information has been agreed.
+      </p>
+      <a href="/contact/">Contact Lir Capital</a>
+    </section>
   </section>
 </BaseLayout>
