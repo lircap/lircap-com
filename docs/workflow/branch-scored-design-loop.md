@@ -18,6 +18,7 @@ Before a scored design run starts:
 - #55 auto-deploy is active so merged `main` becomes the pre-prod baseline at `https://lircap.pendragon.bot/`.
 - The current baseline has screenshots/QA evidence or the run begins by capturing it.
 - `docs/design/critique-rubric.md`, `docs/qa/quality-gates.md`, `docs/workflow/agent-operating-model.md`, and `docs/workflow/issue-pr-loop.md` are treated as mandatory guardrails.
+- The previous run has a post-loop retrospective, including failed/non-promoted variant analysis, agent self-review, client feedback intake, and open client questions either answered or explicitly carried into the new run.
 
 ## Roles
 
@@ -145,6 +146,7 @@ For each candidate:
 
 - build and capture the same evidence set as the baseline;
 - complete `templates/design-loop-scorecard.md`, including proof/provenance evidence for any claims or proof points touched by the candidate;
+- complete a concise durable scorecard/rejection record for **every** candidate, including losing or failed variants, so B/C-style failures are not left only in worktree screenshots or delegation summaries;
 - dispatch design, brand, production-design, browser-QA, and code/security review as relevant;
 - run production-design review after rendered screenshots/browser evidence exist and before final scorecard scoring;
 - record craft defects separately from strategic/design disagreements and from score improvements;
@@ -242,6 +244,36 @@ For the winning candidate only:
 6. Verify the real deploy run and external smoke.
 7. Capture post-deploy score as the next baseline.
 
+### 7. Post-loop retrospective, client questions, and feedback intake
+
+Every run must close with a retrospective before the next run begins. This applies after **PROMOTE**, **NO PROMOTION**, and **REQUEST NEW INPUTS** outcomes.
+
+Required post-loop record:
+
+- **Variant failure analysis** — for each failed, rejected, or non-promoted variant, state why it failed, which gates caught it, which gates missed it until late, and whether the failure came from prompt scope, evidence quality, scoring, review coverage, assets, implementation craft, or strategy.
+- **Agent self-review** — each major role used in the run (`design-director`, `brand-strategist`, `production-design-reviewer`, `browser-qa-reviewer`, `ux-researcher`, audience agents, implementer, code/security, devops as relevant) must report what worked, what gaps remained, what its own prompt failed to make explicit, and one concrete prompt/process improvement for the next loop.
+- **Best-practice check** — at least one reviewer/orchestrator pass compares the process against current design/UX/frontend best practice for the affected surface. This is a check on the process, not permission to import unsourced claims or generic design tropes.
+- **Client feedback intake** — unstructured client feedback on both the process and the end product is copied into the run record or linked issue, decomposed into defects/opportunities/questions, and mapped to owners and gates. Client feedback outranks simulated audience evidence.
+- **Client questions** — agents may propose client questions that would materially improve the end goal or the process. The orchestrator asks only high-leverage questions, records answers, and must also state the default assumption if the client does not answer before the next run.
+- **Process patch before next loop** — if a defect escaped the process, patch the operating model, templates, scorecard, prompt shapes, issue acceptance criteria, or QA scripts before starting the next numbered loop.
+
+The next loop cannot start as a generic “try again”. It must name which escaped defects or opportunities it is designed to catch earlier, which gates changed, and which questions/feedback are being carried forward.
+
+Current escaped-defect examples that the process must catch earlier:
+
+- mobile navigation using an unusual button pattern instead of a conventional right-aligned hamburger/menu pattern;
+- desktop navigation carrying dual descriptors per option where a cleaner brand point of view is needed;
+- super-wide hero typography/image overlap and one-word-per-line headline failures;
+- hero illustration lacking pixel-perfect/refined creative direction;
+- repeated dividers between homepage sections without a clear hierarchy/role;
+- orphaned sections that look as if a placeholder image/illustration is missing;
+- near-blank `For Investors` / `For Deals` pages;
+- team page and repeated modules missing the small refinements expected from a top agency site;
+- contact page intent/copy that does not match normal user expectations;
+- legal page nonsense or audience/compliance review miss;
+- footer that is merely basic rather than simple-but-refined;
+- whole-site consistency failures across route, breakpoint, component, typography, copy, and interaction details.
+
 ## Score trend adaptation and stopping logic
 
 The loop must track score history per run, per candidate, per dimension, and total weighted score. The default +3 percentage-point materiality threshold remains the promotion gate for replacing the baseline; stopping decisions also consider trend, noise, effort, and risk.
@@ -286,6 +318,12 @@ Any of these blocks promotion regardless of score:
 - stock/AI/generated/fake imagery;
 - placeholder marker or placeholder asset leaking beyond approved pre-prod usage;
 - compliance-risky new claim or regulated phrasing without source/sign-off;
+- public route in primary nav, footer nav, or hero CTA that is blank, scaffold-like, or not production-grade;
+- mobile nav pattern that violates common responsive expectations without explicit client/design approval;
+- desktop nav IA/copy that keeps confusing dual descriptors or internal taxonomy in public labels without explicit approval;
+- super-wide hero failure at 1728/1920, including overlap, accidental one-word line breaks, or materially degraded composition;
+- contact page that does not satisfy the basic user task of how/why to contact and what happens next;
+- legal page that contains nonsense, placeholder legal copy, false specificity, or unsourced legal/privacy claims;
 - broken pre-prod password gate or route smoke;
 - PR branch not based on current accepted baseline;
 - unresolved production-design `BLOCKER`;

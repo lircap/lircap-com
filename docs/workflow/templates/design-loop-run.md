@@ -141,6 +141,53 @@ Use only when relevant to the run objective. Audience agents review supplied scr
 - Expected improvement vs effort/risk cost:
 - Adaptation for next run: continue broad / surgical optimisation / request new inputs / stop
 
+## Post-loop retrospective and process patch
+
+Required before the next numbered loop starts.
+
+### Variant failure analysis
+
+| Variant | Outcome | Why it failed / was not promoted | Gate that caught it | Gate that missed it or caught it late | Root cause category | Carry-forward action |
+|---|---|---|---|---|---|---|
+| A | | | | | prompt / evidence / scoring / review coverage / assets / implementation craft / strategy | |
+| B | | | | | prompt / evidence / scoring / review coverage / assets / implementation craft / strategy | |
+| C | | | | | prompt / evidence / scoring / review coverage / assets / implementation craft / strategy | |
+
+### Agent self-review
+
+| Role | What worked | Gaps / misses | Prompt weakness | Best-practice/process improvement for next loop |
+|---|---|---|---|---|
+| `agent:design-director` | | | | |
+| `agent:brand-strategist` | | | | |
+| `agent:production-design-reviewer` | | | | |
+| `agent:browser-qa-reviewer` | | | | |
+| `agent:ux-researcher` / audience agents | | | | |
+| `agent:frontend-implementer` | | | | |
+| `agent:code-security-reviewer` | | | | |
+| `agent:devops-deployer` | | | | |
+
+### Client feedback intake
+
+- Raw/unstructured client feedback captured or linked:
+- Product/site defects extracted:
+- Process defects extracted:
+- Feedback mapped to issues/gates:
+- Real client feedback conflicts with simulated audience findings? If yes, resolution:
+
+### Client questions for next loop
+
+| Question | Why it materially improves outcome/process | Default assumption if unanswered | Owner |
+|---|---|---|---|
+| | | | |
+
+### Process updates required before next loop
+
+- Operating model/template changes:
+- Scorecard/rubric changes:
+- Prompt-shape changes:
+- QA/script/check changes:
+- New or updated GitHub issues:
+
 ## Closeout evidence
 
 - Parent verification commands:

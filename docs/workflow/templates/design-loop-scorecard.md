@@ -24,6 +24,23 @@ Evidence path or links:
 - Production-design craft verdict: PASS / NEEDS FOCUSED CHANGES / REJECT / BLOCKER
 - Candidate scoring allowed after craft QA? yes/no
 
+## Binary readiness gates before weighted scoring
+
+These gates prevent a high weighted score from hiding launch-quality defects. Any `BLOCKER` prevents promotion regardless of total score.
+
+| Gate | Verdict | Evidence / notes | Blocking? |
+|---|---|---|---|
+| Whole-public-site route readiness: `/`, `/for-investors/`, `/for-deals/`, `/team/`, `/contact/`, `/legal/`, footer links | PASS / ISSUE / BLOCKER | | yes/no |
+| Primary nav contract: every visible nav/CTA destination is production-grade or deliberately hidden/renamed | PASS / ISSUE / BLOCKER | | yes/no |
+| Mobile nav convention: right-aligned hamburger/menu or explicitly approved alternative | PASS / ISSUE / BLOCKER | | yes/no |
+| Desktop nav IA/copy: concise labels, no confusing dual descriptors unless explicitly approved | PASS / ISSUE / BLOCKER | | yes/no |
+| Super-wide hero integrity at 1728/1920: no overlap, accidental one-word lines, or degraded composition | PASS / ISSUE / BLOCKER | | yes/no |
+| Hero illustration/art-direction adequacy: refined enough as a brand-defining asset or deliberately reduced | PASS / ISSUE / BLOCKER | | yes/no |
+| Contact page intent clarity: contact method, expected behaviour, sensitive-info guidance fit the site posture | PASS / ISSUE / BLOCKER | | yes/no |
+| Legal/content sanity: no nonsense, placeholder legal copy, false specificity, or unsourced claims | PASS / ISSUE / BLOCKER | | yes/no |
+| Footer refinement: intentionally simple, not default/basic, with required trust/closure information | PASS / ISSUE / BLOCKER | | yes/no |
+| Cross-route visual/copy consistency: headings, spacing, dividers/rules, CTAs, components, footer/header | PASS / ISSUE / BLOCKER | | yes/no |
+
 ## Asset caps
 
 Record any dimensions that cannot currently reach top score because required inputs are missing.
