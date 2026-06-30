@@ -1,0 +1,427 @@
+[
+  {
+    "url": "http://127.0.0.1:4331/",
+    "brandText": "Lir Capital PartnersLirCap",
+    "brandAriaLabel": "Lir Capital Partners home",
+    "fullDisplay": "none",
+    "compactDisplay": "block",
+    "visibleWordmark": "LirCap",
+    "header": {
+      "x": 20,
+      "y": 0,
+      "width": 280,
+      "height": 91.046875,
+      "right": 300,
+      "bottom": 91.046875
+    },
+    "brand": {
+      "x": 20,
+      "y": 22.890625,
+      "width": 79.125,
+      "height": 29.078125,
+      "right": 99.125,
+      "bottom": 51.96875
+    },
+    "full": {
+      "x": 0,
+      "y": 0,
+      "width": 0,
+      "height": 0,
+      "right": 0,
+      "bottom": 0
+    },
+    "compact": {
+      "x": 20,
+      "y": 22.890625,
+      "width": 79.125,
+      "height": 29.078125,
+      "right": 99.125,
+      "bottom": 51.96875
+    },
+    "toggle": {
+      "x": 253.921875,
+      "y": 14.390625,
+      "width": 46.078125,
+      "height": 46.078125,
+      "right": 300,
+      "bottom": 60.46875
+    },
+    "toggleDisplay": "flex",
+    "navDisplay": "none",
+    "docOverflow": 0,
+    "bodyOverflow": 0,
+    "viewport": {
+      "width": 320,
+      "height": 844
+    },
+    "brandToggleGap": 154.796875,
+    "brandOverlapsToggle": false,
+    "consoleErrors": [],
+    "afterMenuClick": {
+      "ariaExpanded": "true",
+      "navDisplay": "grid"
+    }
+  },
+  {
+    "url": "http://127.0.0.1:4331/",
+    "brandText": "Lir Capital PartnersLirCap",
+    "brandAriaLabel": "Lir Capital Partners home",
+    "fullDisplay": "none",
+    "compactDisplay": "block",
+    "visibleWordmark": "LirCap",
+    "header": {
+      "x": 20,
+      "y": 0,
+      "width": 350,
+      "height": 91.046875,
+      "right": 370,
+      "bottom": 91.046875
+    },
+    "brand": {
+      "x": 20,
+      "y": 19.875,
+      "width": 95.5,
+      "height": 35.09375,
+      "right": 115.5,
+      "bottom": 54.96875
+    },
+    "full": {
+      "x": 0,
+      "y": 0,
+      "width": 0,
+      "height": 0,
+      "right": 0,
+      "bottom": 0
+    },
+    "compact": {
+      "x": 20,
+      "y": 19.875,
+      "width": 95.5,
+      "height": 35.09375,
+      "right": 115.5,
+      "bottom": 54.96875
+    },
+    "toggle": {
+      "x": 323.921875,
+      "y": 14.390625,
+      "width": 46.078125,
+      "height": 46.078125,
+      "right": 370,
+      "bottom": 60.46875
+    },
+    "toggleDisplay": "flex",
+    "navDisplay": "none",
+    "docOverflow": 0,
+    "bodyOverflow": 0,
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "brandToggleGap": 208.421875,
+    "brandOverlapsToggle": false,
+    "consoleErrors": [],
+    "afterMenuClick": {
+      "ariaExpanded": "true",
+      "navDisplay": "grid"
+    }
+  },
+  {
+    "url": "http://127.0.0.1:4331/",
+    "brandText": "Lir Capital PartnersLirCap",
+    "brandAriaLabel": "Lir Capital Partners home",
+    "fullDisplay": "none",
+    "compactDisplay": "block",
+    "visibleWordmark": "LirCap",
+    "header": {
+      "x": 20,
+      "y": 0,
+      "width": 680,
+      "height": 91.046875,
+      "right": 700,
+      "bottom": 91.046875
+    },
+    "brand": {
+      "x": 20,
+      "y": 19.28125,
+      "width": 98.703125,
+      "height": 36.28125,
+      "right": 118.703125,
+      "bottom": 55.5625
+    },
+    "full": {
+      "x": 0,
+      "y": 0,
+      "width": 0,
+      "height": 0,
+      "right": 0,
+      "bottom": 0
+    },
+    "compact": {
+      "x": 20,
+      "y": 19.28125,
+      "width": 98.703125,
+      "height": 36.28125,
+      "right": 118.703125,
+      "bottom": 55.5625
+    },
+    "toggle": {
+      "x": 653.921875,
+      "y": 14.390625,
+      "width": 46.078125,
+      "height": 46.078125,
+      "right": 700,
+      "bottom": 60.46875
+    },
+    "toggleDisplay": "flex",
+    "navDisplay": "none",
+    "docOverflow": 0,
+    "bodyOverflow": 0,
+    "viewport": {
+      "width": 720,
+      "height": 900
+    },
+    "brandToggleGap": 535.21875,
+    "brandOverlapsToggle": false,
+    "consoleErrors": [],
+    "afterMenuClick": {
+      "ariaExpanded": "true",
+      "navDisplay": "grid"
+    }
+  },
+  {
+    "url": "http://127.0.0.1:4331/",
+    "brandText": "Lir Capital PartnersLirCap",
+    "brandAriaLabel": "Lir Capital Partners home",
+    "fullDisplay": "block",
+    "compactDisplay": "none",
+    "visibleWordmark": "Lir Capital Partners",
+    "header": {
+      "x": 39.203125,
+      "y": 0,
+      "width": 901.59375,
+      "height": 181.78125,
+      "right": 940.796875,
+      "bottom": 181.78125
+    },
+    "brand": {
+      "x": 39.203125,
+      "y": 18.390625,
+      "width": 191.5,
+      "height": 64,
+      "right": 230.703125,
+      "bottom": 82.390625
+    },
+    "full": {
+      "x": 39.203125,
+      "y": 37.578125,
+      "width": 191.5,
+      "height": 25.625,
+      "right": 230.703125,
+      "bottom": 63.203125
+    },
+    "compact": {
+      "x": 0,
+      "y": 0,
+      "width": 0,
+      "height": 0,
+      "right": 0,
+      "bottom": 0
+    },
+    "toggle": {
+      "x": 0,
+      "y": 0,
+      "width": 0,
+      "height": 0,
+      "right": 0,
+      "bottom": 0
+    },
+    "toggleDisplay": "none",
+    "navDisplay": "grid",
+    "docOverflow": 0,
+    "bodyOverflow": 0,
+    "viewport": {
+      "width": 980,
+      "height": 900
+    },
+    "brandToggleGap": null,
+    "brandOverlapsToggle": false,
+    "consoleErrors": []
+  },
+  {
+    "url": "http://127.0.0.1:4331/",
+    "brandText": "Lir Capital PartnersLirCap",
+    "brandAriaLabel": "Lir Capital Partners home",
+    "fullDisplay": "block",
+    "compactDisplay": "none",
+    "visibleWordmark": "Lir Capital Partners",
+    "header": {
+      "x": 39.234375,
+      "y": 0,
+      "width": 902.515625,
+      "height": 101.78125,
+      "right": 941.75,
+      "bottom": 101.78125
+    },
+    "brand": {
+      "x": 39.234375,
+      "y": 18.390625,
+      "width": 166.8125,
+      "height": 64,
+      "right": 206.046875,
+      "bottom": 82.390625
+    },
+    "full": {
+      "x": 39.234375,
+      "y": 39.234375,
+      "width": 166.8125,
+      "height": 22.3125,
+      "right": 206.046875,
+      "bottom": 61.546875
+    },
+    "compact": {
+      "x": 0,
+      "y": 0,
+      "width": 0,
+      "height": 0,
+      "right": 0,
+      "bottom": 0
+    },
+    "toggle": {
+      "x": 0,
+      "y": 0,
+      "width": 0,
+      "height": 0,
+      "right": 0,
+      "bottom": 0
+    },
+    "toggleDisplay": "none",
+    "navDisplay": "grid",
+    "docOverflow": 0,
+    "bodyOverflow": 0,
+    "viewport": {
+      "width": 981,
+      "height": 900
+    },
+    "brandToggleGap": null,
+    "brandOverlapsToggle": false,
+    "consoleErrors": []
+  },
+  {
+    "url": "http://127.0.0.1:4331/",
+    "brandText": "Lir Capital PartnersLirCap",
+    "brandAriaLabel": "Lir Capital Partners home",
+    "fullDisplay": "block",
+    "compactDisplay": "none",
+    "visibleWordmark": "Lir Capital Partners",
+    "header": {
+      "x": 40.953125,
+      "y": 0,
+      "width": 942.078125,
+      "height": 101.78125,
+      "right": 983.03125,
+      "bottom": 101.78125
+    },
+    "brand": {
+      "x": 40.953125,
+      "y": 18.390625,
+      "width": 172.15625,
+      "height": 64,
+      "right": 213.109375,
+      "bottom": 82.390625
+    },
+    "full": {
+      "x": 40.953125,
+      "y": 38.875,
+      "width": 172.15625,
+      "height": 23.03125,
+      "right": 213.109375,
+      "bottom": 61.90625
+    },
+    "compact": {
+      "x": 0,
+      "y": 0,
+      "width": 0,
+      "height": 0,
+      "right": 0,
+      "bottom": 0
+    },
+    "toggle": {
+      "x": 0,
+      "y": 0,
+      "width": 0,
+      "height": 0,
+      "right": 0,
+      "bottom": 0
+    },
+    "toggleDisplay": "none",
+    "navDisplay": "grid",
+    "docOverflow": 0,
+    "bodyOverflow": 0,
+    "viewport": {
+      "width": 1024,
+      "height": 900
+    },
+    "brandToggleGap": null,
+    "brandOverlapsToggle": false,
+    "consoleErrors": []
+  },
+  {
+    "url": "http://127.0.0.1:4331/",
+    "brandText": "Lir Capital PartnersLirCap",
+    "brandAriaLabel": "Lir Capital Partners home",
+    "fullDisplay": "block",
+    "compactDisplay": "none",
+    "visibleWordmark": "Lir Capital Partners",
+    "header": {
+      "x": 100,
+      "y": 0,
+      "width": 1240,
+      "height": 101.78125,
+      "right": 1340,
+      "bottom": 101.78125
+    },
+    "brand": {
+      "x": 100,
+      "y": 18.390625,
+      "width": 266.859375,
+      "height": 64,
+      "right": 366.859375,
+      "bottom": 82.390625
+    },
+    "full": {
+      "x": 100,
+      "y": 32.53125,
+      "width": 266.859375,
+      "height": 35.71875,
+      "right": 366.859375,
+      "bottom": 68.25
+    },
+    "compact": {
+      "x": 0,
+      "y": 0,
+      "width": 0,
+      "height": 0,
+      "right": 0,
+      "bottom": 0
+    },
+    "toggle": {
+      "x": 0,
+      "y": 0,
+      "width": 0,
+      "height": 0,
+      "right": 0,
+      "bottom": 0
+    },
+    "toggleDisplay": "none",
+    "navDisplay": "grid",
+    "docOverflow": 0,
+    "bodyOverflow": 0,
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "brandToggleGap": null,
+    "brandOverlapsToggle": false,
+    "consoleErrors": []
+  }
+]

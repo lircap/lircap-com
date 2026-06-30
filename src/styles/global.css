@@ -98,35 +98,33 @@ a { color: inherit; }
 }
 
 .brand-lockup {
-  display: grid;
-  grid-template-columns: auto auto;
+  display: inline-flex;
   align-items: center;
-  gap: clamp(0.72rem, 1.1vw, 1rem);
+  justify-self: start;
   min-height: 4rem;
   text-decoration: none;
+  min-width: 0;
 }
 
-.brand-lockup__mark {
-  font-family: var(--font-display);
-  font-size: clamp(2.25rem, 4vw, 3.34rem);
-  line-height: 0.76;
-  letter-spacing: -0.065em;
-  transform: translateY(-0.015em);
-}
-
-.brand-lockup__meta {
-  display: grid;
-  gap: 0.36rem;
-  padding-top: 0.08rem;
-  color: rgba(245, 241, 235, 0.62);
-  font-size: clamp(0.64rem, 0.82vw, 0.78rem);
-  letter-spacing: 0.24em;
-  line-height: 1;
-  text-transform: uppercase;
-}
-
-.brand-lockup__meta span {
+.brand-wordmark {
   display: block;
+  max-width: 100%;
+  color: var(--parchment);
+  font-family: var(--font-display);
+  font-size: clamp(1.78rem, 2.9vw, 2.48rem);
+  font-weight: 520;
+  letter-spacing: -0.058em;
+  line-height: 0.9;
+  white-space: nowrap;
+}
+
+.brand-wordmark__full,
+.brand-wordmark__compact {
+  display: block;
+}
+
+.brand-wordmark__compact {
+  display: none;
 }
 
 .nav-toggle {
@@ -1153,13 +1151,12 @@ h3 {
 
 @media (max-width: 1120px) and (min-width: 981px) {
   .site-header {
-    grid-template-columns: minmax(8rem, 0.42fr) minmax(0, 1.58fr);
+    grid-template-columns: minmax(13.5rem, 0.54fr) minmax(0, 1.46fr);
     gap: 1rem;
   }
 
-  .brand-lockup__meta {
-    font-size: 0.62rem;
-    gap: 0.32rem;
+  .brand-wordmark {
+    font-size: clamp(1.55rem, 2.5vw, 1.85rem);
   }
 
   .nav-list a {
@@ -1251,17 +1248,19 @@ h3 {
 
   .brand-lockup {
     min-height: auto;
-    gap: clamp(0.5rem, 2.3vw, 0.68rem);
   }
 
-  .brand-lockup__mark {
-    font-size: clamp(2.05rem, 10vw, 2.55rem);
+  .brand-wordmark {
+    font-size: clamp(2.02rem, 10vw, 2.52rem);
+    letter-spacing: -0.064em;
   }
 
-  .brand-lockup__meta {
-    gap: 0.28rem;
-    font-size: clamp(0.55rem, 2vw, 0.64rem);
-    letter-spacing: 0.17em;
+  .brand-wordmark__full {
+    display: none;
+  }
+
+  .brand-wordmark__compact {
+    display: block;
   }
 
   .nav-toggle {
